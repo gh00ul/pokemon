@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#111719">
+  <meta name="description" content="A little nostalgia. A little luck. Holo House is a free, locally saved Pokémon pack-opening and collecting simulator. All money and valuations are fictional.">
+  <title>Holo House — A little collecting magic</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20192%20192%22%3E%3Crect%20width%3D%22192%22%20height%3D%22192%22%20rx%3D%2243%22%20fill%3D%22%23111719%22%2F%3E%3Cpath%20d%3D%22M96%2024c8%2046%2026%2064%2072%2072-46%208-64%2026-72%2072-8-46-26-64-72-72%2046-8%2064-26%2072-72Z%22%20fill%3D%22%23dbfa89%22%2F%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%2296%22%20r%3D%2215%22%20fill%3D%22%23111719%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAV+klEQVR4nO3deVhU570H8O97hhEQZIeBATUgBBAUcQGSusSI0Rg1pllsY6O3Jje3SRM1t723Nas2S5vbNtG0iU1zY1uTNk16TVuNWUQ0Aa1sAUERBAVEwBl2ZRtk5rz3D1AJssxy3nOGM+/nefI8BM457+/RL+M573kXAgVFRER4dl8Rk0EQR6kYC0JuJsBkCvgTwJsCXuj/j3MeHaC4BIJ2AJcIaIUIUgJCi+mECScu1da2KVkckbk9wT9Yfysl4hJCyGIAaQDcZa6BY4cSoFCkdB+osL+9qaFI7gJkCXRgWFi8KOIhAN8DMFmONjmncB7A22YNeaejoaFZjgZZBpr46/QrAfpTALcybIdzfiYK+hcC+nqb0XiKZUMsAi0E6PT3U9CtAJIYXJ8bv0QC+ididnuupaWunkUDkgbaLzh8FhHoLoCmSXldTnW6CSG/nugm/Lyurq5HygtLEuiAgAAfaN1fpMAPAWikuCbnEsoFQte3GAz5Ul3Q4fD56vWzCREyAHInAEGCmjjXEURBvu/p7e1lumlqFpqaLI5e0KFP6ABd2KMUeAO8641z3LE+iN/uNBobHbmIfYFOSJjg39y6G8A6RxrnuCGqAXG1Iz0hNgdap9N5XSHCXlAss7dRjhtFBwhd22YwfGbPyTYFelJ4eKCbmR4AaKo9jXGcla4A5L42Y8N+W0+0+qFQr9dPFC30MwC32NoIx9lIA5D7PLy8S01dnWW2nGhdr0RCwoQekX4M/saPkw3VEkL+6q/TrbTlLGsCTfybW3fze2ZOflQLCB/4BeuTrT1jzED76fRPgvdmcMrxJgIOBOj1Vg1qG/Wh0DcsbI4g4hh4PzOnNIIiXw/3W2tqakyjHTbiQ2FAQIAPEbSHAARLXhzH2S6s12z2M3V1jtqdN/Ith9b9ZwCdJnlZHGc38kM/nX71qEcM983+UXNiAfhAI875NLuJ5hlNTU2G4X443Ce0QATLW+Bh5pxTkFlw++VIP7wh0AE6/f0A4S9POGe2zi80dNFwPxgaaDIw04STkFYrQKvlI2slRAglbwLQDv3BN/6U++cA8mlTUouOC8K02CCly1CbhACdfsPQbw752KA/lasaVxI7IwSxM0KULkN1KOjTGPIpfS3QgWFh8eBjNZiISwxBbCLvzmcgMkCnf2jwN9yufiGKWC9/Pa4hbkYIRJEqXYZK0Z8C+AMAClz/hBbAx2swoXETMC0uCNHxwdC48QdDqVEgZnCPhwAA/sH6W8FXNGIiKiYA7h5u8PB0w9Qof6XLUSVCySNXvxYAgBJxiXLlqFtsou7a13H8wZCVb/v53eQHDASagNyubD3qFZ8UMuhr3ShHcg7wJO5XVgCAEBER4QkCPkeQkdlp4de/To1QsBKVI3Q5AAhdV8TZ4OOdmfDx80BkTOC1/58WFwhffw8FK1Iv0j+jShAIQazSxajVnLQICML1AY2CQJA0V69gRepFgRC/4PCZAqUiDzQjs1LDb/he8jDf4yRCLDMFEMIDzcjstBvvmZNv4ffRrBAIiQIIpihdiBp5+7gjOj7whu/HJgTD24c/sjAh0BkCKPFRug41mp0aDo3mxjeDGo2AWSn8toMJSsIFAjpJ6TrUaMHSqJF/tiRSxkpcCfUTKOCtdBlqIwgE80cJ7cKlUSBE7g3IXIKfAMBT6SrUJiE5FIEhI2+vGKjzQvxM/hqcAW8B8u9VqHoLl469+sPCUW5JOLsRPp6RgUXLxg7rwmV8yRMWeKAlFjHVDzdFB4x5XHRcEPSTfWWoyLXwQEts6eqbrT42fVUMw0pcEw+0xO66L97qY1evTeS9HRLjgZZQcmo4ptgwK2VKlB9mzg1jWJHr4YGW0Kq1020/54EEBpW4Lh5oiXh6abFkhfX3z1ctXXUzJnpPYFCRa+KBlsgdq2Ph6XXDylRj6v9FiGZQkWvigZbItx+aafe5927gq69JhQdaAmm3TUW8AzO6p8/UYd4CPopXCjzQEvi3H85zimtwPNAOS0gOG3Zmiq3mfWsy78KTAA+0gx7eJN0n6/rH+ae0o3igHRAzPQjfknCw/oL0SMTE83WkHcED7YAnty6Q9NU1IQSbnx92pwXOSjzQdrp9RQzSbpsq+XVT5k/G4uW8X9pePNB2cPdww+bnFjC7/lPbF8HD023sA7kb8EDbYcPjcxEWwW6yfKh+Eh56bC6z66sZD7SN9JN9ZQnb+sfY/tKoFQ+0DQSB4NlfpcPdg/3tgLuHG7bvWDbs2h7cyPiflg0e2ZKKubfKt9HBrNRwbNycIlt7asADbaVZKeH4/ib5w/XwZnl/icY7Hmgr+Pi6Y/sbyvzzLwgE23Yu4+tKW4kHegwajYDtO5cjLFy5B7SQUG88/xq/n7YG/xMaw1PbFkn6etteC9Ij8d8vL1a6DKen8fSetE3pIpzVvz+VhvVO1B8cP1MHCqAwp07pUpwWD/QI1jyYiC3PL1S6jBvMuSUCl9p6UHrCqHQpTonfcgxj8Z3R+MkrzrvT3VPbFmHxnXy8x3D4J/QQK+9P6H+h4cTbGAsCwe0rotHa3I3ykkaly3EqPNCDrH98Lv7rpcXf2LnKWQkCwYL0KLh7uCHvaK3S5TgNHmj0d8395OXF2DAO5/UlzdMjNMIHxw5Xg4pU6XIU5/KB9vX3wCtvrcCyNXFKl2K32IRgxCaGIOer8+g1mZUuR1HEXxfmsr/WibPD8NJvl6tmWVvjxQ48/+TnKMqtV7oUxbhkoDUaARs3pWDj5hRZ3r6Z+ywAADethnlbFouIP79diN/96vi1dl2JywVaP9kX216/Y9hdXqVg7rOgKKceXx08hxP5DWhu7EJbcw8AwD/IE0EhXkhOCceCO6ZhTlo4s96Uotx6bNvyBS7WXWZyfWflMoF293DD2o2z8PCmVLvWoBuLxSzinx+cwjs7c9Fi7LLqnECdFx7dkobV30lgEuxekxkf7j6Bd9/IRU9Xn+TXd0YuEegF6ZH40c9uY3avXFHahKcf/xS1VW12nT91mj9e2XUXsyUMGg2d2PXqMRz4vzIm13cmqg50zPQgbH5uEVLmsxtPfCyzGs8++Tm6Onoduo7HRC2271jG9A1gfnYtdryYhcqyZmZtKE2VgY5LDMGGJ+bi9hUxTLd8OPLZWWz9wQGIEvX/CgLBL36/Ercx3iErP7sWb792HCUFF5m2owRVBXpWih7rH5uL+ens9wCsPN2Mh+/5EKZuae9NPb20+N+/r5VlBaXi/AbseSsfRzNrQKk6YjDuAz3RewLSV8bg3vVJDi1pawuLWcTaJe/Zfc88lpuiA/BBxvdkG09yusSIvXtKkHmgEt2dV2Rpk5VxG+j4GSFYs24Glq+JY9JrMZq9e0rw6jOHmbbx9KvpWPNgItM2hrrSa0H2oXP4+M+nUHD0wrj81B5XgZ58ky/SV8XirvunY0qknyI1mPssWHXLbqu75uwVpPPC/pyHFRv1V1vdjgN/O42MfRWoO9+uSA32cPpAR90ciCV3xWD+0ijZbilGk5dViyfWfSxLW2/+9V7M+5byM77ray/h6KFqZB6oQEnBRckegllwugXUvH3cMTs1HPPTo7AgPRKBIV5Kl/QNXx08J1tbWQfPOUWgw6f4Yu3GWVi7cRZaGruQfagaRw9VoTC3Hp2XHeuulJrigZ7oPQEJyaFInT8FSfP0SJilk2XMg72KCxrkaytPvrasFRjihTUPJmLNg4mwWETUVrXhRF4D8rIv4OvjF9De2qNofbIGWuMmIDI6AHGJIYhL0mF2WjimxQaOq+2BmwydsrXVaJSvLXtoNAIiYwIRGROIe9bNgChSVFW0oDCnHmXFBpSfbELNuVZYzKJsNTELtMZNwNQof8TPDEHcDB3iZoQgNjFkXC8Ta+6z4FKbSbb22lt6YO6zOPW/WIMJAkF0XBCi44IA9G9VZ+6z4EJNO8pKGlF+shHlJ40oK2lkNm5b3kfocdgNpLTx9K+XtVh2BzL7uLSYRVRVtKCqouXaoBiNRsDUaf6ImxGC+CQdZqdGYFpc4LiYwwf0j2f2C/BEa3O3LO35B0106sm6Q4kixbnyFhTm1KGsxIjyk404f64NFosKbjmGY7FcD/mne/tDPvShcPqsUGi1zvuXGKTzki3QwU7WwzPU0IfCgn/VynpLNhzFb2i7O68gP7sW+dn9M5e9JrkjOTUcC5ZEYsHSKATpnOsvNTklHBWlTfK0lcZmEoIjmo1dyM6oQnZmNYpy6x0eZSi1cfViJS4xWPF7yryjF/DEd/fK0tauj+7DnFsc39TTUYNfrBTnX3TqV+JOH+jB9JN9kb4qBqvXJmBKlL8iNcj16js41Bv7jm9U7tV3VRv2fViKQ/sr0XDhkiI12GNcBXqwq4OTlt0di4neE2Rt++/vn8TPt2YybePZXy7F6u8kMG1jqF6TGUczq/jgJCV5emmRflcM7t2QhOkzdbK0aTGL+E76ezh/js3w0ciYQPwlY51s60GfLjZi755iHDpQOe7nHo77QA8m5wD/6soWbLz7I8kfijy9tHj3H2sHXk6wdXWAf/ahauZtyUVVgb4qNjEY331kNpbfE8e0j/vI52ex9T+knYL16jursOgOdr+QlFIcy6zGH36bj5Nf8ylY40p0XBC2PLcQKQunMGvj2OFqPPuE45NkPb202LZjGdNtkXO/Oo8dL2bj3Bk+SXZcY72MQWVZM555/FPUnG216/yomwPx0pt3MrvN4MsYqJAcC83s/+g0fv/acTRb2aUXHOqNR/8zDSsfmM7kAbDXZMaetwqwZ1eByyzi6DKBvioswgfbdixDMqOlwCxmEYW59cg6eA4n8urR3NiN1qb+V+UBwRMRFDIRyakRWHhHFJJT2C0FVphTh+1bDuJiPV8KTPUEgeCB78/CpmfmyzI0U+7FGnfvzMPuN/JkHRTkLFwy0FclJIfh5TfVtZzuc098jhN5rrucrvMOa5NBadFFrF/xgSr6YbMyqrBu6fsuHWaAr+CPXpMZmZ9Uwj/AE9OT5HnTKLX9H5bihc1fwNTjGg9+o3H5QAMDLxsOV6O314x58ycrPqLPFnveKsCvnv+S768ygAd6kOL8BhjqOjF/SaTTz6KxWES8+sxh7HmrQOlSnIriA/ydzSd/K0VXZy9e2bXCaTeLt5hFPP34pzjy2VmlS3E6zvk3prAjn53FL7ayXbvOXpRS/HxrJg/zCPgtxwjOnGoEBZxixshgb/86B399t0jpMpwWD/QoCnPq4OPvgcTkUKVLAdA/seA3L2crXYZT47ccY9ixPcsp+qmzMqrwP88eUboMp8cDPQaLRcS2LZ8rOiai0dCJF3900CVfZduKB9oKHZd68cKmLxQJlChSvLDpc8XXuxgveKCtdCKvHrt35sne7juv5+Dr43Wytzte8UDb4N2ducg/dkG29k7k1uOPv8mXrT014IG2gShSvPTjDFkGy5t6zHhhszK3OeMZD7SNLtZdluV1855dBS43OF8KPNB22LOrgOlqQoaGDrz/Oz5Gwx480HboNZmx86WjzK7/2vNf8qGgduKBttORTyuR8+V5ya+bn12LL7+Qb2MiteGBdsBvXsmWdP03Sile/1mWZNdzRTzQDqgsa8axTOlei2dlVONsuXoXgZEDD7SD3n1Dun7i93bxPmdH8UA7qLTooiRv8vKPXUBJgfrWmpMbD7QE/vim45+sUlyD44GWRO5X53G6xGj3+aeLjdf2mOEcwwMtkY/fK7H73L17iiWsxLXxQEskY3+FXavf93T1IfNTPj9QKjzQEukPZoXN52Xsr0B35xUGFbkmHmgJ7f/wtO3nfFTKoBLXxQMtoaLceps2EqqtaudddRLjgZbY1S2frbHvw1Pjcus0Z8YDLbGMfdbfRx/aX8mwEtfEAy2xuvPtqKpoGfO4yrLmcbVD63jBA81A1sGqsY/hQ0SZEADwmziJfWVFoLMzxj6GsxkVALDdhd0FlRUbRt3cvtnYhbKTjTJW5DK6BVC0K12F2ogiRfYo46SzDp7jvRtsdAgg4E8mDGRnjHyPPFrYOftRgssCANfeZYaRoryGYdfUsFhEFOc3KFCR+gkUHQIlOKV0IWrUebkXZ8tu7L47U9qEzsuO7QvOjYDgvADQk0rXoVaFOTfOZCni69QxQynOCLAIfDAuI0XDBHq4kHPSoIRWCO1NDcUA+FRjBgpz6yEO2m5NFCmK+WAkZgRKywUAIoCDShejRpfbTd94DX62rBmX2/k6z4yYJmq1xQIAUEq/ULoatSrMud6JVJTLO5RYIaDH6urqegQAECe4fQKAf3QwUF58ffLs6WKDgpWoGwU5AgwMTrpcV9cK4O+KVqRS5aeuv+IuP9mkYCXqRiBmAoNG2wkgu5UrR72qK1th6jHD1GNGbZX1s1k4m5xvNRpzgUGBbjE2HAYon34sMYtFxNmyJlSUNvHV+BkhwHsYGDU6eDy0SCC8qkxJ6lZ+qhFnSvnoOlYEDXn/2teDf9BqbPgTAOkXPXZxZ0414cwpHmgmKLKbGxrOXP1fzZAfi55ek0wgWClzWapGADQ3dqGlsVvpUlSHUPygp7vz2q0yGeYYN3+dvhCgM2SsS9W02v5/CPv6+D20pAiK2gwX52DQrKvh5hSaKRE3g0/Nkkxfn8jDzAAV8SKG5HTYSbLtBsMRAB/IURTH2YXgaHvjxX8M/faIs77dRPOPwActcU6J9IGKj2GYu4gRA93U1GQAoeuHO4njFEWws81oHHZiytBejm8wdXae9fTyCQZBCpvKOM42lKBCazE/2N3dPeySrWMuNOM7ccKPAZyQvDKOs50JovBAU1NT50gHjBnompoak8bidheAC5KWxnG2otjS3lg/6gyr4fqhh+UXrE8mAs0C4O1wYRxnIwL6h1ajYeNYx1m9tl17U0MRIH4XILbvu8BxDiEHWo2GR6050qbFGtuMxk9AxHsA8Hn4nCwokDcBlrUAzNYcb/Pqo20GwwGA3A8eao45elzUau40GkdZKHAIu5bTbTM27Cci1gDosOd8jhsbOeCpEdIHZlNZf5YjTQaEhiZQSvYBiHLkOhw32MAD4KOw8jZjMIcWPG81GErNbkIKATnsyHU4boCJAlsGejNsDjMwxptCa1zp6Ojp6er4i+ckn24AC6W4Jud6KEEFRGF5e2PDPx25jkO3HEP5hoXNFUTsARAv5XU5NSN9lOANraVv22hvAK0l6adpb2dnQ5C/324zhQXAXAATpLw+pzIUWSDi3e1Gw/sjjc2wlaSf0IMFBU3WmzV9LxKQDeC3IdwgBPhapHh5YDyzpKM5mQX6Kn+dLpFC2EKABwF4sm6Pc2IUWRDoL9oMhs9YNcE80FdNCg8PdLPQR0Dpo+DdfK6khhDynmAm7zc311u/K6mdZAv0YP4hETMpsawWgLspMEepOjgmTATkXxT0MIGYObCikWyTRBQPkp/fTX7wMCWBCkmAmEQoiQEhfgD1A+AHYJLSNXLf0AWgA6CdBKQdBLWUooISekagtNzH0/NETU2NYgt//j9UdVXJKIAwrQAAAABJRU5ErkJggg==">
+  <style>
+/* Holo House • warm graphite, acid-yellow paper, quiet collector-shop details. */
+:root{color-scheme:dark;--bg:#101618;--panel:#192124;--panel2:#202a2e;--line:#303b3d;--text:#f3f4ec;--muted:#a4b1b2;--lime:#dbfa89;--lime-ink:#263015;--orange:#f4b978;--danger:#ffaaa6;--blue:#9ed7ec;--radius:20px;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--shadow:0 18px 60px #0004}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-tap-highlight-color:transparent}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}button{color:inherit}button:disabled{opacity:.43;cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--lime);outline-offset:4px}a{color:var(--lime)}button svg,span svg{width:21px;height:21px;flex:none;vertical-align:middle}h1,h2,h3,p{margin:0}h1{font-weight:660;letter-spacing:-.055em;line-height:1.08}h2{font-size:26px;letter-spacing:-.035em;font-weight:620;line-height:1.2}h3{font-size:18px;letter-spacing:-.025em;line-height:1.25}p{color:var(--muted)}small{font-size:12px}.muted{color:var(--muted)}.lime{color:var(--lime)}.mono{font-family:var(--mono);font-size:.9em;font-variant-numeric:tabular-nums}.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.5}.row{display:flex;align-items:center;gap:12px}.between{justify-content:space-between}.wrap{flex-wrap:wrap}.grow{flex:1}.stack{display:flex;flex-direction:column;gap:14px}.tight{gap:7px}.hidden{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;top:-100px;left:12px;background:var(--lime);color:var(--bg);z-index:100;padding:12px}.skip-link:focus{top:12px}.icon{display:inline-flex;align-items:center;justify-content:center}.dot{display:inline-block;width:6px;height:6px;background:var(--lime);border-radius:50%;box-shadow:0 0 8px #dbfa8933}.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border:1px solid var(--line);border-radius:99px;font-size:11px;font-weight:600;white-space:nowrap}.pill.lime{color:var(--lime);border-color:#dbfa8944;background:#dbfa890b}.pill.new{background:var(--lime);color:var(--lime-ink);border-color:transparent}.pill.slab{color:var(--blue);border-color:#9ed7ec55}.tag{font:10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}.btn{display:inline-flex;min-height:46px;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:11px;padding:11px 16px;background:var(--panel2);font-weight:620;font-size:13px;line-height:1.25;transition:background .18s,transform .15s,border-color .18s;text-decoration:none}.btn:hover{background:#2e3a3d;border-color:#52615f}.btn:active{transform:scale(.98)}.btn.primary{background:var(--lime);border-color:var(--lime);color:var(--lime-ink)}.btn.primary:hover{background:#ebffc0}.btn.ghost{background:transparent}.btn.danger{color:var(--danger);border-color:#ffaaa63d;background:#ffaaa609}.btn.full{width:100%}.btn.small{min-height:40px;padding:8px 12px;font-size:12px}.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);background:transparent;border-radius:50%;flex:none}.icon-btn:hover{background:var(--panel2)}.text-btn{border:0;background:transparent;padding:12px 0;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--muted);font-size:12px;line-height:1.25}.text-btn:hover{color:var(--text)}.link-btn{background:transparent;border:0;color:var(--lime);padding:10px 0;min-height:44px;text-align:left}.segmented{display:flex;gap:3px;padding:4px;border:1px solid var(--line);border-radius:11px;background:var(--bg)}.segmented button{background:transparent;border:0;min-height:38px;padding:8px 15px;color:var(--muted);border-radius:7px;font-size:12px;font-weight:550}.segmented button.active{background:var(--panel2);color:var(--text)}
+/* Persistent navigation */
+.site-header{height:87px;position:sticky;top:0;z-index:20;background:#101618ee;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.header-inner{max-width:1320px;height:100%;margin:auto;padding:0 36px;display:flex;align-items:center;gap:32px}.brand{display:flex;align-items:center;gap:9px;color:var(--text);background:none;border:0;padding:0;min-height:44px;white-space:nowrap}.brand-mark{font-size:36px;color:var(--lime);line-height:1}.brand-name{font-size:23px;letter-spacing:-1px;font-weight:740}.brand-name span{color:var(--lime)}.desktop-nav{display:flex;align-self:stretch;align-items:stretch;gap:24px;margin:auto}.desktop-nav button{position:relative;background:transparent;border:0;font-size:13px;color:var(--muted);padding:0 1px;min-width:45px}.desktop-nav button.active{color:var(--text)}.desktop-nav button.active:after{content:"";height:3px;position:absolute;bottom:0;left:0;right:0;background:var(--lime);border-radius:4px 4px 0 0}.nav-dot{position:absolute;background:var(--lime);width:5px;height:5px;top:24px;right:-7px;border-radius:50%}.header-tools{display:flex;align-items:center;gap:12px;margin-left:auto}.wallet{display:flex;align-items:center;gap:11px;border:1px solid var(--line);border-radius:13px;padding:8px 14px;background:var(--panel)}.wallet .icon{color:var(--lime)}.wallet-value{font-size:16px;line-height:1.25;font-weight:680;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.wallet small{font:8px var(--mono);color:var(--muted);letter-spacing:.13em;display:block;margin-top:2px}.mobile-nav{display:none}main{max-width:1320px;padding:0 36px 70px;margin:0 auto;min-height:calc(100svh - 88px)}.page{animation:page-in .35s ease-out}.page-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin:43px 0 26px}.page-head h1{font-size:40px;margin:9px 0}.page-head p{font-size:13px;max-width:560px}.page-head .eyebrow{color:var(--lime)}.section-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:31px 0 22px}.section-head p{font-size:12px;margin-top:6px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);padding:23px}.notice{display:flex;align-items:center;gap:13px;border:1px solid #dbfa8940;background:#dbfa8909;border-radius:13px;padding:15px 19px;margin-top:22px}.notice .icon{color:var(--lime)}.notice strong{display:block;font-size:13px}.notice p{font-size:12px}.notice .btn{margin-left:auto}.footnote{font-size:11px;line-height:1.6;color:var(--muted)}.site-note{padding-top:24px;margin-top:34px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#829193;font-size:10px}.site-note button{font-size:10px;color:#a4b1b2}
+/* Shop */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;min-height:408px;padding:45px 0 34px;position:relative}.hero .eyebrow{color:var(--lime);display:flex;align-items:center;gap:8px;margin-bottom:18px}.hero h1{font-size:clamp(44px,4.8vw,66px);max-width:550px}.hero h1 em{font-family:Georgia,serif;font-weight:400;color:var(--lime);letter-spacing:-.065em}.hero p{font-size:14px;max-width:400px;line-height:1.75;margin:18px 0 23px}.hero-actions{display:flex;align-items:center;gap:20px}.hero-note{font:9px var(--mono);line-height:1.7;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}.hero-gallery{position:relative;min-width:0;height:320px;isolation:isolate}.hero-gallery:before{content:"";position:absolute;inset:2% 9%;background:radial-gradient(ellipse,#697b5522,transparent 68%);z-index:-1}.hero-ring{position:absolute;top:16px;left:calc(50% - 152px);width:304px;height:304px;border:1px solid #7181512e;border-radius:50%;transform:rotate(-25deg)}.hero-ring:after{content:"";position:absolute;inset:25px -70px;border:1px solid #71815124;border-radius:50%}.hero-card{position:absolute;width:174px;top:36px;left:calc(50% - 87px);filter:drop-shadow(0 12px 15px #0008)}.hero-card.hero-left{transform:translateX(-116px) rotate(-15deg);top:48px;z-index:1}.hero-card.hero-right{transform:translateX(112px) rotate(14deg);top:48px;z-index:2}.hero-card.hero-front{transform:rotate(-3deg);z-index:3}.hero-gallery .card-art{border:1px solid #a9b39255}.hero-spark{position:absolute;color:var(--lime);font-size:35px;top:20px;right:28px;transform:rotate(17deg)}.hero-ticket{position:absolute;z-index:4;bottom:11px;left:calc(50% - 111px);display:flex;align-items:center;gap:13px;background:#eef1e3;color:#273022;padding:13px 16px;box-shadow:0 8px 35px #0006;transform:rotate(-4deg);border-radius:8px}.hero-ticket .eyebrow{font-size:8px;color:#607050;margin:0;letter-spacing:.1em}.hero-ticket strong{font-size:13px}.hero-ticket .icon{color:#768b40}.hero-caption{position:absolute;right:5px;bottom:1px;font:8px var(--mono);color:#7e8c84;letter-spacing:.07em;writing-mode:vertical-rl;transform:rotate(180deg)}.dashboard-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:21px 0}.dashboard-metric{padding:0 28px;border-right:1px solid var(--line);display:flex;gap:13px;align-items:center}.dashboard-metric:first-child{padding-left:0}.dashboard-metric:last-child{border:0;padding-right:0}.metric-icon{width:38px;height:38px;border:1px solid var(--line);background:var(--panel);display:flex;align-items:center;justify-content:center;border-radius:10px;color:var(--muted);flex:none}.metric-label{font-size:10px;color:var(--muted);display:block}.metric-value{font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.03em;margin-top:2px}.metric-value small{color:var(--muted);font-weight:400;font-size:11px;letter-spacing:0}.pack-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}.product{background:var(--panel);border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:border-color .2s,transform .2s}.product:hover{border-color:#586856}.product.featured{border-color:#738054}.product-top{padding:13px 13px 0;display:flex;align-items:center;justify-content:space-between;gap:8px}.product-number{font:9px var(--mono);color:var(--muted)}.product-top .pill{font:8px var(--mono);text-transform:uppercase;letter-spacing:.04em;padding:4px 7px}.product-art{height:223px;display:flex;align-items:center;justify-content:center;position:relative;isolation:isolate;overflow:hidden}.product-art:before{content:"";position:absolute;inset:15%;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--pack-color) 13%,transparent),transparent 70%);z-index:-1}.product-art .pack-object{width:126px;height:181px;transform:rotate(-7deg);transition:transform .4s;box-shadow:7px 15px 16px #0005}.product:hover .product-art .pack-object{transform:rotate(-2deg) translateY(-3px)}.product-body{padding:0 15px 14px;display:flex;flex-direction:column;flex:1}.product h3{font-size:16px;white-space:normal;line-height:1.4;letter-spacing:-.035em}.product .subtitle{font-size:10px;margin:3px 0 13px;min-height:15px}.product-details{padding-top:12px;border-top:1px solid var(--line);font-size:10px;color:var(--muted);display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.product-details span{display:flex;align-items:center;gap:6px}.product-details svg{height:12px;width:12px}.product select{width:100%;font-size:10px;min-height:39px;padding:8px;margin-bottom:8px;background:#101719;border-color:var(--line);border-radius:8px;color:var(--muted)}.product .btn{font-size:12px;padding:11px 5px;min-height:44px;border-color:#5c684c;background:transparent;color:var(--lime)}.product.featured .btn{background:var(--lime);color:var(--lime-ink)}.product .btn:hover{background:#dbfa8920}.product.featured .btn:hover{background:#ebffc0}.product .text-btn{font-size:9px;width:100%;padding:12px 0 0;min-height:39px;gap:5px}.product .text-btn svg{width:13px;height:13px}.shop-bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:21px}.tip-tile{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:14px;padding:19px;background:#151d1f}.tip-tile>.icon{color:var(--lime);width:34px}.tip-tile h3{font-size:12px;margin-bottom:4px}.tip-tile p{font-size:11px;line-height:1.55}.tip-tile .text-btn{margin-left:auto;flex:none}.tip-tile .text-btn svg{width:18px}
+/* Foil pack objects: real text, no image dependency */
+.pack-object{--pack-color:var(--lime);position:relative;background:var(--pack-color);color:#19211e;overflow:hidden;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:21px 10px 20px;isolation:isolate;user-select:none}.pack-object:before{content:"";position:absolute;inset:0;background:linear-gradient(95deg,#0004,transparent 6%,#fff6 10%,transparent 18%,#fff3 52%,transparent 73%,#0002 90%,#fff5 95%,#0005),repeating-linear-gradient(120deg,#fff0 0,#fff0 32px,#ffffff15 33px,#fff0 34px);z-index:2;pointer-events:none;mix-blend-mode:soft-light}.pack-object:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0006 0 1px,transparent 1px 8px,#0004 8px 9px,transparent 9px calc(100% - 9px),#0004 calc(100% - 9px) calc(100% - 8px),transparent calc(100% - 8px) calc(100% - 1px),#0006 calc(100% - 1px)),repeating-linear-gradient(90deg,#ffffff20 0px,#ffffff20 1px,#00000012 2px,#00000012 3px);mask-image:linear-gradient(#000 0 11px,transparent 11px calc(100% - 11px),#000 calc(100% - 11px));z-index:2;pointer-events:none}.pack-brand{font-size:6px;font-weight:800;letter-spacing:.16em;z-index:1}.pack-symbol{position:absolute;width:120px;height:120px;display:flex;align-items:center;justify-content:center;opacity:.85;top:17%;z-index:-1}.pack-symbol svg{width:86%;height:86%;stroke-width:1}.pack-name{font-size:21px;font-weight:950;line-height:.92;text-transform:uppercase;text-align:center;letter-spacing:-.07em;z-index:1;margin-top:61px;text-shadow:0 1px 0 #ffffff50}.pack-bottom{font:5px var(--mono);font-weight:800;letter-spacing:.1em;z-index:1;margin-top:8px}.pack-bolt .pack-symbol{transform:rotate(-11deg);opacity:.9}.pack-bolt .pack-symbol svg{fill:#19261b}.pack-prism .pack-symbol{transform:rotate(10deg)}.pack-prism{background:linear-gradient(145deg,#e0d2ff,var(--pack-color) 43%,#797ba7)}.pack-orbit{background:linear-gradient(165deg,#b4deeb,var(--pack-color) 38%,#457083);color:#112733}.pack-crown{background:linear-gradient(125deg,#f8eac5,#e8c970 55%,#a38749);color:#352a18}.pack-sun .pack-symbol{top:11%;opacity:.7}.pack-object.big{width:230px;height:330px;padding:34px 15px 33px;box-shadow:12px 26px 35px #0008;transform:rotate(-5deg)}.pack-object.big .pack-brand{font-size:10px}.pack-object.big .pack-symbol{width:220px;height:220px;top:14%}.pack-object.big .pack-name{font-size:39px;margin-top:108px}.pack-object.big .pack-bottom{font-size:8px;margin-top:10px}
+/* Cards, their offline placeholders and slabs */
+.card-art{--card-accent:#b9c39d;position:relative;display:block;width:100%;aspect-ratio:245/342;border-radius:9px;overflow:hidden;background:#27343a;box-shadow:0 2px 6px #0003;isolation:isolate}.card-art img{position:absolute;width:100%;height:100%;inset:0;object-fit:contain;z-index:2;border-radius:inherit;display:block}.card-fallback{display:flex;flex-direction:column;position:absolute;inset:0;padding:9%;background:radial-gradient(ellipse at 60% 40%,color-mix(in srgb,var(--card-accent) 35%,#23333b),#17212b 80%);border:6px solid color-mix(in srgb,var(--card-accent) 45%,#4b5158);border-radius:inherit;color:#edf2e8;text-align:left}.card-fallback:after{content:"";position:absolute;inset:16%;border:1px solid #ffffff24;border-radius:50%;transform:rotate(30deg);height:62%;pointer-events:none}.card-fallback small{font:clamp(6px,1vw,9px) var(--mono);color:#c6d3d5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card-fallback strong{font-size:clamp(13px,1.7vw,21px);font-weight:650;line-height:1.2;letter-spacing:-.02em;margin-top:12%;text-wrap:balance;z-index:1}.fallback-symbol{font-size:clamp(35px,5vw,65px);color:var(--card-accent);line-height:1;display:flex;align-items:center;justify-content:center;flex:1;text-shadow:0 0 25px #ffffff40}.card-fallback .fallback-bottom{font-size:8px;border-top:1px solid #ffffff27;padding-top:10px;line-height:1.5}.artwork-status{font-size:7px;color:#8fa1a8;display:block;margin-top:3px}.image-failed img{display:none}.r0{--card-accent:#b0bac1}.r1{--card-accent:#9ddab4}.r2{--card-accent:#90c5f5}.r3{--card-accent:#b6a2ec}.r4{--card-accent:#ecb3eb}.r5{--card-accent:#eed388}.rarity{color:var(--card-accent)!important;font:9px var(--mono);letter-spacing:.07em;text-transform:uppercase;display:flex;align-items:center;gap:5px}.rarity:before{content:"";width:4px;height:4px;border-radius:50%;background:var(--card-accent);display:inline-block}.card-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}.collect-card{position:relative;text-align:left;background:transparent;border:0;padding:0;min-width:0;color:var(--text);transition:transform .2s;border-radius:10px}.collect-card:hover{transform:translateY(-4px)}.collect-card.selected{outline:2px solid var(--lime);outline-offset:6px;background:#dbfa8912}.collect-card .card-badge{position:absolute;z-index:4;right:7px;top:7px;background:#101719eb;backdrop-filter:blur(5px);color:var(--text);font:10px var(--mono);padding:4px 7px;border-radius:6px;border:1px solid #ffffff30}.collect-card.selected .card-badge{background:var(--lime);color:var(--lime-ink)}.card-info{padding:12px 1px 0;min-width:0}.card-info .row{gap:4px}.card-info h3{font-size:12px;letter-spacing:-.015em;margin:4px 0 2px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card-info .edition{font:8px var(--mono);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;margin-bottom:6px}.card-info .value{font-size:13px;letter-spacing:-.02em;font-weight:600}.card-info .sold-note{font-size:9px;color:var(--muted)}.slab-shell{background:linear-gradient(110deg,#c2cfd041,#e7f0ec66 50%,#b5c5d229);padding:8px 9px 12px;border:1px solid #b6cdd974;border-radius:11px;box-shadow:inset 0 0 0 3px #c1d4dd18,0 7px 15px #0004}.slab-label{display:flex;align-items:center;justify-content:space-between;background:#e9ebe3;color:#202722;padding:7px 8px;border-radius:3px;margin-bottom:8px;min-height:43px}.slab-label strong{font-family:var(--mono);font-size:8px;letter-spacing:.08em;display:block}.slab-label small{font-size:5px;display:block;color:#69716a;letter-spacing:.05em}.slab-label .grade-number{font-size:25px;line-height:1;font-weight:850;letter-spacing:-.05em}.slab-shell .card-art{border-radius:5px}.barcode{height:7px;width:65%;background:repeating-linear-gradient(90deg,#1f2421 0 1px,transparent 1px 3px,#1f2421 3px 5px,transparent 5px 7px);margin-top:4px;opacity:.7}.slab-large{max-width:286px;margin:auto;padding:13px 14px 17px;border-radius:16px}.slab-large .slab-label{padding:10px 12px;margin-bottom:13px;min-height:63px}.slab-large .slab-label strong{font-size:11px}.slab-large .slab-label small{font-size:8px}.slab-large .grade-number{font-size:38px}.slab-large .barcode{height:10px}.slab-large.hidden-grade .grade-number{filter:blur(12px);user-select:none}.slab-large.hidden-grade .slab-label{background:#182326;color:#d5dcd8}.slab-large.hidden-grade .slab-label small{color:#8c9c9b}
+/* Binder and grading studio */
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:15px;overflow:hidden;margin-bottom:26px}.stat-strip>div{padding:17px 21px;background:var(--panel)}.stat-strip .label{font-size:10px;color:var(--muted);display:block;margin-bottom:5px}.stat-strip strong{font-size:23px;font-weight:600;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.stat-strip small{font-size:10px;font-weight:400;color:var(--muted);letter-spacing:0}.binder-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}.filters{display:grid;grid-template-columns:1fr 170px 170px;gap:12px;margin-bottom:24px}.search-field{position:relative}.search-field svg{position:absolute;top:14px;left:15px;width:17px;height:17px;color:var(--muted)}input,select{color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:10px;min-height:46px;padding:11px 13px;min-width:0}select{max-width:100%}.search-field input{width:100%;padding-left:42px;font-size:12px}input::placeholder{color:#788c90}.filters select{font-size:12px}.filter-pill{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);min-height:44px}.filter-pill input{width:17px;min-height:17px;accent-color:var(--lime)}.selection-bar{position:sticky;bottom:18px;z-index:10;display:flex;align-items:center;gap:14px;background:var(--lime);color:var(--lime-ink);padding:14px 20px;box-shadow:var(--shadow);border-radius:14px;margin:24px auto 0;max-width:620px}.selection-bar strong{font-size:13px;flex:1}.selection-bar .btn{background:#27331d;border-color:#27331d;color:#effcda}.selection-bar .text-btn{color:var(--lime-ink);padding:5px}.empty-state{padding:65px 30px;text-align:center;border:1px dashed var(--line);border-radius:20px;max-width:100%;background:radial-gradient(ellipse at top,#28352230,transparent 70%)}.empty-state .empty-symbol{display:block;color:var(--lime);font-size:55px;margin-bottom:20px}.empty-state h2{font-size:23px}.empty-state p{max-width:390px;font-size:13px;margin:13px auto 23px;line-height:1.7}.load-more{text-align:center;padding:30px 0}.studio-hero{display:grid;grid-template-columns:1fr .75fr;gap:35px;margin-bottom:28px;padding:30px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(ellipse at right,#304c4130,transparent 65%),var(--panel)}.studio-hero h2{font-size:30px;margin:12px 0}.studio-hero p{font-size:13px;max-width:500px;line-height:1.8}.grade-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:23px}.grade-strip div{border:1px solid var(--line);background:var(--bg);padding:10px 5px;text-align:center;border-radius:10px}.grade-strip strong{font-size:20px;display:block;color:var(--lime);line-height:1.4}.grade-strip span,.grade-strip small{display:block;color:var(--muted);font-size:9px}.studio-example{display:flex;align-items:center;justify-content:center;position:relative}.studio-example .slab-shell{width:180px;transform:rotate(7deg)}.studio-example .eyebrow{position:absolute;bottom:-10px;right:0;font-size:8px}.studio-hero .footnote{margin-top:17px;font-size:10px}.studio-select{display:flex;gap:15px;align-items:center;margin:20px 0}.studio-select .search-field{flex:1}.studio-select label{font-size:12px}.grade-eligible .collect-card .btn{margin-top:10px;width:100%}
+/* Saved opening */
+.opening-head{padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:14px}.opening-head .text-btn{font-size:12px}.opening-top{max-width:800px;margin:18px auto 0}.opening-title{text-align:center}.opening-title h1{font-size:33px;margin-top:8px;letter-spacing:-.05em}.opening-title p{font-size:11px;margin-top:8px}.progress-track{height:3px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:23px}.progress-fill{height:100%;background:var(--lime);width:var(--progress);transition:width .35s}.progress-labels{display:flex;justify-content:space-between;margin-top:8px;font:9px var(--mono);color:var(--muted)}.opening-stage{height:445px;position:relative;display:flex;align-items:center;justify-content:center;isolation:isolate}.opening-stage:before{content:"";position:absolute;inset:4% 0;background:radial-gradient(ellipse at center,#4c694423,transparent 65%);z-index:-1}.opening-stage .stage-ring{position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid #6482501c;pointer-events:none;z-index:-1}.stage-ring:after{content:"";position:absolute;inset:24px -50px;border-radius:50%;border:1px solid #64825015;transform:rotate(-20deg)}.tear-target{border:0;background:transparent;padding:20px 35px;touch-action:pan-y;position:relative;border-radius:12px;user-select:none}.tear-target .pack-object{transform:rotate(calc(-5deg + var(--tear,0)*5deg)) translateX(calc(var(--tear,0)*10px));transition:transform .08s}.tear-target.dragging{touch-action:none}.tear-line{position:absolute;z-index:3;top:35px;left:48px;right:26px;border-top:2px dashed #243022b0;pointer-events:none;opacity:.75;transform:rotate(-5deg)}.tear-line:before{content:"↔";font-size:24px;color:#233225;background:var(--pack-color);position:absolute;left:calc(var(--tear,0)*70%);top:-20px;padding:0 6px;border-radius:50%}.tear-instruction{position:absolute;bottom:7px;left:0;right:0;text-align:center;font:9px var(--mono);color:var(--muted);letter-spacing:.03em}.stage-card-button{border:0;padding:0;background:transparent;border-radius:13px;width:241px;position:relative;perspective:1200px}.stage-card-button:focus-visible{outline-offset:9px}.card-back{width:100%;aspect-ratio:245/342;position:relative;border-radius:12px;border:8px solid #617353;background:repeating-linear-gradient(45deg,transparent 0 12px,#dfff8506 12px 13px),#18251d;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 20px 50px #0005;color:var(--lime)}.card-back:before,.card-back:after{content:"";position:absolute;inset:30px 15px;border:1px solid #a9c28033;border-radius:50%;transform:rotate(35deg)}.card-back:after{transform:rotate(-35deg)}.card-back .back-symbol{font-size:63px;line-height:1;margin-bottom:17px;text-shadow:0 0 50px #daff852c}.card-back strong{font-size:29px;letter-spacing:-.06em;line-height:.9;z-index:1;text-align:center}.card-back small{position:absolute;bottom:18px;font:8px var(--mono);letter-spacing:.12em;color:#a7bc94}.reveal-card{width:100%;transform-origin:center;filter:drop-shadow(0 17px 25px #0006);animation:card-reveal .55s cubic-bezier(.2,.8,.25,1) both}.reveal-card.r4{filter:drop-shadow(0 0 23px #deadee40) drop-shadow(0 16px 23px #0005)}.reveal-card.r5{filter:drop-shadow(0 0 35px #ead08955) drop-shadow(0 16px 23px #0005);animation:card-reveal .8s cubic-bezier(.2,.8,.25,1) both}.rare-halo{position:absolute;width:360px;height:360px;background:conic-gradient(from 40deg,#f7dd7400,#f7dd7415,#b9d4ff00,#edd68822,#f7dd7400);border-radius:50%;z-index:-1;animation:halo 15s linear infinite}.sparkles{position:absolute;inset:0;pointer-events:none;overflow:hidden}.sparkles i{position:absolute;left:var(--x);top:var(--y);font-size:var(--s);color:var(--lime);font-style:normal;animation:sparkle 1.6s ease-out both;animation-delay:var(--d)}.reveal-caption{max-width:520px;margin:0 auto;text-align:center;min-height:97px}.reveal-caption .rarity{justify-content:center;font-size:10px}.reveal-caption h2{font-size:26px;margin:8px 0}.reveal-caption .row{justify-content:center;font-size:12px;flex-wrap:wrap}.reveal-caption .value{font-size:15px;color:var(--text);font-weight:650}.opening-controls{display:flex;justify-content:center;align-items:center;gap:11px;margin:22px auto 0;max-width:520px}.opening-controls>.primary{flex:1;max-width:290px}.auto-btn[aria-pressed=true]{color:var(--lime);border-color:#dbfa8966;background:#dbfa8912}.opening-foot{display:flex;justify-content:center;gap:20px;margin-top:8px}.opening-foot .text-btn{font-size:10px}.opening-save{color:var(--muted);font:9px var(--mono);display:flex;align-items:center;justify-content:center;gap:7px;margin-top:10px}.pack-dots{display:flex;justify-content:center;gap:6px;margin-top:13px}.pack-dots span{width:5px;height:5px;background:var(--line);border-radius:50%}.pack-dots span.done{background:var(--lime)}
+/* Opening receipt */
+.results-head{margin:34px 0 26px;text-align:center}.results-head h1{font-size:41px;margin:10px 0}.results-head p{font-size:12px}.receipt-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;margin-bottom:35px}.standout{background:radial-gradient(ellipse at center,#91865b21,transparent 75%),var(--panel);padding:23px;border:1px solid var(--line);border-radius:20px;display:flex;align-items:center;gap:25px;min-width:0}.standout-art{width:147px;flex:none;transform:rotate(-5deg)}.standout .eyebrow{font-size:9px}.standout h2{font-size:23px;margin:10px 0}.standout p{font-size:11px}.standout .standout-value{font-size:24px;font-weight:650;letter-spacing:-.04em;margin:14px 0 6px}.receipt{padding:25px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}.receipt-top{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-bottom:1px dashed #637067;padding-bottom:19px}.receipt-top span{font-size:10px;color:var(--muted);display:block;margin-bottom:6px}.receipt-top strong{font-size:28px;letter-spacing:-.05em;font-weight:650}.receipt-top .lime{color:var(--lime)}.receipt-line{display:flex;justify-content:space-between;gap:20px;font-size:11px;padding:8px 0}.receipt-line span{color:var(--muted)}.receipt-line strong{font-size:12px;font-variant-numeric:tabular-nums;font-weight:550}.receipt-line:first-of-type{margin-top:10px}.receipt-actions{display:flex;gap:9px;margin-top:14px;flex-wrap:wrap}.receipt-actions .btn{flex:1;font-size:11px;min-width:100px}.result-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:25px 0}.result-meta{display:flex;align-items:center;gap:8px}.result-meta .pill{font-size:9px}
+/* Hall */
+.hall-hero{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:30px}.best-record{border:1px solid var(--line);background:var(--panel);padding:22px;border-radius:16px;display:flex;gap:20px;align-items:center}.best-record .record-icon{font-size:31px;color:var(--lime)}.best-record strong{display:block;font-size:21px;letter-spacing:-.03em;margin:4px 0}.best-record p{font-size:11px}.hall-grid .collect-card.not-owned .card-art img{filter:grayscale(.8) brightness(.55)}.hall-grid .collect-card.not-owned .card-art{opacity:.68}.hall-grid .card-badge{font-size:9px}.progress-summary{display:flex;align-items:center;gap:15px;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:13px;margin:25px 0}.progress-summary .progress-track{flex:1;margin:0;height:5px}.progress-summary p{font-size:11px}.goals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.goal{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:19px;display:flex;flex-direction:column}.goal.complete{border-color:#dbfa8955}.goal .goal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:20px;color:var(--lime)}.goal .goal-top strong{font-size:14px}.goal h3{font-size:13px;margin-bottom:8px}.goal p{font-size:11px;min-height:33px}.goal .progress-track{margin:13px 0 9px;height:3px}.goal .progress-labels{font-size:9px;margin:0 0 12px}.goal .btn{font-size:11px;min-height:41px;margin-top:auto}.lifetime-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.lifetime-stat{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.lifetime-stat span{font-size:10px;color:var(--muted);display:block;margin-bottom:6px}.lifetime-stat strong{font-size:22px;letter-spacing:-.04em;font-weight:600}
+/* Dialogs */
+dialog{color:var(--text);background:var(--panel);border:1px solid #48544e;border-radius:22px;padding:0;width:calc(100% - 32px);max-width:560px;max-height:calc(100svh - 40px);overflow-y:auto;box-shadow:0 35px 100px #000a}dialog.wide{max-width:800px}dialog::backdrop{background:#070e11cc;backdrop-filter:blur(8px)}.modal-inner{padding:26px}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:21px}.modal-head h2{font-size:23px}.modal-head .icon-btn{height:36px;width:36px}.modal-head .icon-btn svg{height:17px;width:17px}.modal-intro{font-size:12px;line-height:1.8;margin-bottom:20px}.modal-actions{display:flex;gap:11px;justify-content:flex-end;flex-wrap:wrap;margin-top:24px}.modal-actions .btn{min-width:120px}.modal-footer{border-top:1px solid var(--line);padding-top:17px;margin-top:22px;font-size:10px;color:var(--muted)}.odds-intro{display:flex;gap:24px;align-items:center;margin-bottom:24px}.odds-intro .pack-object{width:98px;height:140px;flex:none;padding-top:18px;padding-bottom:17px;transform:rotate(-5deg)}.odds-intro .pack-name{font-size:16px;margin-top:39px}.odds-intro .pack-symbol{width:88px;height:88px}.odds-intro .pack-brand{font-size:5px}.odds-intro .pack-bottom{font-size:4px}.odds-intro p{font-size:12px;line-height:1.8}.odds-intro .pill{margin-bottom:10px;font-size:9px}.odds-table{width:100%;border-collapse:collapse;font-size:11px}.odds-table th{text-align:left;font-size:9px;font-weight:500;color:var(--muted);border-bottom:1px solid var(--line);padding:10px 0}.odds-table td{padding:9px 0;border-bottom:1px solid #303b3d80}.odds-table td:last-child,.odds-table th:last-child{text-align:right}.odds-table td:first-child{padding-right:16px}.slot-note{font-size:10px;color:var(--muted);line-height:1.7;padding:15px 0}.pity-card{background:#dbfa8908;border:1px solid #dbfa8938;border-radius:12px;padding:16px;margin-top:17px}.pity-card h3{font-size:12px;color:var(--lime);margin-bottom:7px}.pity-card p{font-size:11px;line-height:1.7}.pity-card .progress-track{margin-top:12px}.detail-layout{display:grid;grid-template-columns:.9fr 1fr;gap:29px;align-items:start}.detail-art{max-width:286px;width:100%;margin:auto}.detail-art>.card-art{box-shadow:0 13px 35px #0005}.detail-info .rarity{font-size:10px}.detail-info h3{font-size:30px;margin:9px 0 7px;letter-spacing:-.04em}.detail-info>p{font-size:11px;line-height:1.7;margin-bottom:17px}.detail-prices{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px}.detail-prices small{display:block;color:var(--muted);font-size:9px}.detail-prices strong{font-size:23px;letter-spacing:-.04em;font-weight:620}.quantity-field{display:flex;align-items:center;justify-content:space-between;gap:12px}.quantity-field label{font-size:11px;color:var(--muted)}.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}.stepper button{width:38px;height:42px;background:var(--bg);border:0;font-size:17px}.stepper input{width:54px;border:0;border-radius:0;text-align:center;padding:5px;background:var(--bg);min-height:42px;appearance:textfield;-moz-appearance:textfield;font-size:13px}.stepper input::-webkit-inner-spin-button{-webkit-appearance:none}.detail-actions{display:flex;flex-direction:column;gap:10px;margin:15px 0}.detail-note{font-size:10px!important;margin-top:13px}.setting-section{border-top:1px solid var(--line);margin-top:20px;padding-top:20px}.setting-section h3{font-size:13px;margin-bottom:7px}.setting-section p{font-size:11px;line-height:1.7}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 0}.setting-row strong{font-size:12px;display:block;font-weight:560}.setting-row small{font-size:10px;color:var(--muted);display:block;margin-top:3px;line-height:1.7}.switch{appearance:none;min-height:26px;width:44px;height:26px;flex:none;border-radius:15px;background:#384443;padding:0;position:relative;cursor:pointer;transition:background .2s}.switch:before{content:"";display:block;background:#96a3a0;width:18px;height:18px;border-radius:50%;position:absolute;top:3px;left:3px;transition:transform .2s}.switch:checked{background:var(--lime);border-color:var(--lime)}.switch:checked:before{background:#253024;transform:translateX(18px)}.setting-row select,.setting-row input[type=number]{max-width:135px;font-size:12px;background:var(--bg)}.backup-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.backup-actions .btn{font-size:11px}.grading-overview{display:flex;align-items:center;gap:20px;margin-bottom:20px}.grading-overview .card-art{width:90px;flex:none}.grading-overview h3{font-size:22px;margin-bottom:8px}.grading-overview p{font-size:11px}.grading-cost{display:flex;justify-content:space-between;gap:15px;margin:18px 0;padding:16px;border:1px solid var(--line);border-radius:12px}.grading-cost span{font-size:11px;color:var(--muted)}.grading-cost strong{font-size:16px}.grade-result{text-align:center}.grade-result>.eyebrow{color:var(--lime);margin:10px 0 6px}.grade-result h3{font-size:31px;margin:8px 0 10px}.grade-result p{font-size:12px}.grade-result .slab-shell{width:248px;margin:24px auto}.grade-result .grade-pop .slab-shell{animation:slab-in .7s ease-out both}.grade-result .grade-price{font-size:24px;font-weight:650;margin:13px 0 4px}.grade-result .btn{margin-top:19px;min-width:220px}.sale-lines{display:flex;flex-direction:column;gap:16px;max-height:340px;overflow-y:auto}.sale-line{display:flex;align-items:center;gap:12px;min-width:0}.sale-line>.card-art{width:46px;flex:none}.sale-line .sale-description{min-width:0;flex:1}.sale-description strong{font-size:12px;display:block}.sale-description small{font-size:9px;color:var(--muted);display:block;margin-top:4px}.sale-line>.mono{font-size:11px}.sale-line .stepper input{width:36px}.sale-line .stepper button{width:29px}.sale-total{border-top:1px dashed #61735c;margin-top:22px;padding-top:18px;display:flex;align-items:center;justify-content:space-between;font-size:13px}.sale-total strong{font-size:26px;color:var(--lime);letter-spacing:-.05em}.reset-input{width:100%;margin-top:14px}.toast{position:fixed;bottom:27px;left:50%;transform:translate(-50%,20px);background:#e9efe0;color:#293127;padding:13px 19px;border-radius:12px;box-shadow:0 6px 25px #0005;font-size:12px;max-width:calc(100% - 32px);width:max-content;z-index:100;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;pointer-events:none}.toast.show{visibility:visible;transform:translate(-50%,0);opacity:1}.boot{min-height:70svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:25px}.boot-mark{font-size:60px;color:var(--lime);animation:halo 10s infinite linear}.boot h1{font-size:32px}.boot p{font-size:13px}.no-script{padding:30px;color:var(--danger);text-align:center}.storage-error{padding:80px 0;max-width:600px;margin:auto}.storage-error h1{font-size:38px;margin:20px 0}.storage-error p{font-size:13px;line-height:1.8}.storage-error .row{margin-top:22px;flex-wrap:wrap}
+@keyframes page-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@keyframes card-reveal{0%{opacity:.35;transform:perspective(900px) rotateY(-82deg) translateY(18px) scale(.94)}55%{opacity:1;transform:perspective(900px) rotateY(8deg) translateY(-7px) scale(1.015)}100%{transform:perspective(900px) rotateY(0) translateY(0) scale(1)}}@keyframes halo{to{transform:rotate(360deg)}}@keyframes sparkle{0%{opacity:0;transform:translateY(20px) scale(.4)}25%{opacity:.85}100%{opacity:0;transform:translateY(-40px) scale(1.1)}}@keyframes slab-in{0%{opacity:.4;transform:scale(.86) rotate(-9deg)}70%{transform:scale(1.025) rotate(1deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+/* Mobile gets its own rhythm, not a scaled desktop. */
+@media(min-width:1500px){.hero{min-height:440px}.hero-gallery{transform:scale(1.05)}}
+@media(max-width:1100px){.header-inner{gap:20px;padding:0 25px}.desktop-nav{gap:20px}.header-tools{gap:9px}.header-tools>.sound-top{display:none}main{padding-left:25px;padding-right:25px}.hero{gap:15px;min-height:380px}.hero h1{font-size:51px}.hero-card{width:157px;left:calc(50% - 78px)}.hero-card.hero-left{transform:translateX(-88px) rotate(-15deg)}.hero-card.hero-right{transform:translateX(86px) rotate(14deg)}.hero-ticket{bottom:22px}.hero-gallery{height:300px}.pack-grid{gap:11px}.product-body{padding:0 12px 12px}.product h3{font-size:14px}.product-art{height:197px}.product-art .pack-object{width:113px;height:164px}.product-art .pack-name{font-size:18px}.product-art .pack-symbol{width:105px;height:105px}.product-art .pack-bottom{font-size:4px}.product .subtitle{font-size:9px}.product-details{font-size:9px}.product-details span{gap:4px}.product .text-btn{font-size:8px}.product .btn{font-size:11px}.product select{font-size:9px}.card-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}.goals-grid{grid-template-columns:repeat(4,1fr);gap:10px}.goal{padding:15px}.dashboard-metric{padding:0 20px}.standout{gap:17px}.standout-art{width:128px}.standout h2{font-size:20px}.receipt{padding:21px}}
+@media(max-width:820px){.site-header{height:76px}.header-inner{padding:0 22px}.brand-name{font-size:21px}.brand-mark{font-size:32px}.desktop-nav{gap:17px}.desktop-nav button{font-size:12px}.header-tools{gap:8px}.wallet{padding:8px 12px;gap:8px}.wallet .icon{display:none}.wallet-value{font-size:15px}main{padding-left:22px;padding-right:22px}.hero{grid-template-columns:1fr 1fr;min-height:360px;gap:3px}.hero h1{font-size:44px}.hero p{font-size:12px}.hero .eyebrow{font-size:8px}.hero-note{display:none}.hero-gallery{height:275px}.hero-card{width:137px;left:calc(50% - 68px);top:37px}.hero-card.hero-left{transform:translateX(-62px) rotate(-15deg);top:51px}.hero-card.hero-right{transform:translateX(64px) rotate(14deg);top:47px}.hero-ring{width:230px;height:230px;left:calc(50% - 115px)}.hero-ring:after{inset:22px -25px}.hero-ticket{left:calc(50% - 96px);bottom:19px;gap:9px;padding:11px 13px}.hero-ticket strong{font-size:11px}.hero-ticket .eyebrow{font-size:7px}.hero-caption{right:-9px}.hero-spark{right:14px;top:19px;font-size:26px}.pack-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.product-art{height:210px}.product h3{font-size:16px}.product .subtitle,.product-details{font-size:11px}.product .text-btn{font-size:10px}.product select{font-size:11px}.product .btn{font-size:12px}.product-body{padding:0 16px 15px}.product-top{padding:15px 15px 0}.product-art .pack-object{width:125px;height:180px}.product-art .pack-name{font-size:21px}.product-art .pack-symbol{width:120px;height:120px}.pack-grid .product:last-child{grid-column:auto}.dashboard-metric{padding:0 15px;gap:10px}.metric-icon{display:none}.metric-value{font-size:17px}.card-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.filters{grid-template-columns:1fr 135px 150px;gap:10px}.goals-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.goal p{min-height:0}.lifetime-grid{grid-template-columns:repeat(4,1fr);gap:9px}.lifetime-stat{padding:15px}.lifetime-stat strong{font-size:20px}.receipt-layout{gap:14px;grid-template-columns:.95fr 1fr}.standout{flex-direction:column;text-align:center;gap:19px;justify-content:center;padding:22px}.standout-art{width:133px}.standout .standout-value{margin:7px 0}.standout h2{margin:6px 0}.receipt-top{gap:12px}.receipt-top strong{font-size:23px}.receipt-top span{font-size:9px}.receipt-line{font-size:10px;gap:12px}.receipt-actions{flex-direction:column}.stat-strip>div{padding:15px}.stat-strip strong{font-size:20px}.shop-bottom{gap:13px}.tip-tile{padding:15px;gap:10px}.tip-tile>.icon{width:auto}.tip-tile .text-btn{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.collect-card:hover{transform:none}.product:hover .pack-object{transform:rotate(-7deg)}}
+body.reduce-motion *,body.reduce-motion *:before,body.reduce-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+</style>
+  <style>
+/* Holo House 1.1: phone layouts, not shrunken desktop layouts.
+   All dimensions are CSS pixels. The game/save format is unchanged. */
+:root {
+  --app-height: 100dvh;
+  --keyboard-inset: 0px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --nav-height: 66px;
+}
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body.dialog-open { position: fixed; top: var(--locked-scroll, 0px); left: 0; right: 0; width: 100%; }
+.mobile-welcome, .opening-wallet { display: none; }
+.modal-body { min-width: 0; }
+.modal-dock { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 16px; }
+.modal-dock .modal-actions, .modal-dock .detail-actions { margin: 0; }
+.modal-dock .detail-actions { display: flex; gap: 10px; }
+.modal-dock .detail-actions > .btn { flex: 1; }
+.art-inspect { border: 0; padding: 0; background: none; color: inherit; width: 100%; display: block; }
+.art-zoom-label { font-size: 12px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; }
+.art-zoom-label svg { width: 15px; height: 15px; }
+.artwork-view { text-align: center; }
+.artwork-view > .card-art { max-width: min(460px, 65dvh); margin: auto; }
+.artwork-view > .slab-shell { max-width: min(380px, 55dvh); }
+.artwork-view p { margin-top: 14px; font-size: 12px; }
+@media (hover: none) {
+  .collect-card:hover { transform: none; }
+  .product:hover .pack-object { transform: rotate(-7deg); }
+}
+/* The same controls serve phones in portrait and landscape. */
+@media (max-width: 760px), (max-width: 1024px) and (pointer: coarse) and (orientation: landscape) {
+  html { scroll-padding-top: calc(80px + var(--safe-top)); scroll-padding-bottom: calc(86px + var(--safe-bottom)); }
+  body { font-size: 15px; }
+  h2 { font-size: 25px; }
+  h3 { font-size: 18px; }
+  .eyebrow { font-size: 10px; letter-spacing: .11em; }
+  .footnote { font-size: 12px; line-height: 1.65; }
+  .btn, .btn.small { min-height: 48px; font-size: 14px; padding: 12px 14px; border-radius: 12px; }
+  .text-btn, .link-btn { min-height: 44px; font-size: 13px; padding: 10px 8px; }
+  .icon-btn, .header-tools > .icon-btn { width: 44px; height: 44px; }
+  input:not([type=checkbox]):not([type=file]), select,
+  .search-field input, .filters select, .product select,
+  .studio-select select, .setting-row select, .setting-row input[type=number] {
+    font-size: 16px; min-height: 48px; line-height: 1.35;
+  }
+  /* Header and the thumb navigation rail. */
+  .site-header { height: calc(66px + var(--safe-top)); padding-top: var(--safe-top); background: #101618f5; }
+  .header-inner { padding: 0 16px; gap: 8px; }
+  .brand { gap: 5px; min-width: 0; }
+  .brand-mark { font-size: 30px; }
+  .brand-name { font-size: 20px; letter-spacing: -.9px; }
+  .desktop-nav, .header-tools > .sound-top { display: none; }
+  .header-tools { gap: 8px; }
+  .wallet { border: 0; padding: 5px 2px; background: none; gap: 0; border-radius: 0; text-align: right; }
+  .wallet > .icon { display: none; }
+  .wallet-value { font-size: 17px; font-weight: 700; white-space: nowrap; }
+  .wallet small { font-size: 9px; letter-spacing: .05em; }
+  main { padding: 0 16px calc(var(--nav-height) + var(--safe-bottom) + 28px); min-height: calc(var(--app-height) - 66px - var(--safe-top)); }
+  .page { min-width: 0; }
+  .mobile-nav {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    position: fixed; z-index: 30; left: 0; right: 0; bottom: 0;
+    height: calc(var(--nav-height) + var(--safe-bottom)); padding: 5px max(8px, env(safe-area-inset-right)) var(--safe-bottom) max(8px, env(safe-area-inset-left));
+    border-top: 1px solid var(--line); background: #141c1ff5; backdrop-filter: blur(16px);
+  }
+  .mobile-nav button {
+    position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;
+    background: transparent; border: 0; color: var(--muted); min-height: 56px; min-width: 0; border-radius: 12px; padding: 4px;
+    font-size: 11px; line-height: 1.2; white-space: nowrap;
+  }
+  .mobile-nav button .icon { width: 42px; height: 25px; border-radius: 9px; }
+  .mobile-nav button.active { color: var(--lime); }
+  .mobile-nav button.active .icon { background: #dbfa8915; }
+  .mobile-nav .nav-dot { top: 7px; right: calc(50% - 20px); }
+  .keyboard-open .mobile-nav { visibility: hidden; pointer-events: none; }
+  .page-head { flex-direction: column; align-items: stretch; gap: 18px; margin: 26px 0 22px; }
+  .page-head h1 { font-size: 37px; margin: 8px 0; }
+  .page-head p { font-size: 14px; line-height: 1.6; }
+  .page-head > .row { width: 100%; flex-wrap: wrap; gap: 8px; }
+  .page-head > .row .btn { flex: 1; font-size: 13px; padding: 11px 10px; }
+  .section-head { gap: 12px; margin: 24px 0 16px; align-items: center; }
+  .section-head h2 { font-size: 24px; }
+  .section-head p { font-size: 13px; line-height: 1.5; }
+  .section-head > .eyebrow { display: none; }
+  .notice { align-items: center; padding: 16px; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+  .notice > .icon { display: none; }
+  .notice .grow { min-width: 180px; }
+  .notice strong { font-size: 14px; }
+  .notice p { font-size: 12px; }
+  .notice .btn { margin: 0; width: 100%; }
+  .site-note { flex-direction: column; gap: 2px; margin-top: 22px; font-size: 11px; }
+  .site-note > span { max-width: none; }
+  .site-note .text-btn { font-size: 12px; padding-left: 0; }
+  /* Less landing page, more pack shop. Artwork remains a small welcome fan. */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) 100px; min-height: 0; gap: 0; padding: 25px 0 22px; }
+  .hero .eyebrow { font-size: 9px; margin-bottom: 10px; letter-spacing: .07em; }
+  .hero h1 { font-size: clamp(30px, 7.7vw, 42px); line-height: 1.05; }
+  .hero-copy > p:not(.mobile-welcome), .hero-actions { display: none; }
+  .hero .mobile-welcome { display: block; font-size: 13px; line-height: 1.4; margin: 12px 0 0; }
+  .hero-gallery { height: 158px; width: 124px; margin-left: -24px; overflow: clip; }
+  .hero-ring, .hero-ticket, .hero-caption, .hero-spark { display: none; }
+  .hero-card { width: 73px; top: 31px; left: 25px; }
+  .hero-card.hero-left { transform: translateX(-19px) rotate(-14deg); top: 29px; }
+  .hero-card.hero-right { transform: translateX(22px) rotate(14deg); top: 29px; }
+  .hero-card.hero-front { top: 35px; transform: rotate(2deg); }
+  .hero-gallery .card-fallback strong { font-size: 11px; }
+  .hero-gallery .card-fallback small { font-size: 5px; }
+  .hero-gallery .fallback-symbol { font-size: 24px; }
+  .hero-gallery .fallback-bottom { display: none; }
+  .dashboard-metrics { display: grid; grid-template-columns: 1fr 1fr; padding: 16px 0; border-radius: 14px; }
+  .dashboard-metric { padding: 0 14px; gap: 0; min-width: 0; }
+  .dashboard-metric:last-child { display: none; }
+  .metric-icon { display: none; }
+  .metric-label { font-size: 12px; }
+  .metric-value { font-size: 20px; margin-top: 3px; }
+  .metric-value small { display: block; font-size: 10px; margin-top: 2px; }
+  .pack-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .pack-grid .product, .pack-grid .product:last-child {
+    display: grid; grid-column: auto; grid-template-columns: 94px minmax(0, 1fr);
+    grid-template-areas: 'top top' 'art title' 'art subtitle' 'art details' 'choice choice' 'buy buy' 'odds odds';
+    padding: 16px; column-gap: 16px; align-items: start; border-radius: 18px;
+  }
+  .product-top { grid-area: top; padding: 0; margin-bottom: 14px; min-width: 0; }
+  .product-number { font-size: 10px; }
+  .product-top .pill { font-size: 10px; padding: 3px 8px; }
+  .product-art { grid-area: art; height: 146px; margin: 0; overflow: visible; }
+  .product-art:before { inset: 2% -10%; }
+  .product-art .pack-object { width: 82px; height: 128px; padding: 17px 7px 12px; transform: rotate(-7deg); }
+  .product-art .pack-brand { font-size: 4px; }
+  .product-art .pack-name { font-size: 16px; margin-top: auto; }
+  .product-art .pack-symbol { width: 79px; height: 79px; }
+  .product-art .pack-bottom { font-size: 3.5px; }
+  .product-body { display: contents; }
+  .product h3 { grid-area: title; font-size: 21px; line-height: 1.15; margin: 0; }
+  .product .subtitle { grid-area: subtitle; min-height: 0; font-size: 12px; line-height: 1.4; margin: 6px 0; }
+  .product-details { grid-area: details; min-height: 0; font-size: 12px; line-height: 1.45; gap: 6px; margin: 5px 0 12px; }
+  .product-details span { align-items: flex-start; gap: 6px; }
+  .product-details svg { width: 14px; height: 14px; margin-top: 2px; }
+  .product select { grid-area: choice; width: 100%; padding: 12px; margin: 12px 0 8px; background: var(--bg); }
+  .product .btn { grid-area: buy; font-size: 16px; min-height: 50px; margin: 0; }
+  .product .text-btn { grid-area: odds; justify-self: center; width: 100%; min-height: 44px; margin: 2px 0 -6px; font-size: 13px; }
+  .product .text-btn svg { width: 16px; height: 16px; }
+  .shop-bottom { grid-template-columns: 1fr; gap: 12px; margin-top: 22px; }
+  .tip-tile { padding: 18px; gap: 12px; }
+  .tip-tile h3 { font-size: 15px; }
+  .tip-tile p { font-size: 12px; }
+  .tip-tile > .icon { display: none; }
+  .tip-tile .text-btn { min-width: 44px; }
+  /* Binder: two readable pockets, stable search nodes, no keyboard-triggered rerenders. */
+  .stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 20px; }
+  .stat-strip > div { padding: 15px 13px; min-width: 0; }
+  .stat-strip .label { font-size: 11px; line-height: 1.4; }
+  .stat-strip strong { display: block; font-size: clamp(21px, 5.3vw, 26px); overflow-wrap: anywhere; }
+  .stat-strip small { font-size: 11px; }
+  .binder-toolbar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .binder-toolbar .segmented { grid-column: 1 / -1; width: 100%; }
+  .segmented button { flex: 1; min-height: 44px; font-size: 13px; padding: 8px; }
+  .binder-toolbar > .btn { font-size: 13px; min-height: 46px; padding: 10px; }
+  .filter-pill { font-size: 12px; min-height: 46px; justify-content: flex-end; }
+  .filter-pill input { width: 20px; height: 20px; min-height: 20px; }
+  .filters { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .filters .search-field { grid-column: 1 / -1; }
+  .filters select { padding: 11px 7px; }
+  .search-field svg { top: 15px; }
+  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .card-grid > div { min-width: 0; }
+  .card-info { padding: 11px 0 0; }
+  .card-info h3 { font-size: 15px; line-height: 1.35; margin: 5px 0; }
+  .card-info .rarity { font-size: 10px; }
+  .card-info .edition { font-size: 10px; margin-bottom: 7px; }
+  .card-info .value { font-size: 17px; }
+  .card-info .sold-note { font-size: 10px; }
+  .collect-card .card-badge { font-size: 10px; padding: 5px 6px; right: 6px; top: 6px; }
+  .card-fallback small { font-size: 8px; }
+  .card-fallback strong { font-size: 20px; }
+  .card-fallback .fallback-bottom { font-size: 9px; padding-top: 6px; }
+  .artwork-status { font-size: 8px; }
+  .fallback-symbol { font-size: 44px; }
+  .selection-bar {
+    position: fixed; left: 12px; right: 12px; bottom: calc(var(--nav-height) + var(--safe-bottom) + 8px);
+    margin: 0 auto; padding: 10px 12px; gap: 6px; max-width: 640px; z-index: 25;
+  }
+  .selection-bar strong { font-size: 12px; }
+  .selection-bar .btn { min-height: 46px; font-size: 12px; padding: 10px; }
+  .selection-bar .text-btn { min-width: 44px; font-size: 12px; }
+  .page:has(.selection-bar) { padding-bottom: 76px; }
+  .empty-state { padding: 36px 22px; }
+  .empty-state h2 { font-size: 23px; }
+  /* Phone grading: complete odds, legible fees and separate raw/slab controls. */
+  .studio-hero { grid-template-columns: 1fr; padding: 20px; gap: 0; }
+  .studio-hero h2 { font-size: 28px; }
+  .studio-hero p { font-size: 14px; line-height: 1.7; }
+  .studio-hero .footnote { font-size: 12px; }
+  .studio-example { display: none; }
+  .grade-strip { gap: 6px; }
+  .grade-strip div { padding: 10px 1px; }
+  .grade-strip strong { font-size: 23px; }
+  .grade-strip span, .grade-strip small { font-size: 10px; }
+  .studio-select { flex-wrap: wrap; gap: 10px; }
+  .studio-select .search-field { flex-basis: 100%; min-width: 0; }
+  .studio-select select { width: 100%; }
+  .grade-eligible .btn { margin-top: 10px; font-size: 13px; }
+  /* Full-height opening table. Main actions stay within the viewport without scrolling. */
+  body.pack-active { height: var(--app-height); overflow: hidden; }
+  .pack-active .site-header, .pack-active .mobile-nav { display: none; }
+  .pack-active main { height: 100%; min-height: 0; max-width: none; padding: 0; }
+  .opener {
+    width: 100%; height: 100%; display: grid; grid-template-rows: 48px minmax(0, 1fr);
+    padding: var(--safe-top) max(16px, env(safe-area-inset-right)) max(10px, var(--safe-bottom)) max(16px, env(safe-area-inset-left));
+    animation: none;
+  }
+  .opening-head { padding-top: 0; gap: 10px; min-width: 0; }
+  .opening-head .text-btn { min-height: 44px; font-size: 13px; padding: 10px 0; }
+  .opening-head > .text-btn:last-child { min-width: 44px; }
+  .opening-head .opening-purchase { display: none; }
+  .opening-wallet { display: flex; align-items: center; gap: 7px; font-size: 15px; margin-left: auto; }
+  .opening-wallet .icon { color: var(--lime); }
+  .opening-wallet svg { width: 17px; height: 17px; }
+  .opening-top {
+    min-height: 0; width: 100%; max-width: 600px; margin: 0 auto;
+    display: grid; grid-template-rows: auto 3px auto minmax(0, 1fr) auto 52px 44px auto;
+    row-gap: 7px;
+  }
+  .opening-title { padding: 3px 0 4px; }
+  .opening-title h1 { font-size: 26px; margin-top: 3px; }
+  .opening-title .eyebrow { font-size: 10px; }
+  .opening-title p { display: none; }
+  .opening-top > .progress-track { margin-top: 0; }
+  .progress-labels { font-size: 10px; gap: 8px; line-height: 1.5; flex-wrap: wrap; }
+  .opening-top > .progress-labels { margin: 0; font-size: 10px; white-space: nowrap; flex-wrap: nowrap; }
+  .opening-stage { min-height: 0; height: auto; max-height: none; overflow: clip; }
+  .opening-stage .stage-ring { width: 280px; height: 280px; max-width: 87%; max-height: 90%; }
+  .stage-ring:after { inset: 25px -15px; }
+  .stage-card-button { width: min(74vw, 295px, calc((var(--stage-height, 320px) - 16px) * .71637)); }
+  .reveal-card { filter: drop-shadow(0 10px 16px #0005); }
+  .rare-halo { width: 300px; height: 300px; max-width: 100%; max-height: 100%; }
+  .tear-target { --pack-height: min(330px, calc(var(--stage-height, 320px) - 46px)); padding: 20px 30px 26px; touch-action: pan-y pinch-zoom; }
+  .tear-target .pack-object.big {
+    width: calc(var(--pack-height) * .6944); height: var(--pack-height); padding: 12% 6% 10%;
+  }
+  .pack-object.big .pack-symbol { width: 96%; height: auto; aspect-ratio: 1; }
+  .pack-object.big .pack-name { font-size: clamp(18px, calc(var(--pack-height) * .11), 37px); margin-top: auto; }
+  .pack-object.big .pack-brand { font-size: clamp(5px, calc(var(--pack-height) * .025), 9px); }
+  .pack-object.big .pack-bottom { font-size: clamp(4px, calc(var(--pack-height) * .019), 7px); }
+  .tear-line { top: 34px; left: 41px; right: 24px; }
+  .tear-instruction { bottom: 1px; font-size: 10px; white-space: nowrap; }
+  .reveal-caption { width: 100%; max-width: none; min-height: 0; padding: 0 0 4px; }
+  .reveal-caption h2 { font-size: clamp(20px, 5.6vw, 25px); line-height: 1.12; margin: 5px 0 7px; }
+  .reveal-caption .eyebrow { font-size: 10px; }
+  .reveal-caption > .footnote { display: none; }
+  .reveal-caption .rarity { font-size: 11px; }
+  .reveal-caption .row { flex-wrap: wrap; gap: 4px 8px; font-size: 12px; }
+  .reveal-caption .value { font-size: 18px; }
+  .reveal-caption .pill { font-size: 10px; padding: 3px 7px; }
+  .pack-dots { display: none; }
+  .opening-controls { width: 100%; margin: 0; max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+  .opening-controls > .primary { max-width: none; }
+  .opening-controls .btn { height: 52px; font-size: 15px; padding: 11px 14px; }
+  .opening-controls .auto-btn { min-width: 116px; font-size: 13px; }
+  .opening-foot { margin: 0; justify-content: space-between; gap: 8px; }
+  .opening-foot .text-btn { font-size: 12px; min-height: 44px; padding: 8px 2px; }
+  .opening-foot svg { width: 17px; height: 17px; }
+  .opening-save { font-size: 9px; margin: 0; line-height: 1.3; }
+  /* Results return to normal scrolling and retain bottom navigation. */
+  .results-head { margin: 24px 0 20px; }
+  .results-head h1 { font-size: 36px; margin: 9px 0; }
+  .results-head p { font-size: 14px; }
+  .receipt-layout { grid-template-columns: 1fr; gap: 16px; }
+  .standout { flex-direction: row; text-align: left; padding: 18px; gap: 20px; justify-content: flex-start; }
+  .standout > div { min-width: 0; }
+  .standout-art { width: 108px; flex-shrink: 0; }
+  .standout .eyebrow { font-size: 9px; }
+  .standout h2 { font-size: 23px; margin: 6px 0; }
+  .standout p { font-size: 12px; }
+  .standout .standout-value { font-size: 25px; margin: 10px 0 5px; }
+  .receipt { padding: 18px; }
+  .receipt-top { gap: 15px; padding-bottom: 17px; }
+  .receipt-top > div { flex: 1; min-width: 0; }
+  .receipt-top strong { font-size: clamp(24px, 6vw, 32px); overflow-wrap: anywhere; }
+  .receipt-top span { font-size: 12px; line-height: 1.4; }
+  .receipt-line { font-size: 13px; padding: 10px 0; align-items: flex-start; gap: 16px; }
+  .receipt-line > strong { text-align: right; font-size: 13px; flex-shrink: 0; }
+  .receipt .footnote { font-size: 12px !important; }
+  .receipt-actions { flex-direction: column; gap: 10px; }
+  .receipt-actions .btn { font-size: 14px; }
+  .result-meta { display: flex; flex-direction: column; gap: 5px; align-items: flex-end; }
+  .result-meta .pill { font-size: 10px; }
+  .result-actions { flex-direction: column; gap: 10px; }
+  .result-actions .btn { width: 100%; }
+  /* Goals and lifetime metrics still fit, without unreadable footnotes. */
+  .hall-hero { grid-template-columns: 1fr; gap: 12px; }
+  .best-record { padding: 20px; gap: 18px; }
+  .best-record strong { font-size: 26px; }
+  .best-record p { font-size: 13px; }
+  .goals-grid { grid-template-columns: 1fr; gap: 12px; }
+  .goal { padding: 20px; }
+  .goal h3 { font-size: 19px; }
+  .goal p { font-size: 13px; min-height: 0; }
+  .goal .goal-top { margin-bottom: 12px; }
+  .goal .goal-top strong { font-size: 19px; }
+  .goal .btn { font-size: 14px; }
+  .progress-summary { padding: 16px; gap: 12px; }
+  .progress-summary p { font-size: 12px; }
+  .lifetime-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .lifetime-stat { padding: 16px; min-width: 0; }
+  .lifetime-stat strong { font-size: 24px; overflow-wrap: anywhere; }
+  .lifetime-stat span { font-size: 12px; }
+  /* Sheets stop background scroll. Their header and action dock never scroll away. */
+  dialog, dialog.wide {
+    position: fixed; inset: auto 0 var(--keyboard-inset) 0; margin: 0 auto; padding: 0;
+    width: 100%; max-width: 620px; max-height: calc(var(--app-height) - var(--safe-top) - 10px);
+    overflow: hidden; border: 1px solid var(--line); border-bottom: 0; border-radius: 24px 24px 0 0;
+  }
+  dialog::backdrop { backdrop-filter: blur(5px); }
+  .modal-inner { padding: 0; display: flex; flex-direction: column; max-height: inherit; min-height: 0; overflow: hidden; }
+  .modal-head { flex: 0 0 auto; margin: 0; padding: 15px 16px 12px; gap: 12px; border-bottom: 1px solid var(--line); background: var(--panel); }
+  .modal-head h2 { font-size: 23px; line-height: 1.2; overflow-wrap: anywhere; }
+  .modal-head .icon-btn { width: 44px; height: 44px; }
+  .modal-head .icon-btn svg { width: 19px; height: 19px; }
+  .modal-body { padding: 18px 16px max(18px, var(--safe-bottom)); overflow-y: auto; overscroll-behavior-y: contain; min-height: 0; -webkit-overflow-scrolling: touch; }
+  .modal-body > :last-child { margin-bottom: 0; }
+  .modal-dock { flex: 0 0 auto; margin: 0; padding: 12px 16px max(12px, var(--safe-bottom)); background: var(--panel); border-top: 1px solid var(--line); }
+  .modal-actions, .modal-dock .detail-actions { display: flex; flex-direction: column; gap: 9px; margin-top: 20px; }
+  .modal-dock .modal-actions, .modal-dock .detail-actions { margin: 0; }
+  .modal-actions .btn, .detail-actions .btn { font-size: 15px; min-width: 0; width: 100%; min-height: 48px; }
+  .modal-dock .modal-actions > .primary { order: -1; }
+  .modal-dock .modal-actions > .ghost { min-height: 44px; }
+  .modal-intro { font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+  .modal-footer { font-size: 12px; line-height: 1.6; }
+  .odds-intro { gap: 18px; }
+  .odds-intro p { font-size: 13px; line-height: 1.65; }
+  .odds-intro .pill { font-size: 10px; white-space: normal; }
+  .odds-table { font-size: 12px; }
+  .odds-table th { font-size: 10px; padding: 10px 4px 10px 0; vertical-align: bottom; }
+  .odds-table td { padding: 12px 4px 12px 0; }
+  .odds-table .rarity { font-size: 11px; }
+  .slot-note { font-size: 13px; line-height: 1.7; }
+  .pity-card { padding: 16px; }
+  .pity-card h3 { font-size: 15px; }
+  .pity-card p { font-size: 13px; line-height: 1.7; }
+  .detail-layout { grid-template-columns: 1fr; gap: 12px; }
+  .detail-art { max-width: min(48vw, 185px); margin: 0 auto; width: 100%; }
+  .detail-info h3 { font-size: 29px; line-height: 1.2; margin: 7px 0; }
+  .detail-info .rarity { font-size: 11px; }
+  .detail-info > p { font-size: 13px; }
+  .detail-info .footnote, .detail-note { font-size: 12px; }
+  .detail-prices { padding: 15px 0; gap: 16px; }
+  .detail-prices strong { font-size: 27px; }
+  .detail-prices small { font-size: 12px; }
+  .quantity-field { font-size: 14px; margin-top: 15px; flex-wrap: wrap; gap: 10px; }
+  .stepper button { min-width: 48px; width: 48px; height: 48px; font-size: 20px; }
+  .stepper input { width: 50px; height: 48px; font-size: 16px; padding: 5px; }
+  .slab-large { padding: 10px; border-radius: 13px; }
+  .slab-large .slab-label { padding: 8px; min-height: 48px; margin-bottom: 9px; }
+  .slab-large .slab-label strong { font-size: 9px; }
+  .slab-large .slab-label small { font-size: 7px; }
+  .slab-large .grade-number { font-size: 30px; }
+  .slab-large .barcode { height: 7px; }
+  .grade-result .slab-shell { width: min(65vw, 240px); margin: 18px auto; }
+  .grade-result h3 { font-size: 29px; }
+  .grade-result p { font-size: 13px; }
+  .grade-result .grade-price { font-size: 33px; }
+  .grading-overview { gap: 16px; }
+  .grading-overview .card-art { width: 75px; flex-shrink: 0; }
+  .grading-overview h3 { font-size: 23px; }
+  .grading-overview p { font-size: 12px; }
+  .grading-cost { font-size: 13px; gap: 12px; }
+  .grading-cost strong { font-size: 26px; }
+  .grading-cost small { font-size: 12px; }
+  .artwork-view > .card-art { max-width: min(88vw, calc((var(--app-height) - 220px) * .71637)); }
+  .artwork-view > .slab-shell { max-width: min(84vw, calc((var(--app-height) - 220px) * .62)); }
+  .artwork-view .card-fallback strong { font-size: 28px; }
+  .artwork-view .card-fallback small { font-size: 11px; }
+  .artwork-view .card-fallback .fallback-bottom { font-size: 12px; }
+  .artwork-view p { font-size: 12px; }
+  .setting-row { gap: 14px; flex-wrap: wrap; align-items: center; }
+  .setting-row > label { flex: 1; min-width: 155px; }
+  .setting-row strong { font-size: 14px; }
+  .setting-row small { font-size: 12px; line-height: 1.6; margin-top: 4px; }
+  .setting-row .switch { width: 52px; height: 44px; min-height: 44px; border: 9px solid transparent; background-clip: padding-box; box-sizing: content-box; }
+  .setting-row input.switch { width: 44px; height: 26px; min-height: 26px; }
+  .setting-row select, .setting-row input[type=number] { max-width: none; width: 100%; }
+  .setting-row:has(.switch) { flex-wrap: nowrap; }
+  .setting-section > p { font-size: 13px; line-height: 1.7; }
+  .setting-section h3 { font-size: 18px; }
+  .setting-section > .row { flex-wrap: wrap; }
+  .backup-actions { gap: 9px; }
+  .backup-actions .btn { font-size: 13px; flex: 1; }
+  .sale-lines { max-height: none; overflow: visible; }
+  .sale-line { display: grid; grid-template-columns: 45px minmax(0, 1fr) auto; gap: 8px 12px; padding: 15px 0; }
+  .sale-line > .card-art { width: 45px; grid-row: 1 / 3; }
+  .sale-line > .sale-description { grid-column: 2 / 4; min-width: 0; }
+  .sale-description strong { font-size: 14px; white-space: normal; line-height: 1.4; }
+  .sale-description small { font-size: 11px; }
+  .sale-line > .stepper { grid-column: 2; justify-self: start; }
+  .sale-line > .mono { font-size: 13px; }
+  .sale-line .stepper button { width: 44px; min-width: 44px; height: 48px; }
+  .sale-line .stepper input { width: 40px; font-size: 16px; }
+  .sale-total { font-size: 14px; gap: 12px; }
+  .sale-total strong { font-size: 28px; }
+  .toast { max-width: calc(100% - 24px); width: max-content; bottom: calc(var(--nav-height) + var(--safe-bottom) + 14px); font-size: 13px; padding: 13px 17px; line-height: 1.5; }
+  .pack-active .toast { bottom: calc(132px + var(--safe-bottom)); }
+  .dialog-open .toast { z-index: 100; }
+}
+@media (max-width: 370px) {
+  .header-inner { padding: 0 12px; }
+  .brand-name { font-size: 18px; }
+  .brand-mark { font-size: 26px; }
+  .header-tools { gap: 4px; }
+  .wallet-value { font-size: 16px; }
+  main { padding-left: 12px; padding-right: 12px; }
+  .hero { grid-template-columns: minmax(0, 1fr) 83px; }
+  .hero-gallery { width: 108px; }
+  .product h3 { font-size: 20px; }
+  .pack-grid .product, .pack-grid .product:last-child { padding: 14px; grid-template-columns: 80px minmax(0, 1fr); gap: 0 13px; }
+  .card-grid { gap: 22px 12px; }
+  .card-info .sold-note { display: none; }
+  .filters { grid-template-columns: 1fr; }
+  .filters .search-field { grid-column: auto; }
+  .opening-controls .btn { font-size: 14px; padding: 10px; }
+  .opening-controls .auto-btn { min-width: 106px; font-size: 12px; }
+  .opening-top > .progress-labels { font-size: 9px; }
+  .standout { gap: 15px; padding: 16px; }
+  .standout-art { width: 90px; }
+  .standout h2 { font-size: 22px; }
+  .receipt-line { font-size: 12px; gap: 10px; }
+  .receipt-line > strong { font-size: 12px; }
+  .modal-head h2 { font-size: 21px; }
+  .modal-body { padding-left: 14px; padding-right: 14px; }
+  .odds-intro .pack-object { width: 75px; height: 115px; }
+  .odds-intro .pack-symbol { width: 70px; height: 70px; }
+  .odds-intro .pack-name { font-size: 14px; margin-top: 35px; }
+  .odds-table { font-size: 11px; }
+  .grade-strip { gap: 3px; }
+  .grade-strip span, .grade-strip small { font-size: 9px; }
+  .sale-line { grid-template-columns: 36px minmax(0, 1fr) auto; gap: 8px; }
+  .sale-line > .card-art { width: 36px; }
+}
+@media (max-height: 690px) and (max-width: 760px) and (orientation: portrait) {
+  .opening-top { grid-template-rows: auto 3px auto minmax(0, 1fr) auto 50px 44px; row-gap: 5px; }
+  .opening-save { display: none; }
+  .opening-title h1 { font-size: 23px; }
+  .opening-controls .btn { height: 50px; min-height: 50px; }
+  .reveal-caption h2 { font-size: 21px; }
+  .reveal-caption .row { font-size: 11px; }
+  .reveal-caption .value { font-size: 16px; }
+  .reveal-caption .pill { font-size: 9px; }
+}
+@media (min-width: 520px) and (max-width: 760px) {
+  .pack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pack-grid .product, .pack-grid .product:last-child { grid-template-columns: 68px minmax(0,1fr); padding: 14px; gap: 0 10px; }
+  .product h3 { font-size: 20px; }
+  .product-art .pack-object { width: 63px; height: 103px; }
+  .product-art .pack-symbol { width: 60px; height: 60px; }
+  .product-art .pack-name { font-size: 13px; }
+  .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .goals-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Landscape gives the artwork one half and all controls the other. */
+@media (orientation: landscape) and (max-height: 540px) and (max-width: 1024px) {
+  .pack-active .site-header, .pack-active .mobile-nav { display: none; }
+  body.pack-active { height: var(--app-height); overflow: hidden; }
+  .pack-active main { height: 100%; min-height: 0; padding: 0; max-width: none; }
+  .opener { height: 100%; display: grid; grid-template-rows: 44px minmax(0, 1fr); padding: var(--safe-top) max(16px, env(safe-area-inset-right)) max(8px, var(--safe-bottom)) max(16px, env(safe-area-inset-left)); }
+  .opening-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr); grid-template-rows: auto 3px auto minmax(0, 1fr) 48px 44px; max-width: none; gap: 5px 22px; margin: 0; min-height: 0; }
+  .opening-title { grid-column: 2; grid-row: 1; }
+  .opening-title h1 { font-size: 22px; }
+  .opening-title p { display: none; }
+  .opening-top > .progress-track { grid-column: 2; grid-row: 2; margin: 0; }
+  .opening-top > .progress-labels { grid-column: 2; grid-row: 3; }
+  .opening-stage { grid-column: 1; grid-row: 1 / -1; min-height: 0; height: auto; max-height: none; overflow: clip; }
+  .stage-card-button { width: min(270px, calc((var(--stage-height, 250px) - 15px) * .71637)); }
+  .reveal-caption { grid-column: 2; grid-row: 4; align-self: center; min-height: 0; padding: 0; }
+  .reveal-caption h2 { font-size: 22px; }
+  .reveal-caption .footnote, .pack-dots { display: none; }
+  .opening-controls { grid-column: 2; grid-row: 5; margin: 0; width: 100%; }
+  .opening-controls .btn { min-height: 48px; height: 48px; }
+  .opening-foot { grid-column: 2; grid-row: 6; margin: 0; }
+  .opening-save { display: none; }
+  .opening-head { padding: 0; }
+}
+/* Wrapped cards (opening receipts and grading candidates) fill their grid pocket too. */
+.card-grid > div > .collect-card { display: block; width: 100%; }
+@media (max-width: 760px) {
+  .tip-tile .text-btn { display: inline-flex; }
+  .product-details { border: 0; padding-top: 0; }
+}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to game</a>
+  <header id="header" class="site-header"></header>
+  <main id="main" tabindex="-1"><section class="boot"><span class="boot-mark">✦</span><h1>Make room for a little magic.</h1><p>Opening Holo House…</p></section></main>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Main navigation"></nav>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="no-script">Holo House needs JavaScript to open packs and save your collection. Enable JavaScript and reload.</div></noscript>
+<script>window.HH_STANDALONE = true;</script>
+<script>
+/* catalog.js */
+/* Holo House • bundled catalog and deliberately fictional economy.
+   Card identity/artwork: PokemonTCG/pokemon-tcg-data (see README).
+   House tiers, valuations, pack collation and grading are game rules, NOT market data. */
+(function (root, factory) {
+  const data = factory();
+  if (typeof module === 'object' && module.exports) module.exports = data;
+  else root.HHCatalog = data;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const TIERS = ['Common', 'Uncommon', 'Rare', 'Holo', 'Ultra', 'Crown'];
+  const SETS = {base1:'Base Set',sv3pt5:'Scarlet & Violet—151',swsh7:'Evolving Skies',swsh11:'Lost Origin',swsh12:'Silver Tempest',swsh4:'Vivid Voltage',swsh9:'Brilliant Stars'};
+  const kanto = ('Bulbasaur|Ivysaur|Venusaur|Charmander|Charmeleon|Charizard|Squirtle|Wartortle|Blastoise|Caterpie|Metapod|Butterfree|Weedle|Kakuna|Beedrill|Pidgey|Pidgeotto|Pidgeot|Rattata|Raticate|Spearow|Fearow|Ekans|Arbok|Pikachu|Raichu|Sandshrew|Sandslash|Nidoran ♀|Nidorina|Nidoqueen|Nidoran ♂|Nidorino|Nidoking|Clefairy|Clefable|Vulpix|Ninetales|Jigglypuff|Wigglytuff|Zubat|Golbat|Oddish|Gloom|Vileplume|Paras|Parasect|Venonat|Venomoth|Diglett|Dugtrio|Meowth|Persian|Psyduck|Golduck|Mankey|Primeape|Growlithe|Arcanine|Poliwag|Poliwhirl|Poliwrath|Abra|Kadabra|Alakazam|Machop|Machoke|Machamp|Bellsprout|Weepinbell|Victreebel|Tentacool|Tentacruel|Geodude|Graveler|Golem|Ponyta|Rapidash|Slowpoke|Slowbro|Magnemite|Magneton|Farfetch’d|Doduo|Dodrio|Seel|Dewgong|Grimer|Muk|Shellder|Cloyster|Gastly|Haunter|Gengar|Onix|Drowzee|Hypno|Krabby|Kingler|Voltorb|Electrode|Exeggcute|Exeggutor|Cubone|Marowak|Hitmonlee|Hitmonchan|Lickitung|Koffing|Weezing|Rhyhorn|Rhydon|Chansey|Tangela|Kangaskhan|Horsea|Seadra|Goldeen|Seaking|Staryu|Starmie|Mr. Mime|Scyther|Jynx|Electabuzz|Magmar|Pinsir|Tauros|Magikarp|Gyarados|Lapras|Ditto|Eevee|Vaporeon|Jolteon|Flareon|Porygon|Omanyte|Omastar|Kabuto|Kabutops|Aerodactyl|Snorlax|Articuno|Zapdos|Moltres|Dratini|Dragonair|Dragonite|Mewtwo|Mew').split('|');
+  const evolved = new Set([2,5,8,11,14,17,20,22,28,30,33,36,42,44,47,49,51,53,55,57,61,64,67,70,73,75,78,80,82,85,87,89,91,93,97,99,101,103,105,110,112,117,119,121,134,135,136,138,140,148]);
+  const final = new Set([12,15,18,26,31,34,45,59,62,68,71,94,106,107,113,123,125,126,127,128,130,131,132,139,141,142,143,144,146,149,150]);
+  const ex = new Set([3,6,9,24,38,40,65,76,115,124,145,151]);
+  const ranges = [[30,85],[100,240],[280,560],[700,1450],[2300,5400],[10500,26500]];
+  const specialValues = {'base1-4':32000,'base1-2':16800,'base1-15':15200,'sv3pt5-199':36000,'sv3pt5-198':24500,'sv3pt5-200':26000,'sv3pt5-201':21000,'sv3pt5-202':23000,'sv3pt5-205':28500,'swsh7-215':48000,'swsh7-218':42000,'swsh7-205':29000,'swsh7-209':30500,'swsh7-212':31500,'swsh11-186':39500,'swsh12-186':32500,'swsh4-188':34000,'swsh9-154':35500};
+  function hash(s) { let h=2166136261; for (const c of s) { h^=c.charCodeAt(0); h=Math.imul(h,16777619); } return h>>>0; }
+  const cards=[];
+  function add(set,number,name,tier,edition) {
+    const id=`${set}-${number}`, r=ranges[tier];
+    cards.push(Object.freeze({id,name,tier,rarity:TIERS[tier],setId:set,set:SETS[set],number:String(number),edition,
+      value:specialValues[id] || r[0]+hash(id)%(r[1]-r[0]+1),
+      image:`https://images.pokemontcg.io/${set}/${number}.png`,
+      large:`https://images.pokemontcg.io/${set}/${number}_hires.png`}));
+  }
+  const base = 'Alakazam|Blastoise|Chansey|Charizard|Clefairy|Gyarados|Hitmonchan|Machamp|Magneton|Mewtwo|Nidoking|Ninetales|Poliwrath|Raichu|Venusaur|Zapdos|Beedrill|Dragonair|Dugtrio|Electabuzz|Electrode|Pidgeotto|Arcanine|Charmeleon|Dewgong|Dratini|Farfetch’d|Growlithe|Haunter|Ivysaur|Jynx|Kadabra|Kakuna|Machoke|Magikarp|Magmar|Nidorino|Poliwhirl|Porygon|Raticate|Seel|Wartortle|Abra|Bulbasaur|Caterpie|Charmander|Diglett|Doduo|Drowzee|Gastly|Koffing|Machop|Magnemite|Metapod|Nidoran ♂|Onix|Pidgey|Pikachu|Poliwag|Ponyta|Rattata|Sandshrew|Squirtle|Starmie|Staryu|Tangela|Voltorb|Vulpix|Weedle';
+  base.split('|').forEach((name,i)=>{const n=i+1; const tier=[2,4,15].includes(n)?5:[1,6,10,14].includes(n)?4:n<=16?3:n<=22?2:n<=42?1:0;add('base1',n,name,tier,n<=16?'Vintage holo':'Vintage standard');});
+  kanto.forEach((name,i)=>{const n=i+1;add('sv3pt5',n,name+(ex.has(n)?' ex':''),ex.has(n)?4:final.has(n)?3:evolved.has(n)?2:0,ex.has(n)?'Pokémon ex':'Standard');});
+  // Middle-stage standard cards provide the Uncommon house tier in the modern pool.
+  for (let i=69;i<220;i++) if (cards[i].tier===2 && Number(cards[i].number)%3!==0) cards[i]=Object.freeze({...cards[i],tier:1,rarity:TIERS[1],value:100+hash(cards[i].id)%141});
+  const art = [[166,'Bulbasaur'],[167,'Ivysaur'],[168,'Charmander'],[169,'Charmeleon'],[170,'Squirtle'],[171,'Wartortle'],[172,'Caterpie'],[173,'Pikachu'],[174,'Nidoking'],[175,'Psyduck'],[176,'Poliwhirl'],[177,'Machoke'],[178,'Tangela'],[179,'Mr. Mime'],[180,'Omanyte'],[181,'Dragonair']];
+  art.forEach(([n,name])=>add('sv3pt5',n,name,4,'Illustration rare'));
+  ['Venusaur','Charizard','Blastoise','Arbok','Ninetales','Wigglytuff','Alakazam','Golem','Kangaskhan','Jynx','Zapdos','Mew'].forEach((n,i)=>add('sv3pt5',182+i,n+' ex',4,'Full art'));
+  [[198,'Venusaur'],[199,'Charizard'],[200,'Blastoise'],[201,'Alakazam'],[202,'Zapdos'],[205,'Mew']].forEach(([n,name])=>add('sv3pt5',n,name+' ex',5,n===205?'Gold hyper rare':'Special illustration'));
+  [[205,'Leafeon VMAX'],[209,'Glaceon VMAX'],[212,'Sylveon VMAX'],[215,'Umbreon VMAX'],[218,'Rayquaza VMAX'],[180,'Espeon V'],[189,'Umbreon V'],[192,'Dragonite V'],[194,'Rayquaza V']].forEach(([n,name])=>add('swsh7',n,name,5,'Alternate art'));
+  add('swsh11',186,'Giratina V',5,'Alternate art');add('swsh12',186,'Lugia V',5,'Alternate art');add('swsh4',188,'Pikachu VMAX',5,'Rainbow rare');add('swsh9',154,'Charizard V',5,'Alternate art');
+  const BY_ID=Object.freeze(Object.fromEntries(cards.map(c=>[c.id,c])));
+  // Each array is a slot's exact weight distribution over the six house tiers.
+  const SLOT={basic:[80,20,0,0,0,0],uncommon:[0,100,0,0,0,0],rare:[0,0,75,25,0,0],holo:[0,0,0,100,0,0],ultra:[0,0,0,0,100,0],crown:[0,0,0,0,0,100]};
+  const PACKS=[
+    {id:'daybreak',name:'Daybreak',subtitle:'A little original magic.',theme:'sun',color:'#edbc76',price:1400,box:5,pool:['base1'],slots:[SLOT.basic,SLOT.basic,SLOT.basic,[0,0,100,0,0,0],[0,0,75,20,4.8,0.2]],pity:10,target:4,guarantee:'2 Rare-or-better slots',description:'An affordable trip back to the original 69 Pokémon cards. Vintage artwork, familiar faces, and a tiny chance at a classic crown.'},
+    {id:'electric',name:'Electric Dreams',subtitle:'Your everyday spark.',theme:'bolt',color:'#dfff85',price:3200,box:5,pool:['base1','sv3pt5'],slots:[SLOT.basic,SLOT.basic,SLOT.basic,SLOT.basic,SLOT.rare,SLOT.rare,[0,0,32,50,17,1]],pity:8,target:4,guarantee:'3 Rare-or-better slots',description:'Classic nostalgia meets the 151 collection. Seven chances to find a new favorite, with a boosted Ultra-or-better feature slot.'},
+    {id:'prism',name:'Prism Gallery',subtitle:'Art worth getting lost in.',theme:'prism',color:'#bbabf7',price:6800,box:5,pool:['sv3pt5'],slots:[SLOT.uncommon,SLOT.uncommon,SLOT.uncommon,SLOT.rare,SLOT.rare,SLOT.rare,SLOT.holo,[0,0,0,30,65,5]],pity:4,target:4,guarantee:'2 Holo-or-better slots',description:'A modern-art collection with no Commons, a dedicated Holo slot, and a 70% Ultra-or-better feature slot.'},
+    {id:'midnight',name:'Midnight Archive',subtitle:'For the dedicated collector.',theme:'orbit',color:'#88c9e3',price:17500,box:3,pool:null,slots:[SLOT.uncommon,SLOT.holo,SLOT.holo,SLOT.ultra,SLOT.ultra,[0,0,0,0,85,15]],pity:5,target:5,guarantee:'3 Ultra-or-better slots',description:'The entire catalog is in play. Two fixed Ultras, two Holos, and a feature slot that can uncover an iconic alternate-art Crown.'},
+    {id:'crown',name:'Crown Reserve',subtitle:'Nothing ordinary inside.',theme:'crown',color:'#ebce7d',price:31000,box:3,pool:null,slots:[SLOT.holo,SLOT.holo,SLOT.ultra,SLOT.ultra,SLOT.crown],pity:0,target:5,guarantee:'1 guaranteed Crown',description:'Our most exclusive curation: two Holos, two Ultras, and a guaranteed Crown. A celebration of the chase, not a guaranteed profit.'}
+  ].map(Object.freeze);
+  const GRADES=[{grade:6,label:'Excellent',weight:10,multiplier:0.6},{grade:7,label:'Near mint',weight:22,multiplier:0.85},{grade:8,label:'Mint',weight:34,multiplier:1.15},{grade:9,label:'Mint+',weight:26,multiplier:1.9},{grade:10,label:'Gem mint',weight:8,multiplier:4}];
+  const GOALS=[
+    {id:'first',title:'The first rip',description:'Open your first pack.',field:'packsOpened',target:1,reward:2000},
+    {id:'five',title:'Getting the hang of it',description:'Open 5 packs.',field:'packsOpened',target:5,reward:3500},
+    {id:'twentyfive',title:'A binder begins',description:'Discover 25 different cards.',field:'discovered',target:25,reward:3500},
+    {id:'slab',title:'Under glass',description:'Grade your first card.',field:'graded',target:1,reward:2500},
+    {id:'ultras',title:'An eye for the unusual',description:'Pull 5 Ultra-or-better cards.',field:'ultraPulls',target:5,reward:5000},
+    {id:'crown',title:'Crowning moment',description:'Pull your first Crown.',field:'crownPulls',target:1,reward:6500},
+    {id:'seventyfive',title:'The regular',description:'Discover 75 different cards.',field:'discovered',target:75,reward:6500},
+    {id:'century',title:'A hundred little surprises',description:'Open 100 packs.',field:'packsOpened',target:100,reward:15000}
+  ];
+  const CHASE=['swsh7-215','swsh7-218','sv3pt5-199','swsh11-186','swsh12-186','base1-4','sv3pt5-205','swsh4-188','swsh7-212','sv3pt5-198','sv3pt5-200','swsh9-154'];
+  return Object.freeze({CARDS:Object.freeze(cards),BY_ID,TIERS,SETS,PACKS,GRADES,GOALS,CHASE,STARTING_CASH:18000,RESALE:0.65,VERSION:1});
+});
+
+</script>
+<script>
+/* engine.js */
+/* Pure game rules. No DOM, network, timers, or storage side effects.
+   All money is integer cents. Every mutation is committed by storage.js as one transaction. */
+(function(root,factory){
+  if(typeof module==='object'&&module.exports) module.exports=factory(require('./catalog.js'));
+  else root.HHEngine=factory(root.HHCatalog);
+})(typeof globalThis!=='undefined'?globalThis:this,function(C){
+  'use strict';
+  const fail=message=>{throw new Error(message);};
+  const int=(n,min=0,max=1e12)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
+  const card=id=>C.BY_ID[id]||fail('That card is not in this catalog.');
+  const pack=id=>C.PACKS.find(p=>p.id===id)||fail('That pack is not available.');
+  const resale=value=>Math.round(value*C.RESALE);
+  const fee=id=>800+Math.round(card(id).value*0.35);
+  const clone=o=>JSON.parse(JSON.stringify(o));
+  function random(){const a=new Uint32Array(1);if(globalThis.crypto?.getRandomValues){globalThis.crypto.getRandomValues(a);return a[0]/4294967296;}return Math.random();}
+  function uid(){return Math.floor(random()*0xffffffff).toString(36)+Date.now().toString(36);}
+  function weighted(weights,rng=random){let x=rng()*weights.reduce((a,b)=>a+b,0);for(let i=0;i<weights.length;i++){x-=weights[i];if(x<0)return i;}return weights.length-1;}
+  function initial(){const now=new Date().toISOString();return {version:C.VERSION,revision:0,createdAt:now,updatedAt:now,wallet:C.STARTING_CASH,inventory:{},slabs:[],discovered:{},pity:Object.fromEntries(C.PACKS.map(p=>[p.id,0])),settings:{sound:false,reducedMotion:false,pace:'normal',autoSell:false,threshold:500},stats:{packsPurchased:0,packsOpened:0,cardsPulled:0,packSpend:0,saleIncome:0,gradingSpend:0,rewardIncome:0,sold:0,graded:0,ultraPulls:0,crownPulls:0,bestPull:null,bestPack:null,bestGrade:0},claimed:[],session:null,pendingGrade:null,serial:0};}
+  function owned(s,id){return (s.inventory[id]||0)+s.slabs.filter(x=>x.cardId===id).length;}
+  function totals(s){let raw=0,value=0,sell=0;const variants=new Set();for(const [id,n]of Object.entries(s.inventory)){raw+=n;value+=card(id).value*n;sell+=resale(card(id).value)*n;variants.add(id);}for(const slab of s.slabs){value+=slab.value;sell+=resale(slab.value);variants.add(slab.cardId);}return {raw,slabs:s.slabs.length,copies:raw+s.slabs.length,unique:variants.size,value,resale:sell,discovered:Object.keys(s.discovered).length};}
+  function cost(p,quantity){if(![1,p.box].includes(quantity))fail('Choose one pack or a complete box.');return Math.round(p.price*quantity*(quantity===1?1:0.9));}
+  const pools=new Map();
+  function draw(p,tier,rng){const key=p.id+':'+tier;let pool=pools.get(key);if(!pool){pool=C.CARDS.filter(c=>c.tier===tier&&(!p.pool||p.pool.includes(c.setId)));pools.set(key,pool);}if(!pool.length)fail('This pack has an empty card pool.');return pool[Math.floor(rng()*pool.length)].id;}
+  function buy(s,packId,quantity=1,rng=random){
+    if(s.session&&s.session.phase!=='results')fail('Finish your saved opening before buying another pack.');
+    if(s.pendingGrade)fail('Finish your grading reveal first.');
+    const p=pack(packId),price=cost(p,quantity);
+    if(s.wallet<price)fail('Not enough play money. Sell cards, try a cheaper pack, or start a new collection.');
+    const session={id:uid(),packId,quantity,cost:price,createdAt:new Date().toISOString(),cards:[],packs:[],cursor:0,phase:'sealed',rules:{autoSell:s.settings.autoSell,threshold:s.settings.threshold},autoIncome:0};
+    let misses=s.pity[p.id]||0;
+    for(let n=0;n<quantity;n++){
+      const ids=p.slots.map(slot=>draw(p,weighted(slot,rng),rng));
+      let hit=ids.some(id=>card(id).tier>=p.target),protectedPull=false;
+      if(p.pity&&!hit&&misses>=p.pity-1){const tier=p.target===5?5:(rng()<0.95?4:5);ids[ids.length-1]=draw(p,tier,rng);hit=true;protectedPull=true;}
+      misses=hit?0:misses+1;
+      const start=session.cards.length;
+      ids.forEach(id=>session.cards.push({id,pack:n,result:null}));
+      session.packs.push({start,end:session.cards.length,opened:false,protected:protectedPull});
+    }
+    s.wallet-=price;s.stats.packSpend+=price;s.stats.packsPurchased+=quantity;s.pity[p.id]=misses;s.session=session;
+    return {sessionId:session.id};
+  }
+  function active(s){return s.session||fail('There is no opening to resume.');}
+  function currentPack(a){return a.cards[Math.min(a.cursor,a.cards.length-1)].pack;}
+  function tear(s){const a=active(s);if(a.phase!=='sealed')fail('This wrapper is already open.');const i=currentPack(a);a.packs[i].opened=true;a.phase='back';return {pack:i};}
+  function reveal(s){
+    const a=active(s);if(!['back','front'].includes(a.phase)||a.cursor>=a.cards.length)fail('There is no card ready to reveal.');
+    const row=a.cards[a.cursor],p=a.packs[row.pack];if(!p.opened)fail('Open this wrapper first.');if(row.result)fail('This card has already been collected.');
+    const c=card(row.id),isNew=owned(s,c.id)===0;
+    const auto=a.rules.autoSell&&c.value<=a.rules.threshold&&(s.inventory[c.id]||0)>=1;
+    row.result={isNew,status:auto?'auto-sold':'kept',sale:auto?resale(c.value):0};
+    if(auto){s.wallet+=row.result.sale;s.stats.saleIncome+=row.result.sale;s.stats.sold++;a.autoIncome+=row.result.sale;}
+    else s.inventory[c.id]=(s.inventory[c.id]||0)+1;
+    s.discovered[c.id]=true;s.stats.cardsPulled++;
+    if(c.tier>=4)s.stats.ultraPulls++;if(c.tier===5)s.stats.crownPulls++;
+    if(!s.stats.bestPull||c.value>s.stats.bestPull.value)s.stats.bestPull={cardId:c.id,value:c.value,date:new Date().toISOString()};
+    a.cursor++;a.phase='front';
+    if(a.cursor===p.end){s.stats.packsOpened++;const value=a.cards.slice(p.start,p.end).reduce((n,r)=>n+card(r.id).value,0);if(!s.stats.bestPack||value>s.stats.bestPack.value)s.stats.bestPack={packId:a.packId,value,date:new Date().toISOString()};}
+    return {cardId:c.id,tier:c.tier,isNew,autoSold:auto};
+  }
+  function advance(s){const a=active(s);if(a.phase==='back')return reveal(s);if(a.phase!=='front')fail('Open the wrapper to continue.');if(a.cursor===a.cards.length){a.phase='results';return {results:true};}if(!a.packs[currentPack(a)].opened){a.phase='sealed';return {nextPack:true};}return reveal(s);}
+  function finish(s){const a=active(s);if(a.phase==='results')return {results:true};a.packs.forEach(p=>p.opened=true);a.phase='back';while(a.cursor<a.cards.length)reveal(s);a.phase='results';return {results:true};}
+  function takeRaw(s,id,qty,status){const have=s.inventory[id]||0;if(!int(qty,1)||have<qty)fail('That many ungraded copies are not available.');s.inventory[id]-=qty;if(!s.inventory[id])delete s.inventory[id];let left=qty;if(s.session){for(let i=s.session.cards.length-1;i>=0&&left;i--){const r=s.session.cards[i];if(r.id===id&&r.result?.status==='kept'){r.result.status=status;r.result.sale=status==='sold'?resale(card(id).value):0;left--;}}}}
+  function normalizeItems(items){if(!Array.isArray(items)||!items.length||items.length>2000)fail('Choose at least one card.');const map=new Map();for(const item of items){if(!item||!['raw','slab'].includes(item.kind)||typeof item.id!=='string'||!int(item.qty,1,1e6))fail('Choose a valid quantity.');const k=item.kind+':'+item.id;const old=map.get(k);if(old)old.qty+=item.qty;else map.set(k,{kind:item.kind,id:item.id,qty:item.qty});}return [...map.values()];}
+  function quote(s,items){const normalized=normalizeItems(items);let total=0,count=0;const lines=normalized.map(item=>{let c,value;if(item.kind==='raw'){c=card(item.id);if((s.inventory[item.id]||0)<item.qty)fail('Your available card quantity changed.');value=c.value;}else{const slab=s.slabs.find(x=>x.id===item.id);if(!slab||item.qty!==1)fail('This slab is no longer available.');if(s.pendingGrade?.id===slab.id)fail('Finish the grading reveal before selling this slab.');c=card(slab.cardId);value=slab.value;}const unit=resale(value),subtotal=unit*item.qty;total+=subtotal;count+=item.qty;return {...item,cardId:c.id,name:c.name,unit,subtotal,value};});return {lines,total,count};}
+  function sell(s,items){const q=quote(s,items);for(const row of q.lines){if(row.kind==='raw')takeRaw(s,row.id,row.qty,'sold');else s.slabs=s.slabs.filter(x=>x.id!==row.id);}s.wallet+=q.total;s.stats.saleIncome+=q.total;s.stats.sold+=q.count;return q;}
+  function duplicates(s,sessionOnly=false){const items=[];for(const[id,n]of Object.entries(s.inventory)){let qty=n-1;if(sessionOnly){const found=(s.session?.cards||[]).filter(r=>r.id===id&&r.result?.status==='kept').length;qty=Math.min(qty,found);}if(qty>0)items.push({kind:'raw',id,qty});}return items;}
+  function grade(s,id,rng=random){
+    if(s.pendingGrade)fail('Finish your saved grading reveal first.');const c=card(id),price=fee(id);if(!(s.inventory[id]>0))fail('You need an ungraded copy of this card.');if(s.wallet<price)fail('Not enough play money for this grading fee.');
+    const g=C.GRADES[weighted(C.GRADES.map(x=>x.weight),rng)];
+    takeRaw(s,id,1,'graded');s.wallet-=price;s.stats.gradingSpend+=price;s.stats.graded++;s.stats.bestGrade=Math.max(s.stats.bestGrade,g.grade);s.serial++;
+    const slab={id:'slab-'+s.serial+'-'+uid(),cardId:id,grade:g.grade,value:Math.round(c.value*g.multiplier),fee:price,cert:'HHG-'+String(s.serial).padStart(7,'0'),createdAt:new Date().toISOString()};
+    s.slabs.push(slab);s.pendingGrade={id:slab.id,shown:false};return {slabId:slab.id,grade:g.grade};
+  }
+  function revealGrade(s){if(!s.pendingGrade)fail('There is no grading reveal waiting.');s.pendingGrade.shown=true;return s.slabs.find(x=>x.id===s.pendingGrade.id);}
+  function finishGrade(s){if(!s.pendingGrade?.shown)fail('Reveal your grade first.');s.pendingGrade=null;}
+  function metric(s,g){return g.field==='discovered'?Object.keys(s.discovered).length:s.stats[g.field];}
+  function claim(s,id){const g=C.GOALS.find(g=>g.id===id)||fail('That milestone does not exist.');if(s.claimed.includes(id))fail('This reward has already been collected.');if(metric(s,g)<g.target)fail('This milestone is not complete yet.');s.claimed.push(id);s.wallet+=g.reward;s.stats.rewardIncome+=g.reward;return {reward:g.reward};}
+  function settings(s,x){if(!x||typeof x.sound!=='boolean'||typeof x.reducedMotion!=='boolean'||typeof x.autoSell!=='boolean'||!['normal','quick'].includes(x.pace)||!int(x.threshold,0,1000000))fail('Enter a valid auto-sell threshold between $0 and $10,000.');s.settings={sound:x.sound,reducedMotion:x.reducedMotion,autoSell:x.autoSell,pace:x.pace,threshold:x.threshold};}
+  function sessionTotals(a){if(!a)return null;const list=a.cards.filter(r=>r.result);let best=null;for(const r of list)if(!best||card(r.id).value>card(best.id).value)best=r;return {count:list.length,total:a.cards.length,value:list.reduce((n,r)=>n+card(r.id).value,0),resale:list.reduce((n,r)=>n+resale(card(r.id).value),0),new:list.filter(r=>r.result.isNew).length,duplicates:list.filter(r=>!r.result.isNew).length,autoSold:list.filter(r=>r.result.status==='auto-sold').length,sold:list.filter(r=>['sold','auto-sold'].includes(r.result.status)).reduce((n,r)=>n+r.result.sale,0),best};}
+  function validate(s){
+    const bad=()=>fail('This save is damaged or uses an unsupported format. Your existing save was not replaced.');
+    if(!s||s.version!==C.VERSION||!int(s.revision)||!int(s.wallet)||!int(s.serial)||typeof s.createdAt!=='string'||typeof s.updatedAt!=='string'||!s.inventory||Array.isArray(s.inventory)||!Array.isArray(s.slabs)||!s.discovered||!s.stats||!s.pity||!Array.isArray(s.claimed))bad();
+    let copies=0;for(const[id,n]of Object.entries(s.inventory)){if(!C.BY_ID[id]||!int(n,1,1e7)||s.discovered[id]!==true)bad();copies+=n;}
+    for(const[id,v]of Object.entries(s.discovered))if(!C.BY_ID[id]||v!==true)bad();
+    const seen=new Set();for(const slab of s.slabs){const c=C.BY_ID[slab.cardId],g=C.GRADES.find(g=>g.grade===slab.grade);if(!c||!g||typeof slab.id!=='string'||!/^slab-[a-z0-9-]+$/.test(slab.id)||seen.has(slab.id)||slab.value!==Math.round(c.value*g.multiplier)||slab.fee!==fee(c.id)||!/^HHG-\d{7,}$/.test(slab.cert)||s.discovered[c.id]!==true||typeof slab.createdAt!=='string')bad();seen.add(slab.id);}
+    const statKeys=['packsPurchased','packsOpened','cardsPulled','packSpend','saleIncome','gradingSpend','rewardIncome','sold','graded','ultraPulls','crownPulls','bestGrade'];for(const k of statKeys)if(!int(s.stats[k]))bad();
+    if(copies+s.slabs.length+s.stats.sold!==s.stats.cardsPulled||s.stats.packsOpened>s.stats.packsPurchased||s.stats.crownPulls>s.stats.ultraPulls||s.stats.ultraPulls>s.stats.cardsPulled||s.wallet!==C.STARTING_CASH-s.stats.packSpend-s.stats.gradingSpend+s.stats.saleIncome+s.stats.rewardIncome)bad();
+    if(s.stats.bestPull&&(!C.BY_ID[s.stats.bestPull.cardId]||s.stats.bestPull.value!==card(s.stats.bestPull.cardId).value))bad();
+    if(s.stats.bestPack&&(!C.PACKS.some(p=>p.id===s.stats.bestPack.packId)||!int(s.stats.bestPack.value)))bad();
+    for(const p of C.PACKS)if(!int(s.pity[p.id],0,p.pity?p.pity-1:0))bad();
+    if(new Set(s.claimed).size!==s.claimed.length||s.claimed.some(id=>!C.GOALS.some(g=>g.id===id)))bad();
+    settings(clone(s),s.settings);
+    if(s.pendingGrade&&(!seen.has(s.pendingGrade.id)||typeof s.pendingGrade.shown!=='boolean'))bad();
+    const a=s.session;if(a){const p=C.PACKS.find(x=>x.id===a.packId);if(!p||typeof a.id!=='string'||![1,p.box].includes(a.quantity)||a.cost!==cost(p,a.quantity)||!Array.isArray(a.cards)||a.cards.length!==a.quantity*p.slots.length||!int(a.cursor,0,a.cards.length)||!['sealed','back','front','results'].includes(a.phase)||!Array.isArray(a.packs)||a.packs.length!==a.quantity||!a.rules||typeof a.rules.autoSell!=='boolean'||!int(a.rules.threshold,0,1000000)||!int(a.autoIncome))bad();
+      for(let i=0;i<a.cards.length;i++){const r=a.cards[i];if(!C.BY_ID[r.id]||r.pack!==Math.floor(i/p.slots.length))bad();if(i<a.cursor){if(!r.result||typeof r.result.isNew!=='boolean'||!['kept','auto-sold','sold','graded'].includes(r.result.status)||!int(r.result.sale)||r.result.sale!==( ['auto-sold','sold'].includes(r.result.status)?resale(card(r.id).value):0))bad();}else if(r.result!==null)bad();}
+      a.packs.forEach((v,i)=>{if(v.start!==i*p.slots.length||v.end!==(i+1)*p.slots.length||typeof v.opened!=='boolean'||typeof v.protected!=='boolean')bad();if(a.cursor>v.start&&!v.opened)bad();});
+      if(a.phase==='results'&&a.cursor!==a.cards.length||a.phase==='front'&&a.cursor===0||['sealed','back'].includes(a.phase)&&a.cursor>=a.cards.length)bad();
+      if(a.autoIncome!==a.cards.filter(r=>r.result?.status==='auto-sold').reduce((n,r)=>n+r.result.sale,0))bad();
+    }
+    return true;
+  }
+  return Object.freeze({initial,card,pack,resale,fee,clone,random,weighted,owned,totals,cost,buy,currentPack,tear,reveal,advance,finish,quote,sell,duplicates,grade,revealGrade,finishGrade,metric,claim,settings,sessionTotals,validate});
+});
+
+</script>
+<script>
+/* storage.js */
+/* A single IndexedDB read/write transaction is the commit boundary.
+   IndexedDB serializes competing tabs. Revisions reject stale/double-submitted UI actions.
+   Nothing is granted, charged, removed, or rolled for a second time during rendering. */
+(function(root){
+  'use strict';
+  const DB='holo-house-v1', E=root.HHEngine;
+  let db=null;const channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel('holo-house-sync'):null;
+  const subscribers=new Set();
+  function announce(){channel?.postMessage('changed');}
+  channel?.addEventListener('message',()=>subscribers.forEach(fn=>fn()));
+  function open(){return new Promise((resolve,reject)=>{const request=indexedDB.open(DB,1);request.onupgradeneeded=()=>request.result.createObjectStore('game');request.onerror=()=>reject(new Error('Device storage is unavailable. Open this game in a regular browser tab and allow site storage.'));request.onblocked=()=>reject(new Error('Close older Holo House tabs, then reload to update local storage.'));request.onsuccess=()=>{db=request.result;db.onversionchange=()=>db.close();resolve();};});}
+  function read(){return new Promise((resolve,reject)=>{const tx=db.transaction('game','readonly');const req=tx.objectStore('game').get('save');req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error);});}
+  function mutate(expected,fn,{replace=false}={}){return new Promise((resolve,reject)=>{
+    const tx=db.transaction('game','readwrite'), store=tx.objectStore('game');let next,result,reason;
+    const req=store.get('save');
+    req.onsuccess=()=>{try{const previous=req.result;if(previous&&!replace)E.validate(previous);if(expected!==null&&(previous?.revision??0)!==expected)throw new Error('Your collection changed in another tab. It has been refreshed; please try again.');next=previous?E.clone(previous):E.initial();result=fn(next);if(result?.replacement)next=E.clone(result.replacement);next.revision=(Number.isSafeInteger(previous?.revision)&&previous.revision>=0?previous.revision:0)+1;next.updatedAt=new Date().toISOString();E.validate(next);store.put(next,'save');}catch(error){reason=error;tx.abort();}};
+    tx.oncomplete=()=>{announce();resolve({state:next,result});};
+    tx.onabort=()=>reject(reason||new Error('The save could not be committed. Nothing was changed. Free up browser storage and try again.'));
+    tx.onerror=()=>{reason=reason||new Error('The save could not be committed. Nothing was changed.');};
+  });}
+  async function init(){await open();let s=await read();if(!s){const r=await mutate(null,()=>{});s=r.state;}E.validate(s);return s;}
+  root.HHStorage={init,read,mutate,subscribe(fn){subscribers.add(fn);return()=>subscribers.delete(fn);},async damaged(){return db?await read():null;}};
+})(globalThis);
+
+</script>
+<script>
+/* app.js */
+/* Holo House — view/controller layer. Game mutations live in engine.js.
+   No render function draws random cards or changes the wallet. */
+(function () {
+  'use strict';
+  const C=window.HHCatalog, E=window.HHEngine, Store=window.HHStorage;
+  const $=s=>document.querySelector(s);
+  const main=$('#main'), dialog=$('#modal');
+  const PHONE = matchMedia('(max-width: 760px), (max-width: 1024px) and (pointer: coarse) and (orientation: landscape)');
+  let lockedScroll = null, modalBackPending = false, routeAfterModal = null;
+  // Drop an obsolete modal marker after a document reload, without touching saved game data.
+  if (history.state?.hhModal) history.replaceState(null, '', location.href);
+  const stageObserver = typeof ResizeObserver === 'function' ? new ResizeObserver(entries => {
+    for (const entry of entries) entry.target.style.setProperty('--stage-height', entry.contentRect.height + 'px');
+  }) : null;
+  function fitViewport() {
+    const vv = window.visualViewport;
+    if (vv && Math.abs(vv.scale - 1) > .05) return; // Do not fight accessibility pinch zoom.
+    const h = vv?.height || innerHeight;
+    document.documentElement.style.setProperty('--app-height', h + 'px');
+    document.documentElement.style.setProperty('--keyboard-inset', Math.max(0, innerHeight - h - (vv?.offsetTop || 0)) + 'px');
+    const active=document.activeElement;
+    const typing=active?.tagName==='TEXTAREA'||active?.tagName==='INPUT'&&!['checkbox','radio','file','range','button','submit'].includes(active.type);
+    document.body.classList.toggle('keyboard-open', PHONE.matches && typing);
+  }
+  window.addEventListener('resize', fitViewport, {passive: true});
+  window.visualViewport?.addEventListener('resize', fitViewport, {passive: true});
+  window.visualViewport?.addEventListener('scroll', fitViewport, {passive: true});
+  document.addEventListener('focusin', fitViewport);
+  document.addEventListener('focusout', () => requestAnimationFrame(fitViewport));
+  fitViewport();
+  const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const cash=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
+  const num=n=>new Intl.NumberFormat('en-US').format(n);
+  const pct=n=>Number(n.toFixed(2))+'%';
+  let state=null,busy=false,toastTimer=null,autoTimer=null,storageFailure=null;
+  const validRoutes=['shop','binder','studio','hall','opening'];
+  let route=validRoutes.includes(location.hash.slice(1))?location.hash.slice(1):'shop';
+  const ui={qty:{},binderTab:'all',search:'',rarity:'all',sort:'value',duplicates:false,limit:36,selecting:false,selected:new Map(),studioSearch:'',studioSort:'value',studioLimit:24,auto:false,modalKind:null,modalRevision:0,detail:null,sale:[],saleContext:'',gradeCard:null,imported:null};
+  const ICONS={
+    arrow:'<path d="M5 12h14m-6-6 6 6-6 6"/>',back:'<path d="M19 12H5m6-6-6 6 6 6"/>',arrowUp:'<path d="M6 18 18 6M6 6h12v12"/>',chevron:'<path d="m9 5 7 7-7 7"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>',
+    shop:'<path d="m5 5 14-2 2 16-14 2Z"/><path d="m8 9 7-1m-6 5 7-1m-5-7 1 14"/>',binder:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18M2 7h4M2 12h4M2 17h4m6-9h4m-4 4h4"/>',studio:'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M6 7h12M9 4.5h3M9 11h6v7H9z"/>',hall:'<path d="m3 7 5 4 4-7 4 7 5-4-2 12H5L3 7Z"/><path d="M6 22h12"/>',wallet:'<path d="M20 8V5a2 2 0 0 0-2-2H5a3 3 0 0 0 0 6h15v11H5a3 3 0 0 1-3-3V6"/><path d="M20 12h-5v5h5M16.5 14.5h.1"/>',
+    settings:'<path d="m10 2-.6 3.1-2.5 1.4-3-.9L2 9l2.4 2.1v2.8L2 16l1.9 3.4 3-.9 2.5 1.4L10 23h4l.6-3.1 2.5-1.4 3 .9L22 16l-2.4-2.1v-2.8L22 9l-1.9-3.4-3 .9-2.5-1.4L14 2Z" transform="translate(1 0) scale(.91)"/><circle cx="12" cy="12" r="3"/>',sound:'<path d="M3 9h4l5-4v14l-5-4H3V9Zm13-1a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',mute:'<path d="M3 9h4l5-4v14l-5-4H3V9Zm13 0 5 6m0-6-5 6"/>',search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',check:'<path d="m5 12 4 4L19 6"/>',spark:'<path d="M12 2c1.8 6.2 3.8 8.2 10 10-6.2 1.8-8.2 3.8-10 10-1.8-6.2-3.8-8.2-10-10 6.2-1.8 8.2-3.8 10-10Z"/>',shield:'<path d="m12 3 8 3v6c0 4-3.5 7-8 9-4.5-2-8-5-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/>',cards:'<rect x="7" y="3" width="13" height="17" rx="2"/><path d="m4 6-2 1 3 16 12-2M10 7h7m-7 4h7"/>',coin:'<circle cx="12" cy="12" r="9"/><path d="M15 8h-5a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H9m3-10v12"/>',play:'<path d="m8 4 12 8-12 8V4Z"/>',pause:'<path d="M8 4v16M16 4v16"/>',fast:'<path d="m3 5 9 7-9 7V5Zm10 0 9 7-9 7V5Z"/>',download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',upload:'<path d="M12 16V4m-5 5 5-5 5 5M4 16v5h16v-5"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10h.01"/>',sun:'<circle cx="12" cy="12" r="5"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/>',bolt:'<path d="m13 1-9 13h7l-1 9 10-14h-7l1-8Z"/>',prism:'<path d="m12 1 10 11-10 11L2 12 12 1Zm0 0v22M2 12h20M7 6l10 12m0-12L7 18"/>',orbit:'<circle cx="12" cy="12" r="8"/><ellipse cx="12" cy="12" rx="12" ry="3" transform="rotate(-35 12 12)"/><circle cx="12" cy="12" r="2"/>',crown:'<path d="m2 7 6 5 4-10 4 10 6-5-3 14H5L2 7Z"/><path d="M5 17h14"/>'
+  };
+  const icon=(name,extra='')=>`<span class="icon ${extra}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||ICONS.spark}</svg></span>`;
+  const button=(label,action,extra='',className='btn')=>`<button type="button" class="${className}" data-action="${action}" ${extra}>${label}</button>`;
+  const badge=(tier,label=C.TIERS[tier])=>`<span class="rarity r${tier}">${escape(label)}</span>`;
+  const footer=()=>`<footer class="site-note"><span>Made for the joy of collecting. Fictional money, static game values. No purchases. No payouts.</span>${button('About & credits','about','','text-btn')}</footer>`;
+  function cardArt(c,{large=false,eager=false}={}){
+    return `<span class="card-art r${c.tier}"><span class="card-fallback" aria-hidden="true"><small>${escape(c.setId.toUpperCase())} / ${escape(c.number)}</small><strong>${escape(c.name)}</strong><span class="fallback-symbol">${c.tier===5?'✧':c.tier>=3?'✦':'◈'}</span><span class="fallback-bottom">${escape(c.edition)}<br>${C.TIERS[c.tier]} · House tier<span class="artwork-status">Artwork loading…</span></span></span><img src="${large?c.large:c.image}" ${large?`data-small="${c.image}"`:''} alt="${escape(c.name)} — ${escape(c.set)}, card ${escape(c.number)}" loading="${eager?'eager':'lazy'}" decoding="async" referrerpolicy="no-referrer" width="245" height="342"></span>`;
+  }
+  function slabArt(slab,{large=false,hidden=false,example=false}={}){
+    const c=E.card(slab.cardId);
+    return `<div class="slab-shell ${large?'slab-large':''} ${hidden?'hidden-grade':''}"><div class="slab-label"><div><strong>HHG ${hidden?'SEALED':'CERTIFIED'}</strong><small>${hidden?'GRADE READY TO REVEAL':escape(slab.cert)}</small><div class="barcode" aria-hidden="true"></div></div><span class="grade-number" ${hidden?'aria-hidden="true"':''}>${hidden?'?':slab.grade}</span></div>${cardArt(c,{large,eager:large})}</div>`;
+  }
+  function packArt(p,{big=false}={}){return `<div class="pack-object pack-${p.theme} ${big?'big':''}" style="--pack-color:${p.color}" aria-hidden="true"><span class="pack-brand">HOLO HOUSE · COLLECTOR SERIES</span><span class="pack-symbol">${icon(p.theme)}</span><span class="pack-name">${escape(p.name).replace(' ','<br>')}</span><span class="pack-bottom">${p.slots.length} CARDS / A LITTLE COLLECTING MAGIC</span></div>`;}
+  function cardTile(item,{action='inspect',tag='',hall=false,selectable=false}={}){
+    const c=E.card(item.cardId||item.id),isSlab=item.kind==='slab',key=item.kind+':'+item.id,selected=ui.selected.has(key);
+    let label=tag||(isSlab?'GRADE '+item.slab.grade:'×'+item.qty);
+    if(selectable)label=selected?'✓ SELECTED':'○ SELECT';
+    return `<button type="button" class="collect-card ${selectable&&selected?'selected':''} ${hall&&!E.owned(state,c.id)?'not-owned':''}" data-action="${action}" data-id="${escape(item.id)}" data-kind="${item.kind||'raw'}" ${selectable?`aria-pressed="${selected}"`:''} aria-label="${selectable?'Select':'View'} ${escape(c.name)}, ${escape(c.edition)}${isSlab?', grade '+item.slab.grade:''}"><span class="card-badge">${escape(label)}</span>${isSlab?slabArt(item.slab):cardArt(c)}<div class="card-info"><div class="row between">${badge(c.tier)}${isSlab?'<span class="tag">SLAB</span>':''}</div><h3>${escape(c.name)}</h3><span class="edition">${escape(c.set)} · #${escape(c.number)}</span><div class="row between"><span class="value">${cash(item.value??c.value)}</span>${isSlab?'<span class="sold-note">graded est.</span>':'<span class="sold-note">game value</span>'}</div></div></button>`;
+  }
+  const tabInfo=[['shop','shop','Packs'],['binder','binder','Binder'],['studio','studio','Grading'],['hall','hall','Hall of Fame']];
+  function renderHeader(){
+    const claims=C.GOALS.some(g=>E.metric(state,g)>=g.target&&!state.claimed.includes(g.id));
+    const nav=(mobile)=>tabInfo.map(([id,i,label])=>`<button type="button" data-action="nav" data-route="${id}" class="${route===id?'active':''}" ${route===id?'aria-current="page"':''}>${mobile?icon(i):''}<span>${mobile&&id==='hall'?'Hall of Fame':label}</span>${id==='hall'&&claims?'<i class="nav-dot" aria-label="Milestone reward available"></i>':''}</button>`).join('');
+    $('#header').innerHTML=`<div class="header-inner"><button class="brand" data-action="nav" data-route="shop" aria-label="Holo House home"><span class="brand-mark" aria-hidden="true">✦</span><span class="brand-name">holo<span>house.</span></span></button><nav class="desktop-nav" aria-label="Main navigation">${nav(false)}</nav><div class="header-tools">${button(icon(state.settings.sound?'sound':'mute'),'sound',`aria-label="${state.settings.sound?'Mute':'Enable'} sound" aria-pressed="${state.settings.sound}"`,'icon-btn sound-top')}<div class="wallet" aria-label="Wallet ${cash(state.wallet)} in fictional money">${icon('wallet')}<div><div class="wallet-value" id="wallet-amount">${cash(state.wallet)}</div><small>PLAY MONEY</small></div></div>${button(icon('settings'),'settings','aria-label="Settings and save backup"','icon-btn')}</div></div>`;
+    $('#mobile-nav').innerHTML=nav(true);
+    document.body.classList.toggle('opening-mode',route==='opening');
+    document.body.classList.toggle('pack-active',route==='opening'&&!!state.session&&state.session.phase!=='results');
+    document.body.dataset.route=route;
+    document.body.classList.toggle('reduce-motion',state.settings.reducedMotion);
+  }
+  function notices(){let h='';if(state.pendingGrade)h+=`<div class="notice">${icon('studio')}<div class="grow"><strong>A new slab is waiting.</strong><p>Your grade is locked in and saved. Come see how it did.</p></div>${button('Reveal grade '+icon('arrow'),'pending-grade','','btn small primary')}</div>`;
+    if(state.session&&state.session.phase!=='results')h+=`<div class="notice">${icon('lock')}<div class="grow"><strong>Your ${escape(E.pack(state.session.packId).name)} opening is saved.</strong><p>${state.session.cursor} of ${state.session.cards.length} cards revealed. Already paid; nothing will be rerolled.</p></div>${button('Resume '+icon('arrow'),'nav','data-route="opening"','btn small primary')}</div>`;return h;}
+  function shopView(){const t=E.totals(state),best=state.stats.bestPull?E.card(state.stats.bestPull.cardId):null;return `<div class="page">${notices()}<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span> THE COLLECTOR’S CLUB</div><h1>Good things<br>come in <em>packs.</em></h1><p>A little nostalgia. A little luck. Open something special and make a collection that’s yours.</p><p class="mobile-welcome">Your next favorite is in here.</p><div class="hero-actions">${button('Find your next pull '+icon('arrow'),'browse','','btn primary')}<span class="hero-note">${C.CARDS.length} CARDS TO DISCOVER<br>ZERO REAL MONEY REQUIRED</span></div></div><div class="hero-gallery" aria-label="Examples of collectible chase cards"><div class="hero-ring"></div><div class="hero-card hero-left">${cardArt(E.card('swsh7-215'),{eager:true})}</div><div class="hero-card hero-right">${cardArt(E.card('sv3pt5-205'),{eager:true})}</div><div class="hero-card hero-front">${cardArt(E.card('sv3pt5-199'),{eager:true})}</div><span class="hero-spark" aria-hidden="true">✧</span><div class="hero-ticket">${icon('spark')}<div><div class="eyebrow">THE NEXT ONE COULD BE THE ONE</div><strong>A little collecting magic.</strong></div></div><span class="hero-caption">DISPLAY CARDS · FIND THEM IN PACKS</span></div></section><section class="dashboard-metrics" aria-label="Your collection snapshot"><div class="dashboard-metric"><span class="metric-icon">${icon('binder')}</span><div><span class="metric-label">Binder estimate</span><div class="metric-value">${cash(t.value)} <small>static game value</small></div></div></div><div class="dashboard-metric"><span class="metric-icon">${icon('cards')}</span><div><span class="metric-label">Cards collected</span><div class="metric-value">${t.unique} <small>of ${C.CARDS.length} unique · ${t.copies} copies</small></div></div></div><div class="dashboard-metric"><span class="metric-icon">${icon('spark')}</span><div><span class="metric-label">Your best pull</span><div class="metric-value">${best?escape(best.name):'Still a mystery'} <small>${best?cash(best.value):'Make your first discovery'}</small></div></div></div></section><section id="pack-shop"><div class="section-head"><div><h2>Choose your next discovery.</h2><p>Every pack has a personality. Every box saves 10%.</p></div><span class="eyebrow">01 — 05</span></div><div class="pack-grid">${C.PACKS.map((p,i)=>product(p,i)).join('')}</div></section><div class="shop-bottom"><div class="tip-tile">${icon('shield')}<div class="grow"><h3>Good luck has a safety net.</h3><p>Miss long enough and your next pack gets a guaranteed hit. Each series tracks separately.</p></div>${button(icon('arrowUp'),'odds','data-id="electric" aria-label="Read bad-luck protection rules"','text-btn')}</div><div class="tip-tile">${icon('studio')}<div class="grow"><h3>A favorite deserves a little glass.</h3><p>Submit a card for a randomized grade. Maybe it’s a gem. Maybe it’s a lesson.</p></div>${button(icon('arrowUp'),'nav','data-route="studio" aria-label="Visit the grading studio"','text-btn')}</div></div>${state.session?.phase==='results'?button('Review your last opening '+icon('arrow'),'nav','data-route="opening"','link-btn'):''}${footer()}</div>`;}
+  function product(p,i){const q=ui.qty[p.id]||1,price=E.cost(p,q),pityText=p.pity?`${C.TIERS[p.target]}+ by pack ${p.pity}`:'A Crown in every pack';return `<article class="product ${p.id==='electric'?'featured':''}" id="product-${p.id}" style="--pack-color:${p.color}"><div class="product-top"><span class="product-number">VOL. 0${i+1}</span>${p.id==='electric'?'<span class="pill lime">HOUSE FAVORITE</span>':`<span class="pill">${p.slots.length} CARDS</span>`}</div><div class="product-art">${packArt(p)}</div><div class="product-body"><h3>${p.name}</h3><p class="subtitle">${p.subtitle}</p><div class="product-details"><span>${icon('spark')}${p.guarantee}</span><span>${icon('shield')}${pityText}</span></div><label class="sr-only" for="quantity-${p.id}">Pack quantity for ${p.name}</label><select id="quantity-${p.id}" data-product="${p.id}"><option value="1" ${q===1?'selected':''}>1 pack · ${p.slots.length} cards</option><option value="${p.box}" ${q===p.box?'selected':''}>${p.box}-pack box · save 10%</option></select>${button(`Open ${q===1?'pack':'box'} · ${cash(price)}`,'buy',`data-id="${p.id}" data-qty="${q}" data-transaction="true" aria-label="Buy ${q} ${p.name} ${q===1?'pack':'packs'} for ${cash(price)}"`,'btn full')}${button('Contents & odds '+icon('arrowUp'),'odds',`data-id="${p.id}"`,'text-btn')}</div></article>`;}
+  function filteredBinder(){
+    let items=[];for(const[id,qty]of Object.entries(state.inventory))items.push({kind:'raw',id,cardId:id,qty,value:E.card(id).value});for(const slab of state.slabs)items.push({kind:'slab',id:slab.id,cardId:slab.cardId,qty:1,value:slab.value,slab});
+    const search=ui.search.trim().toLowerCase();
+    items=items.filter(x=>{const c=E.card(x.cardId);return (ui.binderTab==='all'||x.kind===(ui.binderTab==='slabs'?'slab':'raw'))&&(ui.rarity==='all'||c.tier===Number(ui.rarity))&&(!ui.duplicates||(x.kind==='raw'&&x.qty>1))&&(!search||`${c.name} ${c.set} ${c.id} ${c.edition} ${x.slab?.cert||''}`.toLowerCase().includes(search));});
+    const discovered=Object.keys(state.discovered),order=new Map(discovered.map((id,i)=>[id,i]));
+    items.sort((a,b)=>ui.sort==='name'?E.card(a.cardId).name.localeCompare(E.card(b.cardId).name)||a.id.localeCompare(b.id):ui.sort==='quantity'?b.qty-a.qty||b.value-a.value:ui.sort==='newest'?(order.get(b.cardId)||0)-(order.get(a.cardId)||0)||b.value-a.value:b.value-a.value||E.card(a.cardId).name.localeCompare(E.card(b.cardId).name));return items;
+  }
+  function binderView(){const t=E.totals(state),items=filteredBinder(),shown=items.slice(0,ui.limit),dupes=E.duplicates(state).reduce((a,x)=>a+x.qty,0);const tabs=[['all','All cards'],['raw','Ungraded'],['slabs','Slabs']];return `<div class="page"><div class="page-head"><div><div class="eyebrow">YOUR PERSONAL ARCHIVE</div><h1>The binder.</h1><p>Keep the ones you love. Let the rest fund your next discovery.</p></div><div class="row">${button('Auto-sell '+(state.settings.autoSell?'on':'off'),'settings','','btn ghost')}${button('Sell duplicates'+(dupes?` (${dupes})`:''),'sell-duplicates',dupes?'':'disabled','btn')}</div></div><div class="stat-strip"><div><span class="label">Unique cards held</span><strong>${t.unique} <small>/ ${C.CARDS.length}</small></strong></div><div><span class="label">Total copies</span><strong>${t.copies} <small>including ${t.slabs} slabs</small></strong></div><div><span class="label">Estimated binder value</span><strong>${cash(t.value)}</strong></div><div><span class="label">Actual sell-back value</span><strong class="lime">${cash(t.resale)}</strong></div></div><div class="binder-toolbar"><div class="segmented" aria-label="Card format">${tabs.map(([id,label])=>button(label,'binder-tab',`data-id="${id}" aria-pressed="${ui.binderTab===id}"`,ui.binderTab===id?'active':'')).join('')}</div>${button(ui.selecting?'Done selecting':'Select cards','toggle-select',`aria-pressed="${ui.selecting}"`,'btn ghost')}<label class="filter-pill"><input id="duplicates-filter" type="checkbox" ${ui.duplicates?'checked':''}> Duplicates only</label></div><div class="filters"><div class="search-field">${icon('search')}<input id="binder-search" type="search" value="${escape(ui.search)}" placeholder="Search Pokémon or set…" enterkeyhint="search" autocapitalize="none" spellcheck="false" aria-label="Search your collection" autocomplete="off"></div><select id="rarity-filter" aria-label="Filter by house rarity"><option value="all">All rarities</option>${C.TIERS.map((r,i)=>`<option value="${i}" ${ui.rarity===String(i)?'selected':''}>${r}</option>`).join('')}</select><select id="binder-sort" aria-label="Sort your collection"><option value="value" ${ui.sort==='value'?'selected':''}>Value: high to low</option><option value="name" ${ui.sort==='name'?'selected':''}>Name: A to Z</option><option value="quantity" ${ui.sort==='quantity'?'selected':''}>Most copies</option><option value="newest" ${ui.sort==='newest'?'selected':''}>Newest discovered</option></select></div><div id="binder-content">${ui.selecting?`<div class="row between" style="margin-bottom:18px"><span class="footnote">Select card types. Choose quantities before selling.</span>${button('Select shown','select-shown','','text-btn')}</div>`:''}${!items.length?emptyState(t.copies?'Nothing in this pocket.':'A binder starts with one pack.',t.copies?'Try a different search or filter. Your other cards are still right where you left them.':'Your first favorite is out there. Visit the shop and make a little room for surprise.',t.copies?'Clear filters':'Find your first pack',t.copies?'clear-filters':'nav',t.copies?'':'data-route="shop"'):`<div class="card-grid">${shown.map(x=>cardTile(x,{selectable:ui.selecting,action:ui.selecting?'select-card':'inspect'})).join('')}</div><div class="load-more">${items.length>shown.length?button(`Show more · ${shown.length} of ${items.length}`,'more-cards','','btn ghost'):`<p class="footnote">${items.length} ${items.length===1?'card type':'card types'} shown · all estimates are fictional game values</p>`}</div>`}${ui.selecting&&ui.selected.size?`<div class="selection-bar"><strong>${ui.selected.size} ${ui.selected.size===1?'type':'types'} selected</strong>${button('Clear','clear-selection','','text-btn')}${button('Review sale '+icon('arrow'),'sell-selection','','btn')}</div>`:''}</div>${footer()}</div>`;}
+  function emptyState(title,text,label,action,extra=''){return `<div class="empty-state"><span class="empty-symbol" aria-hidden="true">✧</span><h2>${title}</h2><p>${text}</p>${button(label,action,extra,'btn primary')}</div>`;}
+  function studioView(){const example={cardId:'sv3pt5-199',grade:10,cert:'DISPLAY EXAMPLE'};let items=Object.entries(state.inventory).map(([id,qty])=>({kind:'raw',id,cardId:id,qty,value:E.card(id).value}));const search=ui.studioSearch.toLowerCase().trim();items=items.filter(x=>!search||`${E.card(x.id).name} ${E.card(x.id).set} ${x.id}`.toLowerCase().includes(search));items.sort((a,b)=>ui.studioSort==='fee'?E.fee(a.id)-E.fee(b.id):b.value-a.value);const shown=items.slice(0,ui.studioLimit);return `<div class="page"><div class="page-head"><div><div class="eyebrow">HOLO HOUSE GRADING</div><h1>A little glass. A little suspense.</h1><p>Your favorite card, made one of a kind. Simulated certification, real collecting decisions.</p></div></div>${state.pendingGrade?`<div class="notice" style="margin-bottom:22px">${icon('studio')}<div class="grow"><strong>Your slab is ready.</strong><p>The paid result is saved and waiting.</p></div>${button('Reveal grade','pending-grade','','btn primary')}</div>`:''}<section class="studio-hero"><div><span class="eyebrow">ONE COPY IN. ONE SLAB OUT.</span><h2>Not every card is a ten.</h2><p>Pay <strong class="lime">$8 + 35% of the raw game value</strong>. One ungraded copy becomes a slab with a permanent grade. Low grades can reduce its value; a rare Gem Mint 10 gets a 4× multiplier.</p><div class="grade-strip">${C.GRADES.map(g=>`<div><strong>${g.grade}</strong><span>${g.weight}% chance</span><small>${g.multiplier}× value</small></div>`).join('')}</div><p class="footnote">No regrading. No refunds. Slabs sell for 65% of their adjusted value. On average, grading costs more than it adds in resale value. This is a fictional grading service, not a real card condition assessment.</p></div><div class="studio-example">${slabArt(example)}<span class="eyebrow">GEM MINT DISPLAY EXAMPLE</span></div></section><div class="section-head"><div><h2>Choose a card to submit.</h2><p>Only ungraded cards you own are shown.</p></div><span class="pill">${state.stats.graded} graded</span></div><div class="studio-select"><div class="search-field">${icon('search')}<input id="studio-search" type="search" enterkeyhint="search" autocapitalize="none" spellcheck="false" placeholder="Find a favorite…" value="${escape(ui.studioSearch)}" aria-label="Search cards for grading"></div><select id="studio-sort" aria-label="Sort grading candidates"><option value="value" ${ui.studioSort==='value'?'selected':''}>Highest value</option><option value="fee" ${ui.studioSort==='fee'?'selected':''}>Lowest fee</option></select></div><div id="studio-content">${!items.length?emptyState(Object.keys(state.inventory).length?'No matching ungraded cards.':'The studio is ready when you are.','Open a pack and keep an ungraded card to start your slab collection.',Object.keys(state.inventory).length?'Clear search':'Browse packs',Object.keys(state.inventory).length?'clear-studio':'nav',Object.keys(state.inventory).length?'':'data-route="shop"'):`<div class="card-grid grade-eligible">${shown.map(x=>`<div>${cardTile(x,{action:'grade',tag:'×'+x.qty+' UNGRADED'})}${button('Grade · '+cash(E.fee(x.id)),'grade',`data-id="${x.id}"`,'btn full small ghost')}</div>`).join('')}</div>${items.length>shown.length?`<div class="load-more">${button(`Show more · ${shown.length} of ${items.length}`,'more-studio','','btn ghost')}</div>`:''}`}</div>${footer()}</div>`;}
+  function hallView(){const t=E.totals(state),best=state.stats.bestPull?E.card(state.stats.bestPull.cardId):null,ownedChases=C.CHASE.filter(id=>E.owned(state,id)>0).length;const stats=[['Packs purchased',num(state.stats.packsPurchased)],['Packs fully opened',num(state.stats.packsOpened)],['Cards discovered',`${t.discovered} / ${C.CARDS.length}`],['Cards pulled',num(state.stats.cardsPulled)],['Ultra-or-better pulls',num(state.stats.ultraPulls)],['Crown pulls',num(state.stats.crownPulls)],['Pack purchases',cash(state.stats.packSpend)],['Actual sale proceeds',cash(state.stats.saleIncome)],['Grading fees paid',cash(state.stats.gradingSpend)],['Cards sold',num(state.stats.sold)],['Cards graded',num(state.stats.graded)],['Milestone rewards',cash(state.stats.rewardIncome)]];return `<div class="page"><div class="page-head"><div><div class="eyebrow">THE ONES YOU REMEMBER</div><h1>Hall of Fame.</h1><p>Some cards have a way of making the whole room stop.</p></div><span class="pill lime">${ownedChases} / ${C.CHASE.length} chase cards held</span></div><div class="hall-hero"><div class="best-record"><span class="record-icon">✧</span><div><span class="eyebrow">PERSONAL BEST · SINGLE PULL</span><strong>${best?cash(best.value):'The chase begins here.'}</strong><p>${best?escape(best.name)+' · '+escape(best.set):'Your biggest discovery will live here.'}</p></div></div><div class="best-record"><span class="record-icon">◈</span><div><span class="eyebrow">PERSONAL BEST · PACK VALUE</span><strong>${state.stats.bestPack?cash(state.stats.bestPack.value):'One pack can change everything.'}</strong><p>${state.stats.bestPack?escape(E.pack(state.stats.bestPack.packId).name)+' · total simulated value':'Open a pack to set your first record.'}${state.stats.bestGrade?' · Best grade: '+state.stats.bestGrade:''}</p></div></div></div><div class="section-head"><div><h2>The chase list.</h2><p>Ownership includes raw cards and slabs. Every card is actually obtainable.</p></div></div><div class="card-grid hall-grid">${C.CHASE.map(id=>cardTile({kind:'raw',id,cardId:id,qty:state.inventory[id]||0,value:E.card(id).value},{hall:true,tag:E.owned(state,id)>0?'✓ OWNED · '+E.owned(state,id):state.discovered[id]?'NOT HELD':'UNDISCOVERED'})).join('')}</div><div class="progress-summary"><div><span class="eyebrow">LIFETIME DISCOVERY</span><p>${t.discovered} of ${C.CARDS.length} unique cards found</p></div><div class="progress-track" role="progressbar" aria-label="Lifetime card discoveries" aria-valuenow="${t.discovered}" aria-valuemin="0" aria-valuemax="${C.CARDS.length}"><div class="progress-fill" style="--progress:${t.discovered/C.CARDS.length*100}%"></div></div><span class="mono lime">${Math.floor(t.discovered/C.CARDS.length*100)}%</span></div><div class="section-head"><div><h2>Little milestones. More possibilities.</h2><p>One-time rewards for building a collection. Claim each just once.</p></div></div><div class="goals-grid">${C.GOALS.map(g=>{const v=Math.min(E.metric(state,g),g.target),claimed=state.claimed.includes(g.id),ready=v>=g.target;return `<article class="goal ${ready?'complete':''}"><div class="goal-top"><span>${claimed?'✓':'✦'}</span><strong>${cash(g.reward)}</strong></div><h3>${g.title}</h3><p>${g.description}</p><div class="progress-track"><div class="progress-fill" style="--progress:${v/g.target*100}%"></div></div><div class="progress-labels"><span>${v} / ${g.target}</span><span>${claimed?'CLAIMED':ready?'READY':'IN PROGRESS'}</span></div>${button(claimed?'Collected':ready?'Claim '+cash(g.reward):'Keep collecting','claim',`data-id="${g.id}" ${!ready||claimed?'disabled':''}`,ready&&!claimed?'btn primary':'btn ghost')}</article>`;}).join('')}</div><div class="section-head"><div><h2>Your collecting story, in numbers.</h2><p>Lifetime records remain even when you sell a card.</p></div></div><div class="lifetime-grid">${stats.map(([label,value])=>`<div class="lifetime-stat"><span>${label}</span><strong>${value}</strong></div>`).join('')}</div>${footer()}</div>`;}
+  /* The opener only renders outcomes already committed in the saved session. */
+  function openingView(){const a=state.session;if(!a)return `<div class="page"><div class="page-head"><div><h1>Your next discovery is waiting.</h1></div></div>${emptyState('No pack on the table.','Pick a pack from the shop to start an opening.','Browse packs','nav','data-route="shop"')}</div>`;if(a.phase==='results')return resultsView(a);
+    const p=E.pack(a.packId),front=a.phase==='front',row=front?a.cards[a.cursor-1]:null,c=row?E.card(row.id):null,packIndex=front?row.pack:E.currentPack(a),info=a.packs[packIndex],local=Math.max(0,Math.min(a.cursor-info.start,p.slots.length));
+    const last=a.cursor===a.cards.length,boundary=front&&!last&&!a.packs[E.currentPack(a)].opened;
+    const nextLabel=a.phase==='sealed'?'Open wrapper':a.phase==='back'?'Reveal first card':last?'See the results':boundary?`Next pack · ${packIndex+2}/${a.quantity}`:'Next card';
+    let stage='';if(a.phase==='sealed')stage=`<button class="tear-target" id="tear-pack" data-action="tear" aria-label="Tear open ${escape(p.name)}. Swipe across the top, or tap." style="--pack-color:${p.color};--tear:0">${packArt(p,{big:true})}<span class="tear-line"></span><span class="tear-instruction">SWIPE THE SEAL · OR TAP</span></button>`;
+    else if(a.phase==='back')stage=`<button class="stage-card-button" data-action="advance" aria-label="Reveal your first card"><div class="card-back"><span class="back-symbol">✦</span><strong>holo<br>house.</strong><small>SOMETHING GOOD IS IN HERE</small></div></button>`;
+    else stage=`${c.tier>=4?'<div class="rare-halo" aria-hidden="true"></div>':''}<button class="stage-card-button" data-action="advance" aria-label="${nextLabel}"><div class="reveal-card r${c.tier}">${cardArt(c,{large:true,eager:true})}</div></button>${c.tier>=4?`<div class="sparkles" aria-hidden="true">${Array.from({length:c.tier===5?16:8},(_,i)=>`<i style="--x:${14+(i*37)%75}%;--y:${17+(i*23)%64}%;--s:${8+(i%4)*5}px;--d:${i*0.037}s">${i%2?'✦':'✧'}</i>`).join('')}</div>`:''}`;
+    return `<div class="page opener"><div class="opening-head">${button(icon('back')+' Save & leave','nav','data-route="shop"','text-btn')}<span class="opening-wallet" aria-label="Wallet ${cash(state.wallet)} in play money">${icon('wallet')}<strong>${cash(state.wallet)}</strong></span><span class="pill opening-purchase">${a.quantity===1?'SINGLE PACK':a.quantity+'-PACK BOX'} · PAID ${cash(a.cost)}</span>${button(icon(state.settings.sound?'sound':'mute'),'sound',`aria-label="${state.settings.sound?'Mute':'Enable'} sound" aria-pressed="${state.settings.sound}"`,'text-btn')}</div><div class="opening-top"><div class="opening-title"><div class="eyebrow">PACK ${packIndex+1} OF ${a.quantity} · TAKE YOUR TIME</div><h1>${p.name}</h1><p>${a.phase==='sealed'?'A fresh seal. A new possibility.':c?.tier===5?'A CROWN MOMENT. THIS ONE IS SPECIAL.':c?.tier===4?'A little extraordinary.':a.phase==='back'?'Your first card is ready.':'One more for the collection.'}</p></div><div class="progress-track" role="progressbar" aria-label="Cards revealed in this opening" aria-valuemin="0" aria-valuemax="${a.cards.length}" aria-valuenow="${a.cursor}"><div class="progress-fill" style="--progress:${a.cursor/a.cards.length*100}%"></div></div><div class="progress-labels"><span>${a.cursor} / ${a.cards.length} CARDS REVEALED</span><span>${a.rules.autoSell?'AUTO-SELL ≤ '+cash(a.rules.threshold):'ALL PULLS KEPT'}</span></div><div class="opening-stage"><div class="stage-ring" aria-hidden="true"></div>${stage}</div><div class="reveal-caption">${c?`${badge(c.tier)}<h2>${escape(c.name)}</h2><div class="row"><span class="value">${cash(c.value)}</span><span class="muted">estimated · sells for ${cash(E.resale(c.value))}</span><span class="pill ${row.result.isNew?'new':''}">${row.result.status==='auto-sold'?'AUTO-SOLD':row.result.isNew?'NEW TO BINDER':'DUPLICATE'}</span></div><div class="pack-dots" aria-hidden="true">${p.slots.map((_,i)=>`<span class="${i<local?'done':''}"></span>`).join('')}</div>`:`<div class="eyebrow">${a.phase==='sealed'?p.slots.length+' CARDS · '+p.guarantee:'YOUR CARDS ARE ALREADY LOCKED IN'}</div><h2>${a.phase==='sealed'?'Make the first move.':'A little suspense is half the fun.'}</h2><p class="footnote">${a.phase==='sealed'?'Tear the seal above, or use the button below.':'Tap the card or press reveal. Your progress saves every step.'}</p>`}</div><div class="opening-controls">${button(nextLabel+icon('arrow'),a.phase==='sealed'?'tear':'advance','data-transaction="true"','btn primary')}${button(icon(ui.auto?'pause':'play')+(ui.auto?'Pause':'Auto reveal'),'auto',`aria-pressed="${ui.auto}"`,'btn ghost auto-btn')}</div><div class="opening-foot">${button(icon('fast')+' Reveal remaining','quick-reveal','','text-btn')}${button('Pack odds '+icon('info'),'odds',`data-id="${p.id}"`,'text-btn')}</div><div class="opening-save"><span class="dot"></span> SAVED ON THIS DEVICE · REFRESH-SAFE</div></div></div>`;
+  }
+  function resultsView(a){const t=E.sessionTotals(a),best=t.best?E.card(t.best.id):null,dupes=E.duplicates(state,true).reduce((n,x)=>n+x.qty,0),net=t.resale-a.cost;return `<div class="page"><div class="opening-head">${button(icon('back')+' Back to packs','nav','data-route="shop"','text-btn')}<span class="pill lime">${icon('check')} OPENING SAVED</span></div><header class="results-head"><div class="eyebrow">${escape(E.pack(a.packId).name)} · ${a.quantity} ${a.quantity===1?'PACK':'PACKS'} · ${a.cards.length} CARDS</div><h1>A few new favorites.</h1><p>The reveal is over. The collecting is just getting started.</p></header><div class="receipt-layout">${best?`<div class="standout"><button class="collect-card standout-art" data-action="inspect" data-kind="raw" data-id="${best.id}" aria-label="Inspect standout ${escape(best.name)}">${cardArt(best,{eager:true})}</button><div><span class="eyebrow">✧ YOUR STANDOUT PULL</span><h2>${escape(best.name)}</h2><p>${escape(best.edition)} · #${best.number}</p><div class="standout-value">${cash(best.value)}</div>${badge(best.tier)}<p style="margin-top:6px">Sell-back: ${cash(E.resale(best.value))}</p></div></div>`:''}<section class="receipt" aria-label="Opening results summary"><div class="receipt-top"><div><span>Total estimated pull value</span><strong>${cash(t.value)}</strong></div><div><span>Actual resale if all sold raw</span><strong class="lime">${cash(t.resale)}</strong></div></div><div class="receipt-line"><span>Purchase cost${a.quantity>1?' · box discount included':''}</span><strong>${cash(a.cost)}</strong></div><div class="receipt-line"><span>Resale less purchase cost</span><strong class="${net>=0?'lime':''}">${net<0?'−':'+'}${cash(Math.abs(net))}</strong></div><div class="receipt-line"><span>New on reveal / duplicates</span><strong>${t.new} new / ${t.duplicates} duplicates</strong></div><div class="receipt-line"><span>Auto-sold · already in wallet</span><strong>${t.autoSold} cards · ${cash(a.autoIncome)}</strong></div><div class="receipt-line"><span>All raw-card sales credited</span><strong>${cash(t.sold)}</strong></div><p class="footnote" style="font-size:9px;margin-top:5px">Values above are snapshots at pull time. Estimates are not cash. Sell-back is 65%, rounded per copy. Graded or sold cards may no longer be in your binder.</p><div class="receipt-actions">${button(dupes?`Sell session duplicates (${dupes})`:'No duplicates to sell','sell-session',dupes?'':'disabled','btn ghost')}${button('Visit binder '+icon('arrow'),'nav','data-route="binder"','btn primary')}</div></section></div><div class="section-head"><div><h2>The whole opening.</h2><p>Tap any card to inspect it.</p></div><div class="result-meta"><span class="pill lime">${t.new} NEW</span><span class="pill">${t.duplicates} DUPLICATES</span></div></div><div class="card-grid">${a.cards.map(r=>`<div>${cardTile({kind:'raw',id:r.id,cardId:r.id,qty:state.inventory[r.id]||0},{tag:r.result.status==='auto-sold'?'AUTO-SOLD':r.result.status==='sold'?'SOLD':r.result.status==='graded'?'GRADED':r.result.isNew?'NEW':'DUPLICATE'})}</div>`).join('')}</div><div class="result-actions">${button(`Open ${a.quantity===1?'another pack':'another box'} · ${cash(a.cost)}`,'buy',`data-id="${a.packId}" data-qty="${a.quantity}"`,'btn primary')}${button('Try a different pack','nav','data-route="shop"','btn ghost')}</div>${footer()}</div>`;}
+
+  /* Dialogs share the same inventory and price helpers as the main views. */
+  function lockPage() {
+    if (lockedScroll !== null) return;
+    lockedScroll = window.scrollY;
+    document.body.style.setProperty('--locked-scroll', -lockedScroll + 'px');
+    document.body.classList.add('dialog-open');
+  }
+  function unlockPage() {
+    if (lockedScroll === null) return;
+    const y = lockedScroll; lockedScroll = null;
+    document.body.classList.remove('dialog-open');
+    document.body.style.removeProperty('--locked-scroll');
+    window.scrollTo({top: y, behavior: 'instant'});
+  }
+  function showDialog(title, body, {kind='generic',wide=false}={}) {
+    stopAuto();
+    const wasOpen = dialog.open;
+    ui.modalKind=kind; ui.modalRevision=state?.revision??0;
+    dialog.classList.toggle('wide',wide); dialog.dataset.kind=kind;
+    dialog.innerHTML=`<div class="modal-inner"><div class="modal-head"><h2 id="modal-title">${title}</h2>${button(icon('close'),'close-modal','aria-label="Close dialog"','icon-btn')}</div><div class="modal-body">${body}</div></div>`;
+    const bodyElement = dialog.querySelector('.modal-body');
+    let actions = kind==='detail' ? bodyElement.querySelector('.detail-actions') : kind==='settings' ? bodyElement.querySelector('#settings-form .modal-actions') : bodyElement.querySelector(':scope > .modal-actions:last-child');
+    if (kind==='pending-grade') {
+      const gradeAction=bodyElement.querySelector('[data-action="reveal-grade"], [data-action="finish-grade"]');
+      if(gradeAction) { actions=document.createElement('div'); actions.className='modal-actions'; actions.append(gradeAction); }
+    }
+    if (actions) {
+      const dock=document.createElement('div'); dock.className='modal-dock';
+      dock.append(actions); dialog.querySelector('.modal-inner').append(dock);
+    }
+    if (!wasOpen) {
+      lockPage();
+      // A phone's Back action dismisses this sheet before leaving the game.
+      history.pushState({hhModal:true},'',location.href);
+      dialog.showModal();
+    }
+    bodyElement.scrollTop=0;
+    // Focusing a numeric field here would unexpectedly summon the phone keyboard.
+    dialog.querySelector('[data-action="close-modal"]')?.focus({preventScroll:true});
+    fitViewport();
+  }
+  function closeDialog({fromHistory=false}={}) {
+    if (dialog.open) dialog.close();
+    ui.modalKind=null; unlockPage();
+    if(!fromHistory && history.state?.hhModal && !modalBackPending) {
+      modalBackPending=true; history.back();
+    }
+  }
+  window.addEventListener('popstate', () => {
+    if(dialog.open && !history.state?.hhModal) closeDialog({fromHistory:true});
+    if(modalBackPending) {
+      modalBackPending=false;
+      if(routeAfterModal) { const next=routeAfterModal; routeAfterModal=null; go(next); }
+    }
+  });
+  function openOdds(id){const p=E.pack(id),feature=p.slots[p.slots.length-1],misses=state.pity[p.id]||0,groups=new Map();p.slots.slice(0,-1).forEach(s=>{const key=JSON.stringify(s),o=groups.get(key);if(o)o.n++;else groups.set(key,{n:1,weights:s});});
+    const lines=[...groups.values()].map(g=>`${g.n} ${g.n===1?'slot':'slots'}: ${g.weights.map((v,i)=>v?`${pct(v)} ${C.TIERS[i]}`:'').filter(Boolean).join(' / ')}`).join('<br>');
+    showDialog(p.name,`<div class="odds-intro">${packArt(p)}<div><span class="pill">${p.slots.length} CARDS PER PACK</span><p>${p.description}</p></div></div><table class="odds-table"><thead><tr><th>FINAL FEATURE SLOT · BEFORE PROTECTION</th><th>PROBABILITY</th></tr></thead><tbody>${feature.map((v,i)=>v?`<tr><td>${badge(i)}</td><td class="mono">${pct(v)}</td></tr>`:'').join('')}</tbody></table><p class="slot-note"><strong class="muted">Other ${p.slots.length-1} slots, in reveal order</strong><br>${lines}<br><br>These are <strong>House tiers</strong>, not the rarity printed on a real card. Within a tier, each eligible card is equally likely. Draws are with replacement, so a pack can contain duplicates.</p><div class="pity-card"><h3>${icon('shield')} ${p.pity?'Bad-luck protection':'No waiting for a Crown'}</h3><p>${p.pity?`After <strong>${p.pity-1} consecutive ${p.name} packs</strong> without a ${C.TIERS[p.target]}-or-better pull, the next pack is guaranteed one. Any qualifying hit resets this series’ counter. The guarantee replaces the feature slot only when needed. ${p.target===4?'A protected replacement is 95% Ultra and 5% Crown.':'A protected replacement is always Crown.'} Boxes process one pack at a time and use the same counter.`:'Every pack already guarantees one Crown, so no pity counter is needed.'}</p>${p.pity?`<div class="progress-track"><div class="progress-fill" style="--progress:${misses/p.pity*100}%"></div></div><div class="progress-labels"><span>${misses} CONSECUTIVE MISSES SAVED</span><span>${p.pity-misses} PACK${p.pity-misses===1?'':'S'} TO GUARANTEE</span></div>`:''}</div><div class="receipt-line" style="margin-top:15px"><span>Single pack</span><strong>${cash(p.price)}</strong></div><div class="receipt-line"><span>${p.box}-pack box · ${p.slots.length*p.box} cards · 10% off</span><strong>${cash(E.cost(p,p.box))}</strong></div><div class="modal-footer">${p.pool?'Card pool: '+p.pool.map(s=>C.SETS[s]).join(' + '):'Card pool: all seven catalog sets, in the tiers shown above.'}<br>All pack identities, collation, probabilities and values are simulated. These are not official retail products.</div>`,{kind:'odds'});
+  }
+  function packsFor(c){return C.PACKS.filter(p=>(!p.pool||p.pool.includes(c.setId))&&(p.slots.some(w=>w[c.tier]>0)||(p.pity&&c.tier>=p.target))).map(p=>p.name).join(', ');}
+  function detailDialog(kind,id){let slab=kind==='slab'?state.slabs.find(s=>s.id===id):null;if(kind==='slab'&&!slab){toast('That slab is no longer in your binder.');return;}const c=E.card(slab?.cardId||id),qty=slab?1:state.inventory[c.id]||0,value=slab?.value??c.value;
+    ui.detail={kind,id,cardId:c.id};
+    const ownedNote=qty?`${qty} ${slab?'slab':'ungraded '+(qty===1?'copy':'copies')} in your binder${!slab&&E.owned(state,c.id)>qty?' · '+(E.owned(state,c.id)-qty)+' graded':''}`:'Not currently held as an ungraded card.';
+    showDialog(slab?'The slab':'Card details',`<div class="detail-layout"><div class="detail-art"><button type="button" class="art-inspect" data-action="view-art" data-kind="${kind}" data-id="${escape(id)}" aria-label="Enlarge ${escape(c.name)} artwork">${slab?slabArt(slab,{large:true}):cardArt(c,{large:true,eager:true})}<span class="art-zoom-label">${icon('search')} Tap to enlarge</span></button></div><div class="detail-info">${badge(c.tier,slab?'GRADE '+slab.grade+' · '+c.rarity:c.rarity)}<h3>${escape(c.name)}</h3><p>${escape(c.set)} · #${escape(c.number)}<br>${escape(c.edition)}${slab?'<br>Certificate '+escape(slab.cert)+' · simulated HHG':''}</p><div class="detail-prices"><div><small>${slab?'Graded':'Raw'} game estimate</small><strong>${cash(value)}</strong></div><div><small>You receive per copy</small><strong class="lime">${cash(E.resale(value))}</strong></div></div><p>${ownedNote}</p>${qty?`${!slab?`<div class="quantity-field"><label for="detail-quantity">Copies to sell</label>${stepper('detail-quantity',1,qty)}</div>`:''}<div class="detail-actions">${button(`Sell ${slab?'slab':'1 copy'} · ${cash(E.resale(value))}`,'detail-sell','id="detail-sell-button"','btn primary')}${!slab?button(`Grade a copy · ${cash(E.fee(c.id))}`,'grade',`data-id="${c.id}"`,'btn ghost'):''}</div>`:`${button('Find it in packs '+icon('arrow'),'nav','data-route="shop"','btn primary full')}`}<p class="detail-note">${slab?'Slabs cannot be regraded. The grade and certificate are part of your saved collection.':`Find this version in: ${packsFor(c)}.`}</p><p class="footnote">Static, fictional values. House rarity is a game tier, not necessarily the rarity printed on the card. Artwork loading never changes your card.</p></div></div>`,{kind:'detail',wide:true});
+  }
+  function artworkDialog(kind,id) {
+    const slab=kind==='slab'?state.slabs.find(x=>x.id===id):null;
+    if(kind==='slab'&&!slab) {toast('That slab is no longer in your binder.'); return;}
+    const c=E.card(slab?.cardId||id);
+    showDialog(escape(c.name),`<div class="artwork-view">${slab?slabArt(slab,{large:true}):cardArt(c,{large:true,eager:true})}<p>${escape(c.set)} · #${escape(c.number)}</p></div><div class="modal-actions">${button('Back to card details','inspect',`data-kind="${kind}" data-id="${escape(id)}"`,'btn primary full')}</div>`,{kind:'artwork',wide:true});
+  }
+  function stepper(id,value,max,extra=''){return `<div class="stepper">${button('−','step',`data-for="${id}" data-delta="-1" aria-label="Decrease quantity"`,'')}<input type="number" inputmode="numeric" min="1" max="${max}" value="${value}" id="${id}" aria-label="Quantity" ${extra}>${button('+','step',`data-for="${id}" data-delta="1" aria-label="Increase quantity"`,'')}</div>`;}
+  function openSale(items,context='',retainRevision=false){let q;try{q=E.quote(state,items);}catch(e){toast(e.message);return;}const revision=retainRevision?ui.modalRevision:state.revision;if(!retainRevision)ui.saleLimits=Object.fromEntries(q.lines.map(r=>[r.kind+':'+r.id,r.kind==='slab'?1:context==='duplicates'||context==='session'?r.qty:state.inventory[r.id]]));ui.sale=q.lines.map(({kind,id,qty})=>({kind,id,qty}));ui.saleContext=context;
+    const note=context==='duplicates'||context==='session'?'This sale preserves at least one ungraded copy of each version. Slabs are not included.':`You’re selling the selected copies, not just duplicates. A sold card cannot be bought back.`;
+    showDialog(`Sell ${q.count} ${q.count===1?'card':'cards'}?`,`<p class="modal-intro">${note} You receive 65% of the game estimate, rounded per copy.</p><div class="sale-lines">${q.lines.map((r,i)=>{const max=ui.saleLimits[r.kind+':'+r.id];return `<div class="sale-line">${cardArt(E.card(r.cardId))}<div class="sale-description"><strong>${escape(r.name)}</strong><small>${r.kind==='slab'?'GRADED SLAB':escape(E.card(r.cardId).edition)} · ${cash(r.unit)} each</small></div>${r.kind==='raw'?stepper('sale-quantity-'+i,r.qty,max,`data-sale-index="${i}"`):'<span class="mono">×1</span>'}<span class="mono" data-line-total="${i}">${cash(r.subtotal)}</span></div>`;}).join('')}</div><div class="sale-total"><span>Added to your wallet</span><strong id="sale-total">${cash(q.total)}</strong></div><p class="footnote" style="margin-top:8px">Wallet after sale: <strong class="muted" id="sale-wallet">${cash(state.wallet+q.total)}</strong></p><div class="modal-actions">${button('Keep my cards','close-modal','','btn ghost')}${button('Confirm sale · '+cash(q.total),'confirm-sale','data-transaction="true"','btn primary')}</div>`,{kind:'sale'});ui.modalRevision=revision;
+  }
+  function refreshSaleQuote() {
+    try {
+      const q=E.quote(state,ui.sale);
+      $('#modal-title').textContent=`Sell ${q.count} ${q.count===1?'card':'cards'}?`;
+      q.lines.forEach((line,i)=>{ const label=dialog.querySelector(`[data-line-total="${i}"]`); if(label)label.textContent=cash(line.subtotal); });
+      $('#sale-total').textContent=cash(q.total);
+      $('#sale-wallet').textContent=cash(state.wallet+q.total);
+      dialog.querySelector('[data-action="confirm-sale"]').textContent='Confirm sale · '+cash(q.total);
+    } catch(error) { toast(error.message); }
+  }
+  function updateSearchResults(kind) {
+    const template=document.createElement('template');
+    template.innerHTML=kind==='binder'?binderView():studioView();
+    const target=document.getElementById(kind+'-content');
+    if(target) target.replaceChildren(...template.content.querySelector('#'+kind+'-content').childNodes);
+  }
+  function gradeDialog(id){const c=E.card(id);if(!(state.inventory[id]>0)){toast('Keep an ungraded copy before submitting it.');return;}if(state.pendingGrade){pendingGradeDialog();return;}ui.gradeCard=id;const price=E.fee(id);showDialog('Before it goes under glass…',`<div class="grading-overview">${cardArt(c)}<div><h3>${escape(c.name)}</h3><p>${escape(c.edition)} · #${c.number}<br>Raw estimate ${cash(c.value)} · Raw resale ${cash(E.resale(c.value))}</p></div></div><p class="modal-intro">This consumes <strong>one ungraded copy</strong> and the fee. It creates one slab, not an extra card. The grade is random, permanently saved at submission, and cannot be rerolled by refreshing.</p><table class="odds-table"><thead><tr><th>HHG GRADE</th><th>CHANCE</th><th>ESTIMATE</th><th>SLAB RESALE</th></tr></thead><tbody>${C.GRADES.map(g=>`<tr><td><strong>${g.grade}</strong> · ${g.label}</td><td>${g.weight}%</td><td>${cash(Math.round(c.value*g.multiplier))}</td><td>${cash(E.resale(Math.round(c.value*g.multiplier)))}</td></tr>`).join('')}</tbody></table><div class="grading-cost"><span>Non-refundable grading fee<br><small>$8 + 35% of the raw estimate</small></span><strong>${cash(price)}</strong></div><p class="footnote">A grade 6 or 7 lowers the estimate. Most grades will not make back the fee on resale. No regrading or real-world certification. ${state.wallet<price?`<strong style="color:var(--danger)">You need ${cash(price-state.wallet)} more to submit.</strong>`:''}</p><div class="modal-actions">${button('Keep it ungraded','close-modal','','btn ghost')}${button(state.wallet<price?'View funding options':`Submit · ${cash(price)}`,'confirm-grade','data-transaction="true"','btn primary')}</div>`,{kind:'grade'});}
+  function pendingGradeDialog(){if(!state.pendingGrade)return;const pending=state.pendingGrade,slab=state.slabs.find(s=>s.id===pending.id);if(!slab)return;const c=E.card(slab.cardId),g=C.GRADES.find(g=>g.grade===slab.grade);showDialog(pending.shown?'Certified. Collected. Yours.':'The verdict is in.',`<div class="grade-result"><div class="eyebrow">HOLO HOUSE GRADING · ${escape(slab.cert)}</div><h3>${pending.shown?(slab.grade===10?'A perfect little moment.':g.label+'. Made yours.'):'One card. One verdict.'}</h3><p>${escape(c.name)} · ${escape(c.edition)}</p><div class="${pending.shown?'grade-pop':''}">${slabArt(slab,{large:true,hidden:!pending.shown})}</div>${pending.shown?`<div class="pill ${slab.grade===10?'lime':''}">HHG ${slab.grade} · ${g.label.toUpperCase()}</div><div class="grade-price">${cash(slab.value)}</div><p>Graded estimate · actual resale ${cash(E.resale(slab.value))}</p><p class="footnote" style="margin-top:8px">Fee paid: ${cash(slab.fee)} · raw copy consumed: 1</p>${button('Add it to the shelf '+icon('arrow'),'finish-grade','','btn primary')}`:`<p>Your slab is already saved. The reveal can wait; the grade won’t change.</p>${button('Reveal my grade '+icon('spark'),'reveal-grade','data-transaction="true"','btn primary')}`}<div class="modal-footer">SIMULATED GRADING · NOT A REAL CERTIFICATION SERVICE</div></div>`,{kind:'pending-grade'});}
+  function settingsDialog(){const s=state.settings;showDialog('Make yourself at home.',`<form id="settings-form"><div class="setting-row"><label for="setting-sound"><strong>Opening sounds</strong><small>Soft, synthesized sounds. Off by default.</small></label><input id="setting-sound" class="switch" type="checkbox" ${s.sound?'checked':''}></div><div class="setting-row"><label for="setting-motion"><strong>Reduce motion</strong><small>Your device’s reduced-motion preference is always respected.</small></label><input id="setting-motion" class="switch" type="checkbox" ${s.reducedMotion?'checked':''}></div><div class="setting-row"><label for="setting-pace"><strong>Auto-reveal pace</strong><small>Manual opening is always available.</small></label><select id="setting-pace"><option value="normal" ${s.pace==='normal'?'selected':''}>Savor it</option><option value="quick" ${s.pace==='quick'?'selected':''}>Keep it moving</option></select></div><section class="setting-section"><div class="setting-row"><label for="setting-autosell"><strong>Auto-sell inexpensive duplicates</strong><small>Keep your first ungraded copy of every version.</small></label><input id="setting-autosell" class="switch" type="checkbox" ${s.autoSell?'checked':''}></div><div class="setting-row"><label for="setting-threshold"><strong>Estimated value threshold</strong><small>Duplicates at or below this amount are sold.</small></label><input type="number" id="setting-threshold" min="0" max="10000" step="0.01" inputmode="decimal" value="${(s.threshold/100).toFixed(2)}" aria-label="Auto-sell value threshold in dollars"></div><p>Applies as cards are revealed in <strong>future purchases only</strong>. It never sells your last ungraded copy, never touches slabs, and never sells existing binder cards. Current paid openings keep the rule they were purchased with. Cash received is 65% of each card’s estimate.</p></section><div class="modal-actions">${button('Save preferences','save-settings','','btn primary full')}</div></form><section class="setting-section"><h3>Your collection stays here.</h3><p>Progress is saved in this browser’s IndexedDB. Clearing site data or switching browsers won’t carry it with you. Export a backup before moving devices. Importing replaces the entire local collection.</p><div class="backup-actions">${button(icon('download')+' Export save','export','','btn ghost')}${button(icon('upload')+' Import save','import','','btn ghost')}</div><input id="import-file" type="file" accept="application/json,.json" hidden><p class="footnote" style="margin-top:12px"><span class="dot"></span> Last committed: ${escape(new Date(state.updatedAt).toLocaleString())}</p></section><section class="setting-section"><div class="row between"><div><h3>A fresh start.</h3><p>Erase this collection and return to ${cash(C.STARTING_CASH)}.</p></div>${button('Reset game','reset','','btn danger small')}</div></section><div class="modal-footer">All money is fictional. Artwork requires an internet connection until cached. Gameplay and the saved catalog do not depend on image availability. ${button('About Holo House '+icon('arrowUp'),'about','','text-btn')}</div>`,{kind:'settings'});}
+  function fundsDialog(required,context='packs'){showDialog('A little short on play money.',`<p class="modal-intro">This ${context==='grading'?'grading submission':'purchase'} costs <strong>${cash(required)}</strong>. Your wallet has <strong>${cash(state.wallet)}</strong>; you need ${cash(Math.max(0,required-state.wallet))} more.</p><div class="stack">${button(icon('binder')+' Sell cards from your binder','nav','data-route="binder"','btn primary full')}${button(icon('shop')+' Browse packs from $14','cheaper','','btn ghost full')}${button(icon('hall')+' Check milestone rewards','nav','data-route="hall"','btn ghost full')}</div><p class="footnote" style="margin-top:21px">No top-ups, real-money purchases, or hidden overdrafts. Your cards are yours to keep; you can also deliberately start over with a fresh wallet.</p><div class="modal-actions">${button('Keep browsing','close-modal','','btn ghost')}${button('Start over…','reset','','btn danger')}</div>`,{kind:'funds'});}
+  function resetDialog(){showDialog('Start a new collection?',`<p class="modal-intro">This permanently removes your wallet, binder, slabs, milestones and any unfinished paid opening from <strong>this browser</strong>. A new game starts with ${cash(C.STARTING_CASH)}. Export a backup first to keep this collection.</p>${button(icon('download')+' Export this collection','export','','btn ghost full')}<label for="reset-confirm" class="footnote" style="display:block;margin-top:20px">Type <strong>RESET</strong> to confirm.</label><input class="reset-input" id="reset-confirm" placeholder="RESET" autocomplete="off" autocapitalize="characters"><div class="modal-actions">${button('Keep my collection','close-modal','','btn ghost')}${button('Erase & start again','confirm-reset','id="reset-button" disabled','btn danger')}</div>`,{kind:'reset'});}
+  function aboutDialog(){showDialog('A little collecting magic.',`<p class="modal-intro"><strong>Holo House</strong> is an unofficial, fan-made Pokémon pack-opening simulator. It is not a card-battle game and has no accounts, backend, ads, paid API, purchases, cash withdrawals or monetary prizes.</p><div class="stack"><section><h3>Real card identities. Fictional economy.</h3><p class="slot-note">${C.CARDS.length} bundled card records span seven sets, including the original Base Set, Scarlet & Violet—151, and iconic modern alternate arts. Every estimated value, House tier, pack product, probability and grading result is a static game rule—not live market data, an official pack’s odds, or an assessment of real card condition.</p></section><section><h3>Artwork & attribution</h3><p class="slot-note">Card identities and public artwork URLs reference the <a href="https://github.com/PokemonTCG/pokemon-tcg-data" target="_blank" rel="noopener noreferrer">Pokémon TCG community data project</a>. Images load from <a href="https://pokemontcg.io/" target="_blank" rel="noopener noreferrer">Pokémon TCG API’s image CDN</a>. Pokémon names and artwork belong to their respective rights holders. This project is not affiliated with or endorsed by them.</p></section><section><h3>Your save is the source of truth.</h3><p class="slot-note">A purchase locks every pack’s contents and charges your wallet in one IndexedDB transaction. Each reveal, sale and grading submission is also atomic. Competing browser tabs are serialized and stale actions are rejected. A failed image is only a failed image: the same card remains yours.</p></section><section><h3>Offline & privacy</h3><p class="slot-note">On a static host, the service worker caches the app and previously viewed artwork. Uncached art needs a connection; otherwise, labeled placeholders keep everything playable. Your save stays in your browser unless you export it. Image requests go to the public artwork host; there is no analytics.</p></section></div><div class="modal-actions">${button('Back to collecting','close-modal','','btn primary')}</div>`,{kind:'about'});}
+
+  /* Procedural audio: no files, autoplay, tracking, or dependencies. */
+  const Sound={
+    ctx:null,
+    ensure(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;if(!this.ctx)this.ctx=new AC();if(this.ctx.state==='suspended')this.ctx.resume().catch(()=>{});}catch{}},
+    play(type='tap',tier=0){if(!state?.settings.sound)return;this.ensure();const ctx=this.ctx;if(!ctx||ctx.state!=='running')return;try{const now=ctx.currentTime;if(type==='tear'){const length=Math.floor(ctx.sampleRate*.17),buffer=ctx.createBuffer(1,length,ctx.sampleRate),channel=buffer.getChannelData(0);for(let i=0;i<length;i++)channel[i]=(Math.random()*2-1)*(1-i/length);const source=ctx.createBufferSource(),gain=ctx.createGain(),filter=ctx.createBiquadFilter();source.buffer=buffer;filter.type='highpass';filter.frequency.value=1600;gain.gain.setValueAtTime(.055,now);source.connect(filter).connect(gain).connect(ctx.destination);source.start();source.stop(now+.18);return;}const notes=type==='grade'?[523.25,659.25,783.99,1046.5]:tier===5?[523.25,659.25,783.99,1046.5]:tier>=4?[440,554.37,659.25]:type==='sale'?[440,660]:[tier>=3?554:392];notes.forEach((f,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain(),t=now+i*.09;osc.type='sine';osc.frequency.value=f;gain.gain.setValueAtTime(0,t);gain.gain.linearRampToValueAtTime(.035,t+.014);gain.gain.exponentialRampToValueAtTime(.0001,t+(notes.length>1?.52:.15));osc.connect(gain).connect(ctx.destination);osc.start(t);osc.stop(t+.6);});}catch{}},
+  };
+  function toast(text){clearTimeout(toastTimer);const el=$('#toast');el.textContent=text;el.classList.add('show');toastTimer=setTimeout(()=>el.classList.remove('show'),4100);}
+  function stopAuto(){ui.auto=false;clearTimeout(autoTimer);autoTimer=null;const btn=main.querySelector('.auto-btn');if(btn){btn.innerHTML=icon('play')+'Auto reveal';btn.setAttribute('aria-pressed','false');}}
+  function scheduleAuto(){clearTimeout(autoTimer);if(!ui.auto||route!=='opening'||dialog.open||document.hidden||state.session?.phase==='results')return;const a=state.session;if(!a)return;const tier=a.phase==='front'?E.card(a.cards[a.cursor-1].id).tier:0,quick=state.settings.pace==='quick';let delay=a.phase==='sealed'?(quick?420:800):tier===5?(quick?1350:2300):tier>=4?(quick?1050:1700):(quick?530:1000);autoTimer=setTimeout(()=>performAdvance(),delay);}
+  function render({focus=null,start=null}={}){if(!state)return;for(const[key,item]of ui.selected){if(item.kind==='raw'&&!state.inventory[item.id]||item.kind==='slab'&&!state.slabs.some(s=>s.id===item.id))ui.selected.delete(key);}renderHeader();const views={shop:shopView,binder:binderView,studio:studioView,hall:hallView,opening:openingView};main.innerHTML=views[route]();stageObserver?.disconnect();const stage=main.querySelector('.opening-stage');if(stage){stage.style.setProperty('--stage-height',stage.clientHeight+'px');stageObserver?.observe(stage);}document.title=(route==='shop'?'A little collecting magic':route==='binder'?'Your binder':route==='studio'?'Grading studio':route==='hall'?'Hall of Fame':'The opening')+' · Holo House';if(focus){const el=document.getElementById(focus);el?.focus({preventScroll:true});if(start!==null&&['search','text'].includes(el?.type))try{el.setSelectionRange(start,start);}catch{}}scheduleAuto();}
+  function go(name){if(!validRoutes.includes(name))name='shop';stopAuto();if(dialog.open)closeDialog();if(modalBackPending){routeAfterModal=name;return;}route=name;if(location.hash!=='#'+name)location.hash=name;render();window.scrollTo({top:0,behavior:'instant'});main.focus({preventScroll:true});if(ui.showGradeAfterNavigation&&state.pendingGrade){ui.showGradeAfterNavigation=false;pendingGradeDialog();}}
+  window.addEventListener('hashchange',()=>{const value=validRoutes.includes(location.hash.slice(1))?location.hash.slice(1):'shop';if(value===route)return;stopAuto();closeDialog();route=value;if(state)render();window.scrollTo(0,0);});
+  async function commit(fn,{expected=state?.revision,renderView=true,replace=false}={}){
+    if(busy)return null;busy=true;document.documentElement.dataset.busy='true';try{const answer=await Store.mutate(expected??null,fn,{replace});state=answer.state;storageFailure=null;if(renderView)render();return answer.result??{};}catch(error){try{const fresh=await Store.read();if(fresh){E.validate(fresh);state=fresh;if(renderView)render();}}catch{}toast(error.message||'The save could not be completed. Nothing was changed.');return null;}finally{busy=false;delete document.documentElement.dataset.busy;}
+  }
+  async function purchase(id,quantity){const p=E.pack(id);if(state.pendingGrade){pendingGradeDialog();return;}if(state.session&&state.session.phase!=='results'){toast('Your already-paid opening is waiting. Finish it first.');go('opening');return;}const price=E.cost(p,quantity);if(state.wallet<price){fundsDialog(price);return;}if(state.settings.sound)Sound.ensure();const r=await commit(s=>E.buy(s,id,quantity),{renderView:false});if(r){go('opening');Sound.play('tap');}}
+  async function performAdvance(){if(busy)return;const a=state.session;if(!a||a.phase==='results'){stopAuto();return;}if(state.settings.sound)Sound.ensure();const r=await commit(s=>s.session.phase==='sealed'?E.tear(s):E.advance(s));if(r){if(r.cardId){Sound.play('pull',r.tier);$('#announcer').textContent=`${E.card(r.cardId).name}. ${C.TIERS[r.tier]}. ${cash(E.card(r.cardId).value)}. ${r.isNew?'New to your binder.':'Duplicate.'}${r.autoSold?' Automatically sold.':''}`;}else if(r.results){stopAuto();Sound.play('tap');window.scrollTo({top:0,behavior:'instant'});}else if(r.pack!==undefined)Sound.play('tear');}else stopAuto();scheduleAuto();}
+  function downloadSave(data,filename='holo-house-save.json'){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
+  async function exportSave(){const s=state||await Store.damaged();if(!s){toast('There is no readable local save to export.');return;}downloadSave({app:'holo-house',format:1,exportedAt:new Date().toISOString(),state:s},'holo-house-save-'+new Date().toISOString().slice(0,10)+'.json');toast('Save exported. Keep that file somewhere safe.');}
+  async function importFile(file){if(!file)return;if(file.size>5*1024*1024){toast('That file is too large to be a Holo House save.');return;}try{const data=JSON.parse(await file.text());if(data.app!=='holo-house'||data.format!==1||!data.state)throw new Error('Choose a valid Holo House JSON backup.');E.validate(data.state);ui.imported=E.clone(data.state);const t=E.totals(ui.imported);showDialog('Restore this collection?',`<p class="modal-intro">This replaces your entire current local game. Export your current collection first to keep a copy.</p><div class="stat-strip"><div><span class="label">Backup wallet</span><strong>${cash(ui.imported.wallet)}</strong></div><div><span class="label">Total cards</span><strong>${t.copies}</strong></div><div><span class="label">Unique cards</span><strong>${t.unique}</strong></div><div><span class="label">Slabs</span><strong>${t.slabs}</strong></div></div><p class="footnote">${ui.imported.session&&ui.imported.session.phase!=='results'?'Includes an unfinished paid opening. Its locked contents and progress will be restored.':'No unfinished opening.'}</p><div class="modal-actions">${button('Cancel','close-modal','','btn ghost')}${button('Replace & restore','confirm-import','','btn primary')}</div>`,{kind:'import-confirm'});}catch(e){toast(e.message||'This backup could not be read. Your current save is unchanged.');}}
+  function quantityValue(el){const max=Number(el.max)||1,v=Number(el.value);return Number.isFinite(v)?Math.max(1,Math.min(max,Math.floor(v))):1;}
+  function updateDetailPrice(){if(!ui.detail)return;const qty=ui.detail.kind==='slab'?1:quantityValue($('#detail-quantity'));const c=E.card(ui.detail.cardId),slab=ui.detail.kind==='slab'?state.slabs.find(s=>s.id===ui.detail.id):null;const btn=$('#detail-sell-button');if(btn)btn.innerHTML=`Sell ${slab?'slab':qty+' '+(qty===1?'copy':'copies')} · ${cash(E.resale(slab?.value??c.value)*qty)}`;}
+  document.addEventListener('click',async event=>{
+    const el=event.target.closest('[data-action]');if(!el||el.disabled||modalBackPending||busy)return;const action=el.dataset.action;
+    try{
+      switch(action){
+        case 'nav':go(el.dataset.route);break;
+        case 'browse':$('#pack-shop')?.scrollIntoView({behavior:state.settings.reducedMotion||matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});break;
+        case 'close-modal':closeDialog();break;
+        case 'about':aboutDialog();break;
+        case 'settings':settingsDialog();break;
+        case 'odds':openOdds(el.dataset.id);break;
+        case 'buy':await purchase(el.dataset.id,Number(el.dataset.qty));break;
+        case 'cheaper':go('shop');$('#product-daybreak')?.scrollIntoView({behavior:'instant',block:'center'});break;
+        case 'sound':{if(!state.settings.sound)Sound.ensure();const r=await commit(s=>E.settings(s,{...s.settings,sound:!s.settings.sound}));if(r){Sound.play();toast(state.settings.sound?'Opening sounds on.':'Opening sounds off.');}break;}
+        case 'tear':if(performance.now()<(ui.suppressTearClick||0))return;if(state.session?.phase==='sealed')await performAdvance();break;
+        case 'advance':await performAdvance();break;
+        case 'auto':if(state.settings.sound)Sound.ensure();ui.auto=!ui.auto;render();break;
+        case 'quick-reveal':{stopAuto();const r=await commit(s=>E.finish(s));if(r){Sound.play('pull',3);window.scrollTo({top:0,behavior:'instant'});}break;}
+        case 'binder-tab':ui.binderTab=el.dataset.id;ui.limit=36;render();break;
+        case 'toggle-select':ui.selecting=!ui.selecting;if(!ui.selecting)ui.selected.clear();render();break;
+        case 'select-card':{const item={kind:el.dataset.kind,id:el.dataset.id,qty:1},key=item.kind+':'+item.id;if(ui.selected.has(key))ui.selected.delete(key);else ui.selected.set(key,item);render();break;}
+        case 'select-shown':filteredBinder().slice(0,ui.limit).forEach(x=>ui.selected.set(x.kind+':'+x.id,{kind:x.kind,id:x.id,qty:1}));render();break;
+        case 'clear-selection':ui.selected.clear();render();break;
+        case 'sell-selection':if(ui.selected.size)openSale([...ui.selected.values()],'selected');break;
+        case 'sell-duplicates':{const items=E.duplicates(state);if(items.length)openSale(items,'duplicates');else toast('No ungraded duplicates to sell.');break;}
+        case 'sell-session':{const items=E.duplicates(state,true);if(items.length)openSale(items,'session');else toast('No session duplicates remain.');break;}
+        case 'clear-filters':ui.search='';ui.rarity='all';ui.duplicates=false;ui.binderTab='all';ui.limit=36;render();break;
+        case 'more-cards':ui.limit+=36;render();break;
+        case 'clear-studio':ui.studioSearch='';render();break;
+        case 'more-studio':ui.studioLimit+=24;render();break;
+        case 'view-art':artworkDialog(el.dataset.kind||'raw',el.dataset.id);break;
+        case 'inspect':detailDialog(el.dataset.kind||'raw',el.dataset.id);break;
+        case 'step':{const input=document.getElementById(el.dataset.for);if(input){input.value=Math.max(1,Math.min(Number(input.max),quantityValue(input)+Number(el.dataset.delta)));input.dispatchEvent(new Event('input',{bubbles:true}));if(input.dataset.saleIndex!==undefined)input.dispatchEvent(new Event('change',{bubbles:true}));}break;}
+        case 'detail-sell':{if(!ui.detail)break;const qty=ui.detail.kind==='slab'?1:quantityValue($('#detail-quantity'));openSale([{kind:ui.detail.kind,id:ui.detail.id,qty}]);break;}
+        case 'confirm-sale':{const items=E.clone(ui.sale),expected=ui.modalRevision;const r=await commit(s=>E.sell(s,items),{expected});if(r){closeDialog();ui.selected.clear();render();Sound.play('sale');toast(`${r.count} ${r.count===1?'card':'cards'} sold. ${cash(r.total)} added to your wallet.`);}else closeDialog();break;}
+        case 'grade':gradeDialog(el.dataset.id);break;
+        case 'confirm-grade':{const id=ui.gradeCard;if(!id)break;if(state.wallet<E.fee(id)){fundsDialog(E.fee(id),'grading');break;}const expected=ui.modalRevision;if(state.settings.sound)Sound.ensure();const r=await commit(s=>E.grade(s,id),{expected});if(r){Sound.play('tear');pendingGradeDialog();}else closeDialog();break;}
+        case 'pending-grade':pendingGradeDialog();break;
+        case 'reveal-grade':{const expected=ui.modalRevision;const r=await commit(s=>E.revealGrade(s),{expected});if(r){Sound.play('grade');pendingGradeDialog();}else closeDialog();break;}
+        case 'finish-grade':{const expected=ui.modalRevision;const r=await commit(s=>E.finishGrade(s),{expected});if(r){closeDialog();ui.binderTab='slabs';go('binder');toast('Your slab is on the shelf.');}else closeDialog();break;}
+        case 'claim':{const r=await commit(s=>E.claim(s,el.dataset.id));if(r){Sound.play('sale');toast(`Milestone collected. ${cash(r.reward)} is in your wallet.`);}break;}
+        case 'save-settings':{const input=$('#setting-threshold'),v=Number(input.value);if(input.value.trim()===''||!Number.isFinite(v)||v<0||v>10000){input.setCustomValidity('Enter a value from 0 to 10,000.');input.reportValidity();break;}input.setCustomValidity('');const values={sound:$('#setting-sound').checked,reducedMotion:$('#setting-motion').checked,autoSell:$('#setting-autosell').checked,pace:$('#setting-pace').value,threshold:Math.round(v*100)};if(values.sound)Sound.ensure();const r=await commit(s=>E.settings(s,values),{expected:ui.modalRevision});if(r){closeDialog();Sound.play();toast('Preferences saved. Auto-sell changes apply to new purchases.');}else closeDialog();break;}
+        case 'export':case 'recover-export':await exportSave();break;
+        case 'import':$('#import-file').click();break;
+        case 'confirm-import':{if(!ui.imported)break;const imported=E.clone(ui.imported);const r=await commit(()=>({replacement:imported}),{expected:ui.modalRevision,renderView:false});if(r){ui.imported=null;ui.selected.clear();ui.showGradeAfterNavigation=!!state.pendingGrade;go(state.session&&state.session.phase!=='results'?'opening':'binder');toast('Collection restored from your backup.');}else closeDialog();break;}
+        case 'reset':case 'recover-reset':resetDialog();break;
+        case 'confirm-reset':{if($('#reset-confirm')?.value!=='RESET')break;const r=await commit(()=>({replacement:E.initial()}),{expected:storageFailure?null:ui.modalRevision,renderView:false,replace:true});if(r){ui.selected.clear();ui.selecting=false;ui.search='';ui.binderTab='all';go('shop');toast('Fresh binder. Fresh possibilities.');}break;}
+        case 'reload':location.reload();break;
+      }
+    }catch(error){toast(error.message||'Something went wrong. Your last committed save is safe.');}
+  });
+  document.addEventListener('input',event=>{const el=event.target;if(el.id==='binder-search'){ui.search=el.value;ui.limit=36;updateSearchResults('binder');}else if(el.id==='studio-search'){ui.studioSearch=el.value;ui.studioLimit=24;updateSearchResults('studio');}else if(el.dataset.saleIndex!==undefined){ui.sale[Number(el.dataset.saleIndex)].qty=quantityValue(el);refreshSaleQuote();}else if(el.id==='detail-quantity')updateDetailPrice();else if(el.id==='reset-confirm')$('#reset-button').disabled=el.value!=='RESET';else if(el.id==='setting-threshold')el.setCustomValidity('');});
+  document.addEventListener('change',event=>{const el=event.target;
+    if(el.dataset.product){
+      const id=el.dataset.product,p=E.pack(id),q=Number(el.value);ui.qty[id]=q;
+      const buy=main.querySelector(`[data-action="buy"][data-id="${id}"]`);
+      buy.dataset.qty=q;buy.textContent=`Open ${q===1?'pack':'box'} · ${cash(E.cost(p,q))}`;
+      buy.setAttribute('aria-label',`Buy ${q} ${p.name} packs for ${cash(E.cost(p,q))}`);
+    }
+    else if(el.id==='rarity-filter'){ui.rarity=el.value;ui.limit=36;render({focus:el.id});}
+    else if(el.id==='binder-sort'){ui.sort=el.value;render({focus:el.id});}
+    else if(el.id==='duplicates-filter'){ui.duplicates=el.checked;ui.limit=36;render({focus:el.id});}
+    else if(el.id==='studio-sort'){ui.studioSort=el.value;render({focus:el.id});}
+    else if(el.dataset.saleIndex!==undefined){el.value=quantityValue(el);ui.sale[Number(el.dataset.saleIndex)].qty=Number(el.value);refreshSaleQuote();}
+    else if(el.id==='detail-quantity'){el.value=quantityValue(el);updateDetailPrice();}
+    else if(el.id==='import-file')importFile(el.files?.[0]);
+  });
+  document.addEventListener('submit',event=>{event.preventDefault();if(event.target.id==='settings-form')dialog.querySelector('[data-action="save-settings"]')?.click();});
+  dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeDialog();}});
+  dialog.addEventListener('cancel',event=>{event.preventDefault();stopAuto();closeDialog();});
+  document.addEventListener('keydown',event=>{if(event.key==='Enter'&&['binder-search','studio-search'].includes(event.target.id)){event.preventDefault();event.target.blur();}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){const was=ui.auto;stopAuto();if(was&&state)render();}});
+  // A failed high-resolution image tries the same card's thumbnail once. Never reroll.
+  document.addEventListener('error',event=>{const img=event.target;if(img.tagName!=='IMG'||!img.closest('.card-art'))return;navigator.serviceWorker?.controller?.postMessage({type:'evict-art',url:img.src});if(img.dataset.small){const src=img.dataset.small;delete img.dataset.small;img.src=src;return;}img.hidden=true;const art=img.closest('.card-art');art.classList.add('image-failed');const label=art.querySelector('.artwork-status');if(label)label.textContent='Artwork unavailable · card saved';},true);
+  let drag=null;
+  document.addEventListener('pointerdown',event=>{
+    const target=event.target.closest('#tear-pack');
+    if(!target||!event.isPrimary||state?.session?.phase!=='sealed')return;
+    drag={target,id:event.pointerId,x:event.clientX,y:event.clientY,dx:0,axis:null};
+    try{target.setPointerCapture(event.pointerId);}catch{}
+  });
+  document.addEventListener('pointermove',event=>{
+    if(!drag||event.pointerId!==drag.id)return;
+    const dx=event.clientX-drag.x,dy=event.clientY-drag.y;
+    if(!drag.axis&&Math.max(Math.abs(dx),Math.abs(dy))>12)drag.axis=Math.abs(dx)>Math.abs(dy)*1.2?'x':'y';
+    if(drag.axis!=='x')return;
+    drag.dx=Math.abs(dx);drag.target.classList.add('dragging');
+    drag.target.style.setProperty('--tear',Math.min(drag.dx/120,1));event.preventDefault();
+  },{passive:false});
+  document.addEventListener('pointerup',async event=>{
+    if(!drag||event.pointerId!==drag.id)return;
+    const current=drag;drag=null;
+    if(current.axis)ui.suppressTearClick=performance.now()+450;
+    if(current.axis==='x'&&current.dx>Math.min(82,current.target.clientWidth*.32)&&state?.session?.phase==='sealed')await performAdvance();
+    else{current.target.style.setProperty('--tear',0);current.target.classList.remove('dragging');}
+  });
+  document.addEventListener('pointercancel',event=>{
+    if(drag&&event.pointerId===drag.id){drag.target.style.setProperty('--tear',0);drag.target.classList.remove('dragging');drag=null;}
+  });
+  Store.subscribe(async()=>{if(busy)return;try{const fresh=await Store.read();if(fresh&&fresh.revision>state.revision){E.validate(fresh);state=fresh;stopAuto();render();if(ui.modalKind==='pending-grade'){if(state.pendingGrade)pendingGradeDialog();else closeDialog();}toast('Collection synced from your other tab.');}}catch{toast('Another tab changed the save. Reload before continuing.');}});
+  async function boot(){try{state=await Store.init();if(!location.hash&&state.session&&state.session.phase!=='results')route='opening';render();if(state.pendingGrade)pendingGradeDialog();if(!window.HH_STANDALONE&&'serviceWorker'in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register('./sw.js').catch(()=>{});}catch(error){storageFailure=error;let damaged=null;try{damaged=await Store.damaged();}catch{}$('#header').innerHTML='<div class="header-inner"><span class="brand"><span class="brand-mark">✦</span><span class="brand-name">holohouse.</span></span></div>';main.innerHTML=`<section class="storage-error"><span class="eyebrow">LET’S KEEP YOUR COLLECTION SAFE</span><h1>${damaged?'This save needs a little attention.':'Device storage is unavailable.'}</h1><p>${escape(error.message)}</p><p style="margin-top:15px">${damaged?'Your existing data has not been erased. Export it for safekeeping before starting over.':'Open the game in a regular browser tab and allow site storage. When opening a local file is restricted, use the included local-server instructions or a static HTTPS host.'}</p><div class="row">${damaged?button('Export unreadable save','recover-export','','btn ghost')+button('Reset local game…','recover-reset','','btn danger'):''}${button('Try again','reload','','btn primary')}</div></section>`;}}
+  boot();
+})();
+
+</script>
+</body>
+</html>
